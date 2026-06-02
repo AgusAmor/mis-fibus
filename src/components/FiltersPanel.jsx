@@ -1,13 +1,13 @@
 import { FaSearch, FaTimes } from "react-icons/fa";
 
-// Filters and search panel component for filtering stickers by query, status, or group.
+// Filters and search panel component for filtering stickers by query, status, or view mode.
 export function FiltersPanel({
   searchQuery,
   setSearchQuery,
   statusFilter,
   setStatusFilter,
-  sectionFilter,
-  setSectionFilter,
+  viewMode,
+  setViewMode,
 }) {
   return (
     <div className="flex flex-col gap-3">
@@ -45,21 +45,14 @@ export function FiltersPanel({
         </select>
 
         <select
-          value={sectionFilter}
-          onChange={(e) => setSectionFilter(e.target.value)}
+          value={viewMode}
+          onChange={(e) => setViewMode(e.target.value)}
           className="flex-1 bg-white border border-slate-200 text-slate-700 rounded-xl p-2.5 text-xs font-semibold outline-none cursor-pointer focus:border-primary focus:shadow-[0_0_8px_rgba(0,57,166,0.15)] transition-all duration-300 shadow-xs"
         >
-          <option value="all">All Sections</option>
-          <option value="SPECIAL">FIFA World Cup 2026 & Host Countries</option>
-          <option value="FWC_HISTORY">FIFA World Cup History</option>
-          <option value="CC">Coca-Cola</option>
-          {["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L"].map(
-            (g) => (
-              <option key={g} value={g}>
-                Group {g}
-              </option>
-            ),
-          )}
+          <option value="album">Album View</option>
+          <option value="teams">Teams Only</option>
+          <option value="specials">Specials & Extras</option>
+          <option value="flat">Continuous Grid</option>
         </select>
       </div>
     </div>

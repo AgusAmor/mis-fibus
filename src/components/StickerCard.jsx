@@ -56,17 +56,26 @@ export function StickerCard({ sticker, status, onShortTap, onLongPress }) {
     hasMovedRef.current = true;
   };
 
-  const isSpecial = sticker.group === "SPECIAL" || sticker.group === "FWC" || sticker.group === "CC";
-  const isCocaCola = sticker.group === "CC" || sticker.id.startsWith("CC");
+  const isTeamSpecial =
+    (sticker.number === "01" || sticker.number === "13") &&
+    sticker.group !== "SPECIAL" &&
+    sticker.group !== "FWC" &&
+    sticker.group !== "CC";
 
   let cardClass = "";
 
   if (status.dup > 0) {
-    cardClass = "bg-[#FEF8E7] border-accent/70 text-accent hover:bg-[#FDF1CE] hover:border-accent active:scale-95 hover:-translate-y-0.5 shadow-md shadow-accent/5 hover:shadow-accent/25 hover:shadow-lg";
+    cardClass = isTeamSpecial
+      ? "bg-[#FEF8E7] border-2 border-primary text-primary hover:bg-[#FDF1CE] hover:border-primary active:scale-95 hover:-translate-y-0.5 shadow-md shadow-accent/5 hover:shadow-accent/25 hover:shadow-lg"
+      : "bg-[#FEF8E7] border-accent/70 text-accent hover:bg-[#FDF1CE] hover:border-accent active:scale-95 hover:-translate-y-0.5 shadow-md shadow-accent/5 hover:shadow-accent/25 hover:shadow-lg";
   } else if (status.have) {
-    cardClass = "bg-[#E8F8F0] border-success/60 text-success hover:bg-[#DDF5E7] hover:border-success active:scale-95 hover:-translate-y-0.5 shadow-md shadow-success/5 hover:shadow-success/20 hover:shadow-lg";
+    cardClass = isTeamSpecial
+      ? "bg-[#E8F8F0] border-2 border-primary text-primary hover:bg-[#DDF5E7] hover:border-primary active:scale-95 hover:-translate-y-0.5 shadow-md shadow-success/5 hover:shadow-success/20 hover:shadow-lg"
+      : "bg-[#E8F8F0] border-success/60 text-success hover:bg-[#DDF5E7] hover:border-success active:scale-95 hover:-translate-y-0.5 shadow-md shadow-success/5 hover:shadow-success/20 hover:shadow-lg";
   } else {
-    cardClass = "bg-white border-slate-200/85 text-slate-400 hover:border-slate-300 hover:bg-slate-50 active:scale-95";
+    cardClass = isTeamSpecial
+      ? "bg-white border-2 border-primary text-primary hover:bg-slate-50 active:scale-95 shadow-xs"
+      : "bg-white border-slate-200/85 text-slate-400 hover:border-slate-300 hover:bg-slate-50 active:scale-95";
   }
 
   return (

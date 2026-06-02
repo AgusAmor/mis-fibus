@@ -6,6 +6,8 @@ import { Footer } from "./components/Footer";
 import { StatsPanel } from "./components/StatsPanel";
 import { FiltersPanel } from "./components/FiltersPanel";
 import { StickerGroup } from "./components/StickerGroup";
+import { StickerCard } from "./components/StickerCard";
+import { CountrySection } from "./components/CountrySection";
 
 function App() {
   const {
@@ -24,7 +26,7 @@ function App() {
   // Filter & Search States
   const [searchQuery, setSearchQuery] = useState("");
   const [statusFilter, setStatusFilter] = useState("all");
-  const [sectionFilter, setSectionFilter] = useState("all");
+  const [viewMode, setViewMode] = useState("album");
 
   // Accordion Expansions State
   const [expandedGroups, setExpandedGroups] = useState({
@@ -116,18 +118,7 @@ function App() {
         matchesStatus = status.dup > 0;
       }
 
-      let matchesSection = true;
-      if (sectionFilter !== "all") {
-        if (sectionFilter === "SPECIAL") {
-          matchesSection = s.group === "SPECIAL" || (s.group === "FWC" && parseInt(s.number, 10) <= 8);
-        } else if (sectionFilter === "FWC_HISTORY") {
-          matchesSection = s.group === "FWC" && parseInt(s.number, 10) >= 9;
-        } else {
-          matchesSection = s.group === sectionFilter;
-        }
-      }
-
-      return matchesSearch && matchesStatus && matchesSection;
+      return matchesSearch && matchesStatus;
     });
   };
 
@@ -147,84 +138,147 @@ function App() {
           setSearchQuery={setSearchQuery}
           statusFilter={statusFilter}
           setStatusFilter={setStatusFilter}
-          sectionFilter={sectionFilter}
-          setSectionFilter={setSectionFilter}
+          viewMode={viewMode}
+          setViewMode={setViewMode}
         />
 
-        {/* Accordion Board */}
+        {/* Board */}
         <div className="flex flex-col gap-3">
-          {/* Special Stickers & Stadiums */}
-          {(sectionFilter === "all" || sectionFilter === "SPECIAL") && (
-            <StickerGroup
-              groupKey="FWC_SPECIAL"
-              title="FIFA World Cup 2026 & Host Countries"
-              isExpanded={expandedGroups.FWC_SPECIAL}
-              onToggle={toggleGroup}
-              isSpecial={true}
-              stickers={sections.FWC_SPECIAL}
-              getFilteredStickers={getFilteredStickers}
-              getStickerStatus={getStickerStatus}
-              onShortTap={handleShortTap}
-              onLongPress={handleLongPress}
-            />
-          )}
+          {viewMode === "flat" ? (
+            /* Continuous Grid */
+            <>
+              <div className="grid grid-cols-[repeat(auto-fill,minmax(65px,1fr))] gap-2 sm:grid-cols-[repeat(auto-fill,minmax(70px,1fr))]">
+                {getFilteredStickers(originalStickers).map((sticker) => (
+                  <StickerCard
+                    key={sticker.id}
+                    sticker={sticker}
+                    status={getStickerStatus(sticker.id)}
+                    onShortTap={handleShortTap}
+                    onLongPress={handleLongPress}
+                  />
+                ))}
+              </div>
+              {getFilteredStickers(originalStickers).length === 0 && (
+                <p className="text-xs text-slate-400 text-center my-8 font-medium">
+                  Ninguna figurita coincide con los filtros.
+                </p>
+              )}
+            </>
+          ) : viewMode === "teams" ? (
+            /* Teams Only - flat list of CountrySections with group names */
+            <div className="flex flex-col gap-3.5">
+              {["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L"].flatMap(
+                (groupKey) => {
+                  const groupCountries = groupTeams[groupKey] || [];
+                  return groupCountries.map((countryKey) => {
+                    const countryStickers = countries[countryKey] || [];
+                    // Only render if there's at least one sticker matching filters in this country
+                    if (getFilteredStickers(countryStickers).length === 0) return null;
 
-          {/* Group Stages A - L */}
-          {["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L"].map(
-            (groupKey) => {
-              if (sectionFilter !== "all" && sectionFilter !== groupKey)
-                return null;
-              const groupCountries = groupTeams[groupKey] || [];
-
-              return (
+                    return (
+                      <CountrySection
+                        key={countryKey}
+                        countryKey={countryKey}
+                        groupKey={groupKey}
+                        countryStickers={countryStickers}
+                        getFilteredStickers={getFilteredStickers}
+                        getStickerStatus={getStickerStatus}
+                        onShortTap={handleShortTap}
+                        onLongPress={handleLongPress}
+                        showGroupLabel={true}
+                      />
+                    );
+                  });
+                }
+              )}
+              {/* If no country has matching stickers */}
+              {["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L"].every(
+                (groupKey) =>
+                  (groupTeams[groupKey] || []).every(
+                    (countryKey) =>
+                      getFilteredStickers(countries[countryKey] || []).length === 0
+                  )
+              ) && (
+                <p className="text-xs text-slate-400 text-center my-8 font-medium">
+                  Ninguna figurita coincide con los filtros.
+                </p>
+              )}
+            </div>
+          ) : (
+            /* Album / Specials view modes (with accordions) */
+            <>
+              {/* Special Stickers & Stadiums */}
+              {(viewMode === "album" || viewMode === "specials") && (
                 <StickerGroup
-                  key={groupKey}
-                  groupKey={groupKey}
-                  title={`Group ${groupKey}`}
-                  isExpanded={expandedGroups[groupKey]}
+                  groupKey="FWC_SPECIAL"
+                  title="FIFA World Cup 2026 & Host Countries"
+                  isExpanded={expandedGroups.FWC_SPECIAL}
                   onToggle={toggleGroup}
-                  isSpecial={false}
-                  countriesList={groupCountries}
-                  countriesData={countries}
+                  isSpecial={true}
+                  stickers={sections.FWC_SPECIAL}
                   getFilteredStickers={getFilteredStickers}
                   getStickerStatus={getStickerStatus}
                   onShortTap={handleShortTap}
                   onLongPress={handleLongPress}
                 />
-              );
-            },
-          )}
+              )}
 
-          {/* FIFA World Cup History */}
-          {(sectionFilter === "all" || sectionFilter === "FWC_HISTORY") && (
-            <StickerGroup
-              groupKey="FWC_HISTORY"
-              title="FIFA World Cup History"
-              isExpanded={expandedGroups.FWC_HISTORY}
-              onToggle={toggleGroup}
-              isSpecial={true}
-              stickers={sections.FWC_HISTORY}
-              getFilteredStickers={getFilteredStickers}
-              getStickerStatus={getStickerStatus}
-              onShortTap={handleShortTap}
-              onLongPress={handleLongPress}
-            />
-          )}
+              {/* Group Stages A - L */}
+              {viewMode === "album" &&
+                ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L"].map(
+                  (groupKey) => {
+                    const groupCountries = groupTeams[groupKey] || [];
+                    return (
+                      <StickerGroup
+                        key={groupKey}
+                        groupKey={groupKey}
+                        title={`Group ${groupKey}`}
+                        isExpanded={expandedGroups[groupKey]}
+                        onToggle={toggleGroup}
+                        isSpecial={false}
+                        countriesList={groupCountries}
+                        countriesData={countries}
+                        getFilteredStickers={getFilteredStickers}
+                        getStickerStatus={getStickerStatus}
+                        onShortTap={handleShortTap}
+                        onLongPress={handleLongPress}
+                      />
+                    );
+                  }
+                )}
 
-          {/* Coca-Cola Stickers */}
-          {(sectionFilter === "all" || sectionFilter === "CC") && (
-            <StickerGroup
-              groupKey="CC"
-              title="Coca-Cola"
-              isExpanded={expandedGroups.CC}
-              onToggle={toggleGroup}
-              isSpecial={true}
-              stickers={sections.CC}
-              getFilteredStickers={getFilteredStickers}
-              getStickerStatus={getStickerStatus}
-              onShortTap={handleShortTap}
-              onLongPress={handleLongPress}
-            />
+              {/* FIFA World Cup History */}
+              {(viewMode === "album" || viewMode === "specials") && (
+                <StickerGroup
+                  groupKey="FWC_HISTORY"
+                  title="FIFA World Cup History"
+                  isExpanded={expandedGroups.FWC_HISTORY}
+                  onToggle={toggleGroup}
+                  isSpecial={true}
+                  stickers={sections.FWC_HISTORY}
+                  getFilteredStickers={getFilteredStickers}
+                  getStickerStatus={getStickerStatus}
+                  onShortTap={handleShortTap}
+                  onLongPress={handleLongPress}
+                />
+              )}
+
+              {/* Coca-Cola Stickers */}
+              {(viewMode === "album" || viewMode === "specials") && (
+                <StickerGroup
+                  groupKey="CC"
+                  title="Coca-Cola"
+                  isExpanded={expandedGroups.CC}
+                  onToggle={toggleGroup}
+                  isSpecial={true}
+                  stickers={sections.CC}
+                  getFilteredStickers={getFilteredStickers}
+                  getStickerStatus={getStickerStatus}
+                  onShortTap={handleShortTap}
+                  onLongPress={handleLongPress}
+                />
+              )}
+            </>
           )}
         </div>
       </main>
