@@ -1,56 +1,59 @@
+import {
+  FaTrophy,
+  FaSync,
+  FaCircle,
+  FaExclamationTriangle,
+  FaTimesCircle,
+} from "react-icons/fa";
+
 // Header component displaying the app title and the real-time sync status indicator.
 export function Header({ syncStatus }) {
   const getSyncIcon = () => {
     switch (syncStatus) {
       case "syncing":
         return (
-          <span className="text-[11px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wide bg-white/10 text-white animate-pulse">
-            🔄 Sincronizando...
+          <span className="text-[11px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wide bg-white/15 text-white flex items-center gap-1.5">
+            <FaSync className="animate-spin text-[10px]" /> Sincronizando...
           </span>
         );
       case "synced":
         return (
-          <span className="text-[11px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wide bg-emerald-500/15 text-emerald-400 border border-emerald-500/20">
-            🟢 En Línea
+          <span className="text-[11px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wide bg-white/20 text-white border border-white/30 flex items-center gap-1.5">
+            <FaCircle className="text-emerald-400 text-[8px]" /> En Línea
           </span>
         );
       case "offline":
         return (
-          <span className="text-[11px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wide bg-amber-500/15 text-amber-400 border border-amber-500/20">
-            ⚠️ Modo Offline
+          <span className="text-[11px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wide bg-accent/25 text-amber-300 border border-accent/30 flex items-center gap-1.5">
+            <FaExclamationTriangle className="text-[10px]" /> Offline
           </span>
         );
       case "error":
         return (
-          <span className="text-[11px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wide bg-red-500/15 text-red-400 border border-red-500/20">
-            🔴 Error
+          <span className="text-[11px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wide bg-secondary/25 text-white border border-secondary/30 flex items-center gap-1.5">
+            <FaTimesCircle className="text-[10px]" /> Error
           </span>
         );
       default:
         return (
-          <span className="text-[11px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wide bg-white/5 text-slate-400">
-            ⚪ Desconectado
+          <span className="text-[11px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wide bg-white/5 text-white/50 flex items-center gap-1.5">
+            <FaCircle className="text-white/30 text-[8px]" /> Desconectado
           </span>
         );
     }
   };
 
   return (
-    <header className="flex justify-between items-center px-4 py-5 border-b border-white/10 bg-primary-emerald-dark/80 backdrop-blur-2xl sticky top-0 z-50">
+    <header className="flex justify-between items-center px-4 py-4.5 bg-primary text-white sticky top-0 z-50 shadow-md">
       <div className="flex items-center gap-2">
-        <span className="text-2xl">🏆</span>
+        <img src="/logo-fibus.png" alt="Logo Fibus" className="h-15 w-auto" />
         <div>
-          <h1 className="text-xl font-extrabold tracking-wider bg-linear-to-r from-white to-accent-gold bg-clip-text text-transparent filter drop-shadow-[0_2px_10px_rgba(212,175,55,0.2)]">
-            FIBUS 2026
+          <h1 className="text-xl font-montserrat font-extrabold tracking-wider text-white">
+            MIS FIBUS 2026
           </h1>
         </div>
-        <span className="text-[9px] font-semibold text-accent-gold border border-accent-gold px-1.5 py-0.5 rounded uppercase tracking-widest ml-1">
-          Compartido
-        </span>
       </div>
-      <div>
-        {getSyncIcon()}
-      </div>
+      <div>{getSyncIcon()}</div>
     </header>
   );
 }

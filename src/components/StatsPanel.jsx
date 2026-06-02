@@ -1,33 +1,56 @@
-export function StatsPanel({ stats }) {
-  return (
-    <section className="bg-linear-to-b from-primary-emerald-light/10 to-primary-emerald-dark/30 border border-white/10 rounded-3xl p-6 m-4 relative overflow-hidden shadow-xl shadow-black/25">
-      <div className="absolute -top-1/2 -right-1/5 w-75 h-75 rounded-full bg-linear-to-br from-accent-gold/15 to-transparent blur-3xl z-0"></div>
+import { FaSync } from "react-icons/fa";
 
-      <div className="relative z-10 flex flex-col gap-2.5">
-        <span className="text-xs font-bold text-accent-gold uppercase tracking-wider">
+// Statistics panel showing general album progress, percentages, and duplicate counts.
+export function StatsPanel({ stats }) {
+  const isCompleted = parseFloat(stats.percent) >= 100;
+
+  return (
+    <section className="bg-white border border-slate-100 rounded-3xl p-6 m-4 relative overflow-hidden shadow-lg shadow-slate-100/80">
+      {/* Subtle brand color accent background glow */}
+      <div className="absolute -top-1/2 -right-1/5 w-75 h-75 rounded-full bg-linear-to-br from-primary/5 to-transparent blur-3xl z-0"></div>
+
+      <div className="relative z-10 flex flex-col gap-3">
+        <span className="text-xs font-bold text-primary font-montserrat uppercase tracking-wider">
           Progreso del Álbum
         </span>
 
-        <div className="flex items-baseline gap-2">
-          <span className="text-4xl font-black bg-linear-to-r from-white to-slate-200 bg-clip-text text-transparent tracking-tight">
+        <div className="flex items-baseline gap-1.5">
+          <span className="text-5xl font-bebas font-extrabold text-slate-800 tracking-tight leading-none">
             {stats.percent}%
           </span>
-          <span className="text-xs text-slate-400">completado</span>
+          <span className="text-xs text-slate-400 font-semibold uppercase tracking-wider font-inter">
+            completado
+          </span>
         </div>
 
-        <div className="bg-white/5 border border-white/10 h-4.5 rounded-full overflow-hidden shadow-inner shadow-black/40">
+        {/* Brand progress bar */}
+        <div className="bg-slate-100 border border-slate-200/60 h-4.5 rounded-full overflow-hidden p-0.5">
           <div
-            className="h-full bg-linear-to-r from-emerald-500 to-emerald-600 shadow-[0_0_15px_rgba(16,185,129,0.3)] transition-all duration-800 rounded-full"
+            className={`h-full transition-all duration-500 rounded-full ${
+              isCompleted
+                ? "bg-success shadow-[0_0_12px_rgba(0,166,81,0.25)]"
+                : "bg-primary shadow-[0_0_12px_rgba(0,57,166,0.25)]"
+            }`}
             style={{ width: `${stats.percent}%` }}
           ></div>
         </div>
 
-        <div className="flex justify-between items-center text-xs text-slate-400 mt-0.5">
-          <span>
-            Tenemos {stats.owned} de {stats.total} figuritas
+        <div className="flex justify-between items-center text-xs text-slate-500 font-semibold mt-1">
+          <span className="flex items-center gap-1">
+            <strong className="font-bebas text-base text-slate-800 leading-none">
+              {stats.owned}
+            </strong>{" "}
+            de{" "}
+            <strong className="font-bebas text-base text-slate-800 leading-none">
+              {stats.total}
+            </strong>
           </span>
-          <span className="text-accent-gold font-medium">
-            🔁 {stats.dups} repetidas
+          <span className="text-secondary flex items-center gap-1.5 bg-secondary/5 px-2.5 py-1 rounded-full border border-secondary/10 font-bold uppercase tracking-wider text-[10px]">
+            <FaSync className="text-[9px]" />{" "}
+            <strong className="font-bebas text-base leading-none text-secondary">
+              {stats.dups}
+            </strong>{" "}
+            repetidas
           </span>
         </div>
       </div>

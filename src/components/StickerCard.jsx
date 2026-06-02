@@ -1,5 +1,7 @@
 import { useRef } from "react";
+import { FaCheck } from "react-icons/fa";
 
+// Sticker Card component representing a single digital collectible card.
 export function StickerCard({ sticker, status, onShortTap, onLongPress }) {
   const timerRef = useRef(null);
   const isLongPressRef = useRef(false);
@@ -54,6 +56,19 @@ export function StickerCard({ sticker, status, onShortTap, onLongPress }) {
     hasMovedRef.current = true;
   };
 
+  const isSpecial = sticker.group === "SPECIAL" || sticker.group === "FWC" || sticker.group === "CC";
+  const isCocaCola = sticker.group === "CC" || sticker.id.startsWith("CC");
+
+  let cardClass = "";
+
+  if (status.dup > 0) {
+    cardClass = "bg-accent/10 border-accent/45 text-accent hover:bg-accent/15 hover:border-accent/60 shadow-inner shadow-accent/5 active:scale-95 hover:-translate-y-0.5 hover:shadow-accent/25 hover:shadow-lg";
+  } else if (status.have) {
+    cardClass = "bg-success/10 border-success/40 text-success hover:bg-success/15 hover:border-success/60 shadow-inner shadow-success/5 active:scale-95 hover:-translate-y-0.5 hover:shadow-success/20 hover:shadow-lg";
+  } else {
+    cardClass = "bg-slate-100/50 border-slate-200/85 text-slate-400 hover:border-slate-300 active:scale-95";
+  }
+
   return (
     <div
       onMouseDown={startPress}
@@ -63,37 +78,24 @@ export function StickerCard({ sticker, status, onShortTap, onLongPress }) {
       onTouchEnd={endPress}
       onTouchMove={cancelPress}
       onContextMenu={(e) => e.preventDefault()}
-      className={`relative flex flex-col justify-center items-center rounded-xl overflow-hidden transition-all duration-300 aspect-[1/1.1] border cursor-pointer select-none ${
-        status.dup > 0
-          ? "bg-accent-gold/10 border-accent-gold/45 hover:bg-accent-gold/15 hover:border-accent-gold/60 shadow-inner shadow-accent-gold/5 active:scale-95 hover:-translate-y-0.5 hover:shadow-accent-gold/25 hover:shadow-lg"
-          : status.have
-            ? "bg-emerald-500/10 border-emerald-500/40 hover:bg-emerald-500/15 hover:border-emerald-500/60 shadow-inner shadow-emerald-500/5 active:scale-95 hover:-translate-y-0.5 hover:shadow-emerald-500/20 hover:shadow-lg"
-            : "bg-white/2 border-white/7 hover:border-white/20 active:scale-95"
-      }`}
+      className={`relative flex flex-col justify-center items-center rounded-xl transition-all duration-300 aspect-[1/1.1] border cursor-pointer select-none ${cardClass}`}
     >
-      <span
-        className={`text-[10px] font-extrabold ${
-          status.dup > 0
-            ? "text-accent-gold-light"
-            : status.have
-              ? "text-emerald-400"
-              : "text-slate-200"
-        }`}
-      >
+      {/* Sticker Code in Bebas Neue */}
+      <span className="font-bebas text-lg leading-none tracking-wide">
         {sticker.id}
       </span>
 
-      {/* Badge for duplicate stickers */}
+      {/* Duplicate Badge */}
       {status.dup > 0 && (
-        <span className="absolute top-1 right-1 text-[9px] font-black text-accent-gold bg-accent-gold/15 px-1.5 py-0.5 rounded-full border border-accent-gold/30">
+        <span className="absolute top-1.5 right-1.5 text-[9px] font-bold px-1.5 py-0.5 rounded-full border bg-accent/10 border-accent/30 text-accent leading-none font-bebas">
           x{status.dup}
         </span>
       )}
 
-      {/* Badge for owned sticker (no duplicates) */}
+      {/* Obtained Check Badge */}
       {status.have && status.dup === 0 && (
-        <span className="text-[9px] font-black absolute top-1 right-1 text-emerald-400 bg-emerald-500/15 w-4 h-4 rounded-full flex items-center justify-center border border-emerald-500/30">
-          ✓
+        <span className="absolute top-1.5 right-1.5 text-[9px] font-bold w-4.5 h-4.5 rounded-full flex items-center justify-center border bg-success/10 border-success/30 text-success leading-none">
+          <FaCheck className="text-[7px]" />
         </span>
       )}
     </div>

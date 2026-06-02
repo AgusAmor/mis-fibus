@@ -1,49 +1,65 @@
 @import "tailwindcss";
 
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&family=Montserrat:wght@800&display=swap');
+
 @theme {
-  --color-primary-emerald: #0b3c24;
-  --color-primary-emerald-dark: #062315;
-  --color-primary-emerald-light: #155737;
-  --color-accent-gold: #d4af37;
-  --color-accent-gold-light: #ffd700;
-  
-  --animate-pulse-slow: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  --color-primary: #5E0B19;
+  --color-secondary: #D71920;
+  --color-accent: #D4AF37;
+  --color-success: #00A651;
+  --color-bg-base: #F9F7F3;
+  --color-surface: #FFFFFF;
+  --color-text-primary: #111111;
+  --color-border-light: #E5E7EB;
+
+  --font-montserrat: 'Montserrat', sans-serif;
+  --font-inter: 'Inter', sans-serif;
+  --font-bebas: 'Bebas Neue', sans-serif;
 }
 
 :root {
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
-  color-scheme: dark;
+  color-scheme: light;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Outfit', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+}
+
+.font-bebas {
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+.font-montserrat {
+  font-family: 'Montserrat', sans-serif;
 }
 
 body {
-  background: linear-gradient(135deg, #062315 0%, #0d1e16 100%);
-  color: #f8fafc;
+  background-color: #F9F7F3;
+  color: #111111;
   margin: 0;
   padding: 0;
   min-height: 100vh;
 }
 
-/* Custom scrollbars styling with Tailwind compatible syntax */
+/* Custom scrollbars styling for the Panini physical album theme */
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: rgba(0, 0, 0, 0.15);
+  background: rgba(94, 11, 25, 0.05);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(94, 11, 25, 0.2);
   border-radius: 9999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 255, 255, 0.25);
+  background: rgba(94, 11, 25, 0.35);
 }
 
 /* Disable text selection and callouts completely on interactive cards for smooth touch/hold experience */

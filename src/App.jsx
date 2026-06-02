@@ -28,7 +28,8 @@ function App() {
 
   // Accordion Expansions State
   const [expandedGroups, setExpandedGroups] = useState({
-    FWC_SPECIAL_CC: true,
+    FWC_SPECIAL: true,
+    CC: true,
     A: false,
     B: false,
     C: false,
@@ -52,9 +53,10 @@ function App() {
 
   // Stickers categories definitions
   const sections = {
-    FWC_SPECIAL_CC: originalStickers.filter(
-      (s) => s.group === "SPECIAL" || s.group === "FWC" || s.group === "CC",
+    FWC_SPECIAL: originalStickers.filter(
+      (s) => s.group === "SPECIAL" || s.group === "FWC",
     ),
+    CC: originalStickers.filter((s) => s.group === "CC"),
     A: originalStickers.filter((s) => s.group === "A"),
     B: originalStickers.filter((s) => s.group === "B"),
     C: originalStickers.filter((s) => s.group === "C"),
@@ -113,8 +115,7 @@ function App() {
       let matchesSection = true;
       if (sectionFilter !== "all") {
         if (sectionFilter === "SPECIAL") {
-          matchesSection =
-            s.group === "SPECIAL" || s.group === "FWC" || s.group === "CC";
+          matchesSection = s.group === "SPECIAL" || s.group === "FWC";
         } else {
           matchesSection = s.group === sectionFilter;
         }
@@ -149,13 +150,28 @@ function App() {
           {/* Special Stickers & Stadiums */}
           {(sectionFilter === "all" || sectionFilter === "SPECIAL") && (
             <StickerGroup
-              groupKey="FWC_SPECIAL_CC"
+              groupKey="FWC_SPECIAL"
               title="Especiales & Sedes"
-              icon="✨"
-              isExpanded={expandedGroups.FWC_SPECIAL_CC}
+              isExpanded={expandedGroups.FWC_SPECIAL}
               onToggle={toggleGroup}
               isSpecial={true}
-              stickers={sections.FWC_SPECIAL_CC}
+              stickers={sections.FWC_SPECIAL}
+              getFilteredStickers={getFilteredStickers}
+              getStickerStatus={getStickerStatus}
+              onShortTap={handleShortTap}
+              onLongPress={handleLongPress}
+            />
+          )}
+
+          {/* Coca-Cola Stickers */}
+          {(sectionFilter === "all" || sectionFilter === "CC") && (
+            <StickerGroup
+              groupKey="CC"
+              title="Coca-Cola"
+              isExpanded={expandedGroups.CC}
+              onToggle={toggleGroup}
+              isSpecial={true}
+              stickers={sections.CC}
               getFilteredStickers={getFilteredStickers}
               getStickerStatus={getStickerStatus}
               onShortTap={handleShortTap}
@@ -175,7 +191,6 @@ function App() {
                   key={groupKey}
                   groupKey={groupKey}
                   title={`Grupo ${groupKey}`}
-                  icon="⚽"
                   isExpanded={expandedGroups[groupKey]}
                   onToggle={toggleGroup}
                   isSpecial={false}

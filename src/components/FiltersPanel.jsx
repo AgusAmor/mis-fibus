@@ -1,3 +1,6 @@
+import { FaSearch, FaTimes } from "react-icons/fa";
+
+// Filters and search panel component for filtering stickers by query, status, or group.
 export function FiltersPanel({
   searchQuery,
   setSearchQuery,
@@ -9,21 +12,21 @@ export function FiltersPanel({
   return (
     <div className="flex flex-col gap-3">
       {/* Search Input */}
-      <div className="relative bg-white/3 border border-white/6 rounded-xl flex items-center px-3 focus-within:border-accent-gold transition-all duration-300">
-        <span className="text-slate-400 text-sm">🔍</span>
+      <div className="relative bg-white border border-slate-200 rounded-xl flex items-center px-3 focus-within:border-primary focus-within:shadow-[0_0_8px_rgba(0,57,166,0.15)] transition-all duration-300 shadow-xs">
+        <FaSearch className="text-slate-400 text-xs" />
         <input
           type="text"
           placeholder="Buscar por código (ej. ARG10, FWC04, MEX)..."
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
-          className="bg-transparent border-none text-white text-sm py-3 px-2 w-full outline-none"
+          className="bg-transparent border-none text-slate-800 text-sm py-3 px-2 w-full outline-none"
         />
         {searchQuery && (
           <button
-            className="bg-none border-none text-slate-400 cursor-pointer p-1 hover:text-white"
+            className="bg-none border-none text-slate-400 cursor-pointer p-1 hover:text-slate-600 transition-colors flex items-center"
             onClick={() => setSearchQuery("")}
           >
-            ✕
+            <FaTimes className="text-[10px]" />
           </button>
         )}
       </div>
@@ -33,7 +36,7 @@ export function FiltersPanel({
         <select
           value={statusFilter}
           onChange={(e) => setStatusFilter(e.target.value)}
-          className="flex-1 bg-primary-emerald-dark/80 border border-white/8 text-slate-200 rounded-xl p-2.5 text-xs font-semibold outline-none cursor-pointer focus:border-accent-gold transition-all duration-300"
+          className="flex-1 bg-white border border-slate-200 text-slate-700 rounded-xl p-2.5 text-xs font-semibold outline-none cursor-pointer focus:border-primary focus:shadow-[0_0_8px_rgba(0,57,166,0.15)] transition-all duration-300 shadow-xs"
         >
           <option value="all">Todas las figuritas</option>
           <option value="missing">Faltantes</option>
@@ -44,10 +47,11 @@ export function FiltersPanel({
         <select
           value={sectionFilter}
           onChange={(e) => setSectionFilter(e.target.value)}
-          className="flex-1 bg-primary-emerald-dark/80 border border-white/8 text-slate-200 rounded-xl p-2.5 text-xs font-semibold outline-none cursor-pointer focus:border-accent-gold transition-all duration-300"
+          className="flex-1 bg-white border border-slate-200 text-slate-700 rounded-xl p-2.5 text-xs font-semibold outline-none cursor-pointer focus:border-primary focus:shadow-[0_0_8px_rgba(0,57,166,0.15)] transition-all duration-300 shadow-xs"
         >
           <option value="all">Todas las secciones</option>
           <option value="SPECIAL">Especiales & Sedes</option>
+          <option value="CC">Coca-Cola</option>
           {["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L"].map(
             (g) => (
               <option key={g} value={g}>
