@@ -62,11 +62,11 @@ export function StickerCard({ sticker, status, onShortTap, onLongPress }) {
   let cardClass = "";
 
   if (status.dup > 0) {
-    cardClass = "bg-accent/10 border-accent/45 text-accent hover:bg-accent/15 hover:border-accent/60 shadow-inner shadow-accent/5 active:scale-95 hover:-translate-y-0.5 hover:shadow-accent/25 hover:shadow-lg";
+    cardClass = "bg-[#FEF8E7] border-accent/70 text-accent hover:bg-[#FDF1CE] hover:border-accent active:scale-95 hover:-translate-y-0.5 shadow-md shadow-accent/5 hover:shadow-accent/25 hover:shadow-lg";
   } else if (status.have) {
-    cardClass = "bg-success/10 border-success/40 text-success hover:bg-success/15 hover:border-success/60 shadow-inner shadow-success/5 active:scale-95 hover:-translate-y-0.5 hover:shadow-success/20 hover:shadow-lg";
+    cardClass = "bg-[#E8F8F0] border-success/60 text-success hover:bg-[#DDF5E7] hover:border-success active:scale-95 hover:-translate-y-0.5 shadow-md shadow-success/5 hover:shadow-success/20 hover:shadow-lg";
   } else {
-    cardClass = "bg-slate-100/50 border-slate-200/85 text-slate-400 hover:border-slate-300 active:scale-95";
+    cardClass = "bg-white border-slate-200/85 text-slate-400 hover:border-slate-300 hover:bg-slate-50 active:scale-95";
   }
 
   return (
