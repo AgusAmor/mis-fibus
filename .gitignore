@@ -1,0 +1,62 @@
+# Logs and Debugs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+firebase-debug.log
+firestore-debug.log
+ui-debug.log
+pubsub-debug.log
+
+# Dependency directories
+node_modules/
+
+# Build outputs
+dist/
+dist-ssr/
+build/
+out/
+
+# Local env and Secret files (Sensitive data)
+.env
+.env.local
+.env.production
+.env.development
+.env.test
+.env.staging
+.env.*.local
+.secrets
+.keys
+credentials.json
+client_secret.json
+
+# Certificates and private keys
+*.pem
+*.key
+*.cert
+*.p12
+*.pfx
+*.keystore
+
+# Firebase runtime and local settings
+.firebase/
+.firebaserc.local
+
+# Editor and System files
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+Thumbs.db
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Temporary script files
+inspect_excel.py
+inspect_json.js

@@ -1,0 +1,7954 @@
+[
+  {
+    "id": "00",
+    "group": "SPECIAL",
+    "team": "SPECIAL",
+    "number": "00",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "FWC01",
+    "group": "FWC",
+    "team": "FWC",
+    "number": "01",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "FWC02",
+    "group": "FWC",
+    "team": "FWC",
+    "number": "02",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "FWC03",
+    "group": "FWC",
+    "team": "FWC",
+    "number": "03",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "FWC04",
+    "group": "FWC",
+    "team": "FWC",
+    "number": "04",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "FWC05",
+    "group": "FWC",
+    "team": "FWC",
+    "number": "05",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "FWC06",
+    "group": "FWC",
+    "team": "FWC",
+    "number": "06",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "FWC07",
+    "group": "FWC",
+    "team": "FWC",
+    "number": "07",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "FWC08",
+    "group": "FWC",
+    "team": "FWC",
+    "number": "08",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "FWC09",
+    "group": "FWC",
+    "team": "FWC",
+    "number": "09",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "FWC10",
+    "group": "FWC",
+    "team": "FWC",
+    "number": "10",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "FWC11",
+    "group": "FWC",
+    "team": "FWC",
+    "number": "11",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "FWC12",
+    "group": "FWC",
+    "team": "FWC",
+    "number": "12",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "FWC13",
+    "group": "FWC",
+    "team": "FWC",
+    "number": "13",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "FWC14",
+    "group": "FWC",
+    "team": "FWC",
+    "number": "14",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "FWC15",
+    "group": "FWC",
+    "team": "FWC",
+    "number": "15",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "FWC16",
+    "group": "FWC",
+    "team": "FWC",
+    "number": "16",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "FWC17",
+    "group": "FWC",
+    "team": "FWC",
+    "number": "17",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "FWC18",
+    "group": "FWC",
+    "team": "FWC",
+    "number": "18",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "FWC19",
+    "group": "FWC",
+    "team": "FWC",
+    "number": "19",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CC01",
+    "group": "CC",
+    "team": "CC",
+    "number": "01",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CC02",
+    "group": "CC",
+    "team": "CC",
+    "number": "02",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CC03",
+    "group": "CC",
+    "team": "CC",
+    "number": "03",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CC04",
+    "group": "CC",
+    "team": "CC",
+    "number": "04",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CC05",
+    "group": "CC",
+    "team": "CC",
+    "number": "05",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CC06",
+    "group": "CC",
+    "team": "CC",
+    "number": "06",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CC07",
+    "group": "CC",
+    "team": "CC",
+    "number": "07",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CC08",
+    "group": "CC",
+    "team": "CC",
+    "number": "08",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CC09",
+    "group": "CC",
+    "team": "CC",
+    "number": "09",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CC10",
+    "group": "CC",
+    "team": "CC",
+    "number": "10",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CC11",
+    "group": "CC",
+    "team": "CC",
+    "number": "11",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CC12",
+    "group": "CC",
+    "team": "CC",
+    "number": "12",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CC13",
+    "group": "CC",
+    "team": "CC",
+    "number": "13",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CC14",
+    "group": "CC",
+    "team": "CC",
+    "number": "14",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "MEX01",
+    "group": "A",
+    "team": "MEX",
+    "number": "01",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "MEX02",
+    "group": "A",
+    "team": "MEX",
+    "number": "02",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "MEX03",
+    "group": "A",
+    "team": "MEX",
+    "number": "03",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "MEX04",
+    "group": "A",
+    "team": "MEX",
+    "number": "04",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "MEX05",
+    "group": "A",
+    "team": "MEX",
+    "number": "05",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "MEX06",
+    "group": "A",
+    "team": "MEX",
+    "number": "06",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "MEX07",
+    "group": "A",
+    "team": "MEX",
+    "number": "07",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "MEX08",
+    "group": "A",
+    "team": "MEX",
+    "number": "08",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "MEX09",
+    "group": "A",
+    "team": "MEX",
+    "number": "09",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "MEX10",
+    "group": "A",
+    "team": "MEX",
+    "number": "10",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "MEX11",
+    "group": "A",
+    "team": "MEX",
+    "number": "11",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "MEX12",
+    "group": "A",
+    "team": "MEX",
+    "number": "12",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "MEX13",
+    "group": "A",
+    "team": "MEX",
+    "number": "13",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "MEX14",
+    "group": "A",
+    "team": "MEX",
+    "number": "14",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "MEX15",
+    "group": "A",
+    "team": "MEX",
+    "number": "15",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "MEX16",
+    "group": "A",
+    "team": "MEX",
+    "number": "16",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "MEX17",
+    "group": "A",
+    "team": "MEX",
+    "number": "17",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "MEX18",
+    "group": "A",
+    "team": "MEX",
+    "number": "18",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "MEX19",
+    "group": "A",
+    "team": "MEX",
+    "number": "19",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "MEX20",
+    "group": "A",
+    "team": "MEX",
+    "number": "20",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "RSA01",
+    "group": "A",
+    "team": "RSA",
+    "number": "01",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "RSA02",
+    "group": "A",
+    "team": "RSA",
+    "number": "02",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "RSA03",
+    "group": "A",
+    "team": "RSA",
+    "number": "03",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "RSA04",
+    "group": "A",
+    "team": "RSA",
+    "number": "04",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "RSA05",
+    "group": "A",
+    "team": "RSA",
+    "number": "05",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "RSA06",
+    "group": "A",
+    "team": "RSA",
+    "number": "06",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "RSA07",
+    "group": "A",
+    "team": "RSA",
+    "number": "07",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "RSA08",
+    "group": "A",
+    "team": "RSA",
+    "number": "08",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "RSA09",
+    "group": "A",
+    "team": "RSA",
+    "number": "09",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "RSA10",
+    "group": "A",
+    "team": "RSA",
+    "number": "10",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "RSA11",
+    "group": "A",
+    "team": "RSA",
+    "number": "11",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "RSA12",
+    "group": "A",
+    "team": "RSA",
+    "number": "12",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "RSA13",
+    "group": "A",
+    "team": "RSA",
+    "number": "13",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "RSA14",
+    "group": "A",
+    "team": "RSA",
+    "number": "14",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "RSA15",
+    "group": "A",
+    "team": "RSA",
+    "number": "15",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "RSA16",
+    "group": "A",
+    "team": "RSA",
+    "number": "16",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "RSA17",
+    "group": "A",
+    "team": "RSA",
+    "number": "17",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "RSA18",
+    "group": "A",
+    "team": "RSA",
+    "number": "18",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "RSA19",
+    "group": "A",
+    "team": "RSA",
+    "number": "19",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "RSA20",
+    "group": "A",
+    "team": "RSA",
+    "number": "20",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "KOR01",
+    "group": "A",
+    "team": "KOR",
+    "number": "01",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "KOR02",
+    "group": "A",
+    "team": "KOR",
+    "number": "02",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "KOR03",
+    "group": "A",
+    "team": "KOR",
+    "number": "03",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "KOR04",
+    "group": "A",
+    "team": "KOR",
+    "number": "04",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "KOR05",
+    "group": "A",
+    "team": "KOR",
+    "number": "05",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "KOR06",
+    "group": "A",
+    "team": "KOR",
+    "number": "06",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "KOR07",
+    "group": "A",
+    "team": "KOR",
+    "number": "07",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "KOR08",
+    "group": "A",
+    "team": "KOR",
+    "number": "08",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "KOR09",
+    "group": "A",
+    "team": "KOR",
+    "number": "09",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "KOR10",
+    "group": "A",
+    "team": "KOR",
+    "number": "10",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "KOR11",
+    "group": "A",
+    "team": "KOR",
+    "number": "11",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "KOR12",
+    "group": "A",
+    "team": "KOR",
+    "number": "12",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "KOR13",
+    "group": "A",
+    "team": "KOR",
+    "number": "13",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "KOR14",
+    "group": "A",
+    "team": "KOR",
+    "number": "14",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "KOR15",
+    "group": "A",
+    "team": "KOR",
+    "number": "15",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "KOR16",
+    "group": "A",
+    "team": "KOR",
+    "number": "16",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "KOR17",
+    "group": "A",
+    "team": "KOR",
+    "number": "17",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "KOR18",
+    "group": "A",
+    "team": "KOR",
+    "number": "18",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "KOR19",
+    "group": "A",
+    "team": "KOR",
+    "number": "19",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "KOR20",
+    "group": "A",
+    "team": "KOR",
+    "number": "20",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CZE01",
+    "group": "A",
+    "team": "CZE",
+    "number": "01",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CZE02",
+    "group": "A",
+    "team": "CZE",
+    "number": "02",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CZE03",
+    "group": "A",
+    "team": "CZE",
+    "number": "03",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CZE04",
+    "group": "A",
+    "team": "CZE",
+    "number": "04",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CZE05",
+    "group": "A",
+    "team": "CZE",
+    "number": "05",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CZE06",
+    "group": "A",
+    "team": "CZE",
+    "number": "06",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CZE07",
+    "group": "A",
+    "team": "CZE",
+    "number": "07",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CZE08",
+    "group": "A",
+    "team": "CZE",
+    "number": "08",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CZE09",
+    "group": "A",
+    "team": "CZE",
+    "number": "09",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CZE10",
+    "group": "A",
+    "team": "CZE",
+    "number": "10",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CZE11",
+    "group": "A",
+    "team": "CZE",
+    "number": "11",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CZE12",
+    "group": "A",
+    "team": "CZE",
+    "number": "12",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CZE13",
+    "group": "A",
+    "team": "CZE",
+    "number": "13",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CZE14",
+    "group": "A",
+    "team": "CZE",
+    "number": "14",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CZE15",
+    "group": "A",
+    "team": "CZE",
+    "number": "15",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CZE16",
+    "group": "A",
+    "team": "CZE",
+    "number": "16",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CZE17",
+    "group": "A",
+    "team": "CZE",
+    "number": "17",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CZE18",
+    "group": "A",
+    "team": "CZE",
+    "number": "18",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CZE19",
+    "group": "A",
+    "team": "CZE",
+    "number": "19",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CZE20",
+    "group": "A",
+    "team": "CZE",
+    "number": "20",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CAN01",
+    "group": "B",
+    "team": "CAN",
+    "number": "01",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CAN02",
+    "group": "B",
+    "team": "CAN",
+    "number": "02",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CAN03",
+    "group": "B",
+    "team": "CAN",
+    "number": "03",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CAN04",
+    "group": "B",
+    "team": "CAN",
+    "number": "04",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CAN05",
+    "group": "B",
+    "team": "CAN",
+    "number": "05",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CAN06",
+    "group": "B",
+    "team": "CAN",
+    "number": "06",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CAN07",
+    "group": "B",
+    "team": "CAN",
+    "number": "07",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CAN08",
+    "group": "B",
+    "team": "CAN",
+    "number": "08",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CAN09",
+    "group": "B",
+    "team": "CAN",
+    "number": "09",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CAN10",
+    "group": "B",
+    "team": "CAN",
+    "number": "10",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CAN11",
+    "group": "B",
+    "team": "CAN",
+    "number": "11",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CAN12",
+    "group": "B",
+    "team": "CAN",
+    "number": "12",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CAN13",
+    "group": "B",
+    "team": "CAN",
+    "number": "13",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CAN14",
+    "group": "B",
+    "team": "CAN",
+    "number": "14",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CAN15",
+    "group": "B",
+    "team": "CAN",
+    "number": "15",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CAN16",
+    "group": "B",
+    "team": "CAN",
+    "number": "16",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CAN17",
+    "group": "B",
+    "team": "CAN",
+    "number": "17",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CAN18",
+    "group": "B",
+    "team": "CAN",
+    "number": "18",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CAN19",
+    "group": "B",
+    "team": "CAN",
+    "number": "19",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CAN20",
+    "group": "B",
+    "team": "CAN",
+    "number": "20",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "BIH01",
+    "group": "B",
+    "team": "BIH",
+    "number": "01",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "BIH02",
+    "group": "B",
+    "team": "BIH",
+    "number": "02",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "BIH03",
+    "group": "B",
+    "team": "BIH",
+    "number": "03",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "BIH04",
+    "group": "B",
+    "team": "BIH",
+    "number": "04",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "BIH05",
+    "group": "B",
+    "team": "BIH",
+    "number": "05",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "BIH06",
+    "group": "B",
+    "team": "BIH",
+    "number": "06",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "BIH07",
+    "group": "B",
+    "team": "BIH",
+    "number": "07",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "BIH08",
+    "group": "B",
+    "team": "BIH",
+    "number": "08",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "BIH09",
+    "group": "B",
+    "team": "BIH",
+    "number": "09",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "BIH10",
+    "group": "B",
+    "team": "BIH",
+    "number": "10",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "BIH11",
+    "group": "B",
+    "team": "BIH",
+    "number": "11",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "BIH12",
+    "group": "B",
+    "team": "BIH",
+    "number": "12",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "BIH13",
+    "group": "B",
+    "team": "BIH",
+    "number": "13",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "BIH14",
+    "group": "B",
+    "team": "BIH",
+    "number": "14",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "BIH15",
+    "group": "B",
+    "team": "BIH",
+    "number": "15",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "BIH16",
+    "group": "B",
+    "team": "BIH",
+    "number": "16",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "BIH17",
+    "group": "B",
+    "team": "BIH",
+    "number": "17",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "BIH18",
+    "group": "B",
+    "team": "BIH",
+    "number": "18",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "BIH19",
+    "group": "B",
+    "team": "BIH",
+    "number": "19",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "BIH20",
+    "group": "B",
+    "team": "BIH",
+    "number": "20",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "QAT01",
+    "group": "B",
+    "team": "QAT",
+    "number": "01",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "QAT02",
+    "group": "B",
+    "team": "QAT",
+    "number": "02",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "QAT03",
+    "group": "B",
+    "team": "QAT",
+    "number": "03",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "QAT04",
+    "group": "B",
+    "team": "QAT",
+    "number": "04",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "QAT05",
+    "group": "B",
+    "team": "QAT",
+    "number": "05",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "QAT06",
+    "group": "B",
+    "team": "QAT",
+    "number": "06",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "QAT07",
+    "group": "B",
+    "team": "QAT",
+    "number": "07",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "QAT08",
+    "group": "B",
+    "team": "QAT",
+    "number": "08",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "QAT09",
+    "group": "B",
+    "team": "QAT",
+    "number": "09",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "QAT10",
+    "group": "B",
+    "team": "QAT",
+    "number": "10",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "QAT11",
+    "group": "B",
+    "team": "QAT",
+    "number": "11",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "QAT12",
+    "group": "B",
+    "team": "QAT",
+    "number": "12",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "QAT13",
+    "group": "B",
+    "team": "QAT",
+    "number": "13",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "QAT14",
+    "group": "B",
+    "team": "QAT",
+    "number": "14",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "QAT15",
+    "group": "B",
+    "team": "QAT",
+    "number": "15",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "QAT16",
+    "group": "B",
+    "team": "QAT",
+    "number": "16",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "QAT17",
+    "group": "B",
+    "team": "QAT",
+    "number": "17",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "QAT18",
+    "group": "B",
+    "team": "QAT",
+    "number": "18",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "QAT19",
+    "group": "B",
+    "team": "QAT",
+    "number": "19",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "QAT20",
+    "group": "B",
+    "team": "QAT",
+    "number": "20",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "SUI01",
+    "group": "B",
+    "team": "SUI",
+    "number": "01",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "SUI02",
+    "group": "B",
+    "team": "SUI",
+    "number": "02",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "SUI03",
+    "group": "B",
+    "team": "SUI",
+    "number": "03",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "SUI04",
+    "group": "B",
+    "team": "SUI",
+    "number": "04",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "SUI05",
+    "group": "B",
+    "team": "SUI",
+    "number": "05",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "SUI06",
+    "group": "B",
+    "team": "SUI",
+    "number": "06",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "SUI07",
+    "group": "B",
+    "team": "SUI",
+    "number": "07",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "SUI08",
+    "group": "B",
+    "team": "SUI",
+    "number": "08",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "SUI09",
+    "group": "B",
+    "team": "SUI",
+    "number": "09",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "SUI10",
+    "group": "B",
+    "team": "SUI",
+    "number": "10",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "SUI11",
+    "group": "B",
+    "team": "SUI",
+    "number": "11",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "SUI12",
+    "group": "B",
+    "team": "SUI",
+    "number": "12",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "SUI13",
+    "group": "B",
+    "team": "SUI",
+    "number": "13",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "SUI14",
+    "group": "B",
+    "team": "SUI",
+    "number": "14",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "SUI15",
+    "group": "B",
+    "team": "SUI",
+    "number": "15",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "SUI16",
+    "group": "B",
+    "team": "SUI",
+    "number": "16",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "SUI17",
+    "group": "B",
+    "team": "SUI",
+    "number": "17",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "SUI18",
+    "group": "B",
+    "team": "SUI",
+    "number": "18",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "SUI19",
+    "group": "B",
+    "team": "SUI",
+    "number": "19",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "SUI20",
+    "group": "B",
+    "team": "SUI",
+    "number": "20",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "BRA01",
+    "group": "C",
+    "team": "BRA",
+    "number": "01",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "BRA02",
+    "group": "C",
+    "team": "BRA",
+    "number": "02",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "BRA03",
+    "group": "C",
+    "team": "BRA",
+    "number": "03",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "BRA04",
+    "group": "C",
+    "team": "BRA",
+    "number": "04",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "BRA05",
+    "group": "C",
+    "team": "BRA",
+    "number": "05",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "BRA06",
+    "group": "C",
+    "team": "BRA",
+    "number": "06",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "BRA07",
+    "group": "C",
+    "team": "BRA",
+    "number": "07",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "BRA08",
+    "group": "C",
+    "team": "BRA",
+    "number": "08",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "BRA09",
+    "group": "C",
+    "team": "BRA",
+    "number": "09",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "BRA10",
+    "group": "C",
+    "team": "BRA",
+    "number": "10",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "BRA11",
+    "group": "C",
+    "team": "BRA",
+    "number": "11",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "BRA12",
+    "group": "C",
+    "team": "BRA",
+    "number": "12",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "BRA13",
+    "group": "C",
+    "team": "BRA",
+    "number": "13",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "BRA14",
+    "group": "C",
+    "team": "BRA",
+    "number": "14",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "BRA15",
+    "group": "C",
+    "team": "BRA",
+    "number": "15",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "BRA16",
+    "group": "C",
+    "team": "BRA",
+    "number": "16",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "BRA17",
+    "group": "C",
+    "team": "BRA",
+    "number": "17",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "BRA18",
+    "group": "C",
+    "team": "BRA",
+    "number": "18",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "BRA19",
+    "group": "C",
+    "team": "BRA",
+    "number": "19",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "BRA20",
+    "group": "C",
+    "team": "BRA",
+    "number": "20",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "MAR01",
+    "group": "C",
+    "team": "MAR",
+    "number": "01",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "MAR02",
+    "group": "C",
+    "team": "MAR",
+    "number": "02",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "MAR03",
+    "group": "C",
+    "team": "MAR",
+    "number": "03",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "MAR04",
+    "group": "C",
+    "team": "MAR",
+    "number": "04",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "MAR05",
+    "group": "C",
+    "team": "MAR",
+    "number": "05",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "MAR06",
+    "group": "C",
+    "team": "MAR",
+    "number": "06",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "MAR07",
+    "group": "C",
+    "team": "MAR",
+    "number": "07",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "MAR08",
+    "group": "C",
+    "team": "MAR",
+    "number": "08",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "MAR09",
+    "group": "C",
+    "team": "MAR",
+    "number": "09",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "MAR10",
+    "group": "C",
+    "team": "MAR",
+    "number": "10",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "MAR11",
+    "group": "C",
+    "team": "MAR",
+    "number": "11",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "MAR12",
+    "group": "C",
+    "team": "MAR",
+    "number": "12",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "MAR13",
+    "group": "C",
+    "team": "MAR",
+    "number": "13",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "MAR14",
+    "group": "C",
+    "team": "MAR",
+    "number": "14",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "MAR15",
+    "group": "C",
+    "team": "MAR",
+    "number": "15",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "MAR16",
+    "group": "C",
+    "team": "MAR",
+    "number": "16",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "MAR17",
+    "group": "C",
+    "team": "MAR",
+    "number": "17",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "MAR18",
+    "group": "C",
+    "team": "MAR",
+    "number": "18",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "MAR19",
+    "group": "C",
+    "team": "MAR",
+    "number": "19",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "MAR20",
+    "group": "C",
+    "team": "MAR",
+    "number": "20",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "HAI01",
+    "group": "C",
+    "team": "HAI",
+    "number": "01",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "HAI02",
+    "group": "C",
+    "team": "HAI",
+    "number": "02",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "HAI03",
+    "group": "C",
+    "team": "HAI",
+    "number": "03",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "HAI04",
+    "group": "C",
+    "team": "HAI",
+    "number": "04",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "HAI05",
+    "group": "C",
+    "team": "HAI",
+    "number": "05",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "HAI06",
+    "group": "C",
+    "team": "HAI",
+    "number": "06",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "HAI07",
+    "group": "C",
+    "team": "HAI",
+    "number": "07",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "HAI08",
+    "group": "C",
+    "team": "HAI",
+    "number": "08",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "HAI09",
+    "group": "C",
+    "team": "HAI",
+    "number": "09",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "HAI10",
+    "group": "C",
+    "team": "HAI",
+    "number": "10",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "HAI11",
+    "group": "C",
+    "team": "HAI",
+    "number": "11",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "HAI12",
+    "group": "C",
+    "team": "HAI",
+    "number": "12",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "HAI13",
+    "group": "C",
+    "team": "HAI",
+    "number": "13",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "HAI14",
+    "group": "C",
+    "team": "HAI",
+    "number": "14",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "HAI15",
+    "group": "C",
+    "team": "HAI",
+    "number": "15",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "HAI16",
+    "group": "C",
+    "team": "HAI",
+    "number": "16",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "HAI17",
+    "group": "C",
+    "team": "HAI",
+    "number": "17",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "HAI18",
+    "group": "C",
+    "team": "HAI",
+    "number": "18",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "HAI19",
+    "group": "C",
+    "team": "HAI",
+    "number": "19",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "HAI20",
+    "group": "C",
+    "team": "HAI",
+    "number": "20",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "SCO01",
+    "group": "C",
+    "team": "SCO",
+    "number": "01",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "SCO02",
+    "group": "C",
+    "team": "SCO",
+    "number": "02",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "SCO03",
+    "group": "C",
+    "team": "SCO",
+    "number": "03",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "SCO04",
+    "group": "C",
+    "team": "SCO",
+    "number": "04",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "SCO05",
+    "group": "C",
+    "team": "SCO",
+    "number": "05",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "SCO06",
+    "group": "C",
+    "team": "SCO",
+    "number": "06",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "SCO07",
+    "group": "C",
+    "team": "SCO",
+    "number": "07",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "SCO08",
+    "group": "C",
+    "team": "SCO",
+    "number": "08",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "SCO09",
+    "group": "C",
+    "team": "SCO",
+    "number": "09",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "SCO10",
+    "group": "C",
+    "team": "SCO",
+    "number": "10",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "SCO11",
+    "group": "C",
+    "team": "SCO",
+    "number": "11",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "SCO12",
+    "group": "C",
+    "team": "SCO",
+    "number": "12",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "SCO13",
+    "group": "C",
+    "team": "SCO",
+    "number": "13",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "SCO14",
+    "group": "C",
+    "team": "SCO",
+    "number": "14",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "SCO15",
+    "group": "C",
+    "team": "SCO",
+    "number": "15",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "SCO16",
+    "group": "C",
+    "team": "SCO",
+    "number": "16",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "SCO17",
+    "group": "C",
+    "team": "SCO",
+    "number": "17",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "SCO18",
+    "group": "C",
+    "team": "SCO",
+    "number": "18",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "SCO19",
+    "group": "C",
+    "team": "SCO",
+    "number": "19",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "SCO20",
+    "group": "C",
+    "team": "SCO",
+    "number": "20",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "USA01",
+    "group": "D",
+    "team": "USA",
+    "number": "01",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "USA02",
+    "group": "D",
+    "team": "USA",
+    "number": "02",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "USA03",
+    "group": "D",
+    "team": "USA",
+    "number": "03",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "USA04",
+    "group": "D",
+    "team": "USA",
+    "number": "04",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "USA05",
+    "group": "D",
+    "team": "USA",
+    "number": "05",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "USA06",
+    "group": "D",
+    "team": "USA",
+    "number": "06",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "USA07",
+    "group": "D",
+    "team": "USA",
+    "number": "07",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "USA08",
+    "group": "D",
+    "team": "USA",
+    "number": "08",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "USA09",
+    "group": "D",
+    "team": "USA",
+    "number": "09",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "USA10",
+    "group": "D",
+    "team": "USA",
+    "number": "10",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "USA11",
+    "group": "D",
+    "team": "USA",
+    "number": "11",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "USA12",
+    "group": "D",
+    "team": "USA",
+    "number": "12",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "USA13",
+    "group": "D",
+    "team": "USA",
+    "number": "13",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "USA14",
+    "group": "D",
+    "team": "USA",
+    "number": "14",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "USA15",
+    "group": "D",
+    "team": "USA",
+    "number": "15",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "USA16",
+    "group": "D",
+    "team": "USA",
+    "number": "16",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "USA17",
+    "group": "D",
+    "team": "USA",
+    "number": "17",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "USA18",
+    "group": "D",
+    "team": "USA",
+    "number": "18",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "USA19",
+    "group": "D",
+    "team": "USA",
+    "number": "19",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "USA20",
+    "group": "D",
+    "team": "USA",
+    "number": "20",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "PAR01",
+    "group": "D",
+    "team": "PAR",
+    "number": "01",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "PAR02",
+    "group": "D",
+    "team": "PAR",
+    "number": "02",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "PAR03",
+    "group": "D",
+    "team": "PAR",
+    "number": "03",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "PAR04",
+    "group": "D",
+    "team": "PAR",
+    "number": "04",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "PAR05",
+    "group": "D",
+    "team": "PAR",
+    "number": "05",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "PAR06",
+    "group": "D",
+    "team": "PAR",
+    "number": "06",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "PAR07",
+    "group": "D",
+    "team": "PAR",
+    "number": "07",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "PAR08",
+    "group": "D",
+    "team": "PAR",
+    "number": "08",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "PAR09",
+    "group": "D",
+    "team": "PAR",
+    "number": "09",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "PAR10",
+    "group": "D",
+    "team": "PAR",
+    "number": "10",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "PAR11",
+    "group": "D",
+    "team": "PAR",
+    "number": "11",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "PAR12",
+    "group": "D",
+    "team": "PAR",
+    "number": "12",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "PAR13",
+    "group": "D",
+    "team": "PAR",
+    "number": "13",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "PAR14",
+    "group": "D",
+    "team": "PAR",
+    "number": "14",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "PAR15",
+    "group": "D",
+    "team": "PAR",
+    "number": "15",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "PAR16",
+    "group": "D",
+    "team": "PAR",
+    "number": "16",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "PAR17",
+    "group": "D",
+    "team": "PAR",
+    "number": "17",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "PAR18",
+    "group": "D",
+    "team": "PAR",
+    "number": "18",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "PAR19",
+    "group": "D",
+    "team": "PAR",
+    "number": "19",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "PAR20",
+    "group": "D",
+    "team": "PAR",
+    "number": "20",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "AUS01",
+    "group": "D",
+    "team": "AUS",
+    "number": "01",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "AUS02",
+    "group": "D",
+    "team": "AUS",
+    "number": "02",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "AUS03",
+    "group": "D",
+    "team": "AUS",
+    "number": "03",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "AUS04",
+    "group": "D",
+    "team": "AUS",
+    "number": "04",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "AUS05",
+    "group": "D",
+    "team": "AUS",
+    "number": "05",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "AUS06",
+    "group": "D",
+    "team": "AUS",
+    "number": "06",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "AUS07",
+    "group": "D",
+    "team": "AUS",
+    "number": "07",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "AUS08",
+    "group": "D",
+    "team": "AUS",
+    "number": "08",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "AUS09",
+    "group": "D",
+    "team": "AUS",
+    "number": "09",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "AUS10",
+    "group": "D",
+    "team": "AUS",
+    "number": "10",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "AUS11",
+    "group": "D",
+    "team": "AUS",
+    "number": "11",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "AUS12",
+    "group": "D",
+    "team": "AUS",
+    "number": "12",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "AUS13",
+    "group": "D",
+    "team": "AUS",
+    "number": "13",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "AUS14",
+    "group": "D",
+    "team": "AUS",
+    "number": "14",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "AUS15",
+    "group": "D",
+    "team": "AUS",
+    "number": "15",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "AUS16",
+    "group": "D",
+    "team": "AUS",
+    "number": "16",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "AUS17",
+    "group": "D",
+    "team": "AUS",
+    "number": "17",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "AUS18",
+    "group": "D",
+    "team": "AUS",
+    "number": "18",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "AUS19",
+    "group": "D",
+    "team": "AUS",
+    "number": "19",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "AUS20",
+    "group": "D",
+    "team": "AUS",
+    "number": "20",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "TUR01",
+    "group": "D",
+    "team": "TUR",
+    "number": "01",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "TUR02",
+    "group": "D",
+    "team": "TUR",
+    "number": "02",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "TUR03",
+    "group": "D",
+    "team": "TUR",
+    "number": "03",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "TUR04",
+    "group": "D",
+    "team": "TUR",
+    "number": "04",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "TUR05",
+    "group": "D",
+    "team": "TUR",
+    "number": "05",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "TUR06",
+    "group": "D",
+    "team": "TUR",
+    "number": "06",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "TUR07",
+    "group": "D",
+    "team": "TUR",
+    "number": "07",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "TUR08",
+    "group": "D",
+    "team": "TUR",
+    "number": "08",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "TUR09",
+    "group": "D",
+    "team": "TUR",
+    "number": "09",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "TUR10",
+    "group": "D",
+    "team": "TUR",
+    "number": "10",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "TUR11",
+    "group": "D",
+    "team": "TUR",
+    "number": "11",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "TUR12",
+    "group": "D",
+    "team": "TUR",
+    "number": "12",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "TUR13",
+    "group": "D",
+    "team": "TUR",
+    "number": "13",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "TUR14",
+    "group": "D",
+    "team": "TUR",
+    "number": "14",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "TUR15",
+    "group": "D",
+    "team": "TUR",
+    "number": "15",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "TUR16",
+    "group": "D",
+    "team": "TUR",
+    "number": "16",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "TUR17",
+    "group": "D",
+    "team": "TUR",
+    "number": "17",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "TUR18",
+    "group": "D",
+    "team": "TUR",
+    "number": "18",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "TUR19",
+    "group": "D",
+    "team": "TUR",
+    "number": "19",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "TUR20",
+    "group": "D",
+    "team": "TUR",
+    "number": "20",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "GER01",
+    "group": "E",
+    "team": "GER",
+    "number": "01",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "GER02",
+    "group": "E",
+    "team": "GER",
+    "number": "02",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "GER03",
+    "group": "E",
+    "team": "GER",
+    "number": "03",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "GER04",
+    "group": "E",
+    "team": "GER",
+    "number": "04",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "GER05",
+    "group": "E",
+    "team": "GER",
+    "number": "05",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "GER06",
+    "group": "E",
+    "team": "GER",
+    "number": "06",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "GER07",
+    "group": "E",
+    "team": "GER",
+    "number": "07",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "GER08",
+    "group": "E",
+    "team": "GER",
+    "number": "08",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "GER09",
+    "group": "E",
+    "team": "GER",
+    "number": "09",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "GER10",
+    "group": "E",
+    "team": "GER",
+    "number": "10",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "GER11",
+    "group": "E",
+    "team": "GER",
+    "number": "11",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "GER12",
+    "group": "E",
+    "team": "GER",
+    "number": "12",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "GER13",
+    "group": "E",
+    "team": "GER",
+    "number": "13",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "GER14",
+    "group": "E",
+    "team": "GER",
+    "number": "14",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "GER15",
+    "group": "E",
+    "team": "GER",
+    "number": "15",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "GER16",
+    "group": "E",
+    "team": "GER",
+    "number": "16",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "GER17",
+    "group": "E",
+    "team": "GER",
+    "number": "17",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "GER18",
+    "group": "E",
+    "team": "GER",
+    "number": "18",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "GER19",
+    "group": "E",
+    "team": "GER",
+    "number": "19",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "GER20",
+    "group": "E",
+    "team": "GER",
+    "number": "20",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CUW01",
+    "group": "E",
+    "team": "CUW",
+    "number": "01",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CUW02",
+    "group": "E",
+    "team": "CUW",
+    "number": "02",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CUW03",
+    "group": "E",
+    "team": "CUW",
+    "number": "03",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CUW04",
+    "group": "E",
+    "team": "CUW",
+    "number": "04",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CUW05",
+    "group": "E",
+    "team": "CUW",
+    "number": "05",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CUW06",
+    "group": "E",
+    "team": "CUW",
+    "number": "06",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CUW07",
+    "group": "E",
+    "team": "CUW",
+    "number": "07",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CUW08",
+    "group": "E",
+    "team": "CUW",
+    "number": "08",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CUW09",
+    "group": "E",
+    "team": "CUW",
+    "number": "09",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CUW10",
+    "group": "E",
+    "team": "CUW",
+    "number": "10",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CUW11",
+    "group": "E",
+    "team": "CUW",
+    "number": "11",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CUW12",
+    "group": "E",
+    "team": "CUW",
+    "number": "12",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CUW13",
+    "group": "E",
+    "team": "CUW",
+    "number": "13",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CUW14",
+    "group": "E",
+    "team": "CUW",
+    "number": "14",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CUW15",
+    "group": "E",
+    "team": "CUW",
+    "number": "15",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CUW16",
+    "group": "E",
+    "team": "CUW",
+    "number": "16",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CUW17",
+    "group": "E",
+    "team": "CUW",
+    "number": "17",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CUW18",
+    "group": "E",
+    "team": "CUW",
+    "number": "18",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CUW19",
+    "group": "E",
+    "team": "CUW",
+    "number": "19",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CUW20",
+    "group": "E",
+    "team": "CUW",
+    "number": "20",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CIV01",
+    "group": "E",
+    "team": "CIV",
+    "number": "01",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CIV02",
+    "group": "E",
+    "team": "CIV",
+    "number": "02",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CIV03",
+    "group": "E",
+    "team": "CIV",
+    "number": "03",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CIV04",
+    "group": "E",
+    "team": "CIV",
+    "number": "04",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CIV05",
+    "group": "E",
+    "team": "CIV",
+    "number": "05",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CIV06",
+    "group": "E",
+    "team": "CIV",
+    "number": "06",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CIV07",
+    "group": "E",
+    "team": "CIV",
+    "number": "07",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CIV08",
+    "group": "E",
+    "team": "CIV",
+    "number": "08",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CIV09",
+    "group": "E",
+    "team": "CIV",
+    "number": "09",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CIV10",
+    "group": "E",
+    "team": "CIV",
+    "number": "10",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CIV11",
+    "group": "E",
+    "team": "CIV",
+    "number": "11",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CIV12",
+    "group": "E",
+    "team": "CIV",
+    "number": "12",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CIV13",
+    "group": "E",
+    "team": "CIV",
+    "number": "13",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CIV14",
+    "group": "E",
+    "team": "CIV",
+    "number": "14",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CIV15",
+    "group": "E",
+    "team": "CIV",
+    "number": "15",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CIV16",
+    "group": "E",
+    "team": "CIV",
+    "number": "16",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CIV17",
+    "group": "E",
+    "team": "CIV",
+    "number": "17",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CIV18",
+    "group": "E",
+    "team": "CIV",
+    "number": "18",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CIV19",
+    "group": "E",
+    "team": "CIV",
+    "number": "19",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CIV20",
+    "group": "E",
+    "team": "CIV",
+    "number": "20",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "ECU01",
+    "group": "E",
+    "team": "ECU",
+    "number": "01",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "ECU02",
+    "group": "E",
+    "team": "ECU",
+    "number": "02",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "ECU03",
+    "group": "E",
+    "team": "ECU",
+    "number": "03",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "ECU04",
+    "group": "E",
+    "team": "ECU",
+    "number": "04",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "ECU05",
+    "group": "E",
+    "team": "ECU",
+    "number": "05",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "ECU06",
+    "group": "E",
+    "team": "ECU",
+    "number": "06",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "ECU07",
+    "group": "E",
+    "team": "ECU",
+    "number": "07",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "ECU08",
+    "group": "E",
+    "team": "ECU",
+    "number": "08",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "ECU09",
+    "group": "E",
+    "team": "ECU",
+    "number": "09",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "ECU10",
+    "group": "E",
+    "team": "ECU",
+    "number": "10",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "ECU11",
+    "group": "E",
+    "team": "ECU",
+    "number": "11",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "ECU12",
+    "group": "E",
+    "team": "ECU",
+    "number": "12",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "ECU13",
+    "group": "E",
+    "team": "ECU",
+    "number": "13",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "ECU14",
+    "group": "E",
+    "team": "ECU",
+    "number": "14",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "ECU15",
+    "group": "E",
+    "team": "ECU",
+    "number": "15",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "ECU16",
+    "group": "E",
+    "team": "ECU",
+    "number": "16",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "ECU17",
+    "group": "E",
+    "team": "ECU",
+    "number": "17",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "ECU18",
+    "group": "E",
+    "team": "ECU",
+    "number": "18",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "ECU19",
+    "group": "E",
+    "team": "ECU",
+    "number": "19",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "ECU20",
+    "group": "E",
+    "team": "ECU",
+    "number": "20",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "NED01",
+    "group": "F",
+    "team": "NED",
+    "number": "01",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "NED02",
+    "group": "F",
+    "team": "NED",
+    "number": "02",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "NED03",
+    "group": "F",
+    "team": "NED",
+    "number": "03",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "NED04",
+    "group": "F",
+    "team": "NED",
+    "number": "04",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "NED05",
+    "group": "F",
+    "team": "NED",
+    "number": "05",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "NED06",
+    "group": "F",
+    "team": "NED",
+    "number": "06",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "NED07",
+    "group": "F",
+    "team": "NED",
+    "number": "07",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "NED08",
+    "group": "F",
+    "team": "NED",
+    "number": "08",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "NED09",
+    "group": "F",
+    "team": "NED",
+    "number": "09",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "NED10",
+    "group": "F",
+    "team": "NED",
+    "number": "10",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "NED11",
+    "group": "F",
+    "team": "NED",
+    "number": "11",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "NED12",
+    "group": "F",
+    "team": "NED",
+    "number": "12",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "NED13",
+    "group": "F",
+    "team": "NED",
+    "number": "13",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "NED14",
+    "group": "F",
+    "team": "NED",
+    "number": "14",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "NED15",
+    "group": "F",
+    "team": "NED",
+    "number": "15",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "NED16",
+    "group": "F",
+    "team": "NED",
+    "number": "16",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "NED17",
+    "group": "F",
+    "team": "NED",
+    "number": "17",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "NED18",
+    "group": "F",
+    "team": "NED",
+    "number": "18",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "NED19",
+    "group": "F",
+    "team": "NED",
+    "number": "19",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "NED20",
+    "group": "F",
+    "team": "NED",
+    "number": "20",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "JPN01",
+    "group": "F",
+    "team": "JPN",
+    "number": "01",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "JPN02",
+    "group": "F",
+    "team": "JPN",
+    "number": "02",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "JPN03",
+    "group": "F",
+    "team": "JPN",
+    "number": "03",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "JPN04",
+    "group": "F",
+    "team": "JPN",
+    "number": "04",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "JPN05",
+    "group": "F",
+    "team": "JPN",
+    "number": "05",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "JPN06",
+    "group": "F",
+    "team": "JPN",
+    "number": "06",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "JPN07",
+    "group": "F",
+    "team": "JPN",
+    "number": "07",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "JPN08",
+    "group": "F",
+    "team": "JPN",
+    "number": "08",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "JPN09",
+    "group": "F",
+    "team": "JPN",
+    "number": "09",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "JPN10",
+    "group": "F",
+    "team": "JPN",
+    "number": "10",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "JPN11",
+    "group": "F",
+    "team": "JPN",
+    "number": "11",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "JPN12",
+    "group": "F",
+    "team": "JPN",
+    "number": "12",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "JPN13",
+    "group": "F",
+    "team": "JPN",
+    "number": "13",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "JPN14",
+    "group": "F",
+    "team": "JPN",
+    "number": "14",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "JPN15",
+    "group": "F",
+    "team": "JPN",
+    "number": "15",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "JPN16",
+    "group": "F",
+    "team": "JPN",
+    "number": "16",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "JPN17",
+    "group": "F",
+    "team": "JPN",
+    "number": "17",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "JPN18",
+    "group": "F",
+    "team": "JPN",
+    "number": "18",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "JPN19",
+    "group": "F",
+    "team": "JPN",
+    "number": "19",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "JPN20",
+    "group": "F",
+    "team": "JPN",
+    "number": "20",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "SWE01",
+    "group": "F",
+    "team": "SWE",
+    "number": "01",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "SWE02",
+    "group": "F",
+    "team": "SWE",
+    "number": "02",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "SWE03",
+    "group": "F",
+    "team": "SWE",
+    "number": "03",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "SWE04",
+    "group": "F",
+    "team": "SWE",
+    "number": "04",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "SWE05",
+    "group": "F",
+    "team": "SWE",
+    "number": "05",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "SWE06",
+    "group": "F",
+    "team": "SWE",
+    "number": "06",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "SWE07",
+    "group": "F",
+    "team": "SWE",
+    "number": "07",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "SWE08",
+    "group": "F",
+    "team": "SWE",
+    "number": "08",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "SWE09",
+    "group": "F",
+    "team": "SWE",
+    "number": "09",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "SWE10",
+    "group": "F",
+    "team": "SWE",
+    "number": "10",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "SWE11",
+    "group": "F",
+    "team": "SWE",
+    "number": "11",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "SWE12",
+    "group": "F",
+    "team": "SWE",
+    "number": "12",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "SWE13",
+    "group": "F",
+    "team": "SWE",
+    "number": "13",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "SWE14",
+    "group": "F",
+    "team": "SWE",
+    "number": "14",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "SWE15",
+    "group": "F",
+    "team": "SWE",
+    "number": "15",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "SWE16",
+    "group": "F",
+    "team": "SWE",
+    "number": "16",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "SWE17",
+    "group": "F",
+    "team": "SWE",
+    "number": "17",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "SWE18",
+    "group": "F",
+    "team": "SWE",
+    "number": "18",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "SWE19",
+    "group": "F",
+    "team": "SWE",
+    "number": "19",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "SWE20",
+    "group": "F",
+    "team": "SWE",
+    "number": "20",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "TUN01",
+    "group": "F",
+    "team": "TUN",
+    "number": "01",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "TUN02",
+    "group": "F",
+    "team": "TUN",
+    "number": "02",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "TUN03",
+    "group": "F",
+    "team": "TUN",
+    "number": "03",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "TUN04",
+    "group": "F",
+    "team": "TUN",
+    "number": "04",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "TUN05",
+    "group": "F",
+    "team": "TUN",
+    "number": "05",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "TUN06",
+    "group": "F",
+    "team": "TUN",
+    "number": "06",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "TUN07",
+    "group": "F",
+    "team": "TUN",
+    "number": "07",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "TUN08",
+    "group": "F",
+    "team": "TUN",
+    "number": "08",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "TUN09",
+    "group": "F",
+    "team": "TUN",
+    "number": "09",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "TUN10",
+    "group": "F",
+    "team": "TUN",
+    "number": "10",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "TUN11",
+    "group": "F",
+    "team": "TUN",
+    "number": "11",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "TUN12",
+    "group": "F",
+    "team": "TUN",
+    "number": "12",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "TUN13",
+    "group": "F",
+    "team": "TUN",
+    "number": "13",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "TUN14",
+    "group": "F",
+    "team": "TUN",
+    "number": "14",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "TUN15",
+    "group": "F",
+    "team": "TUN",
+    "number": "15",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "TUN16",
+    "group": "F",
+    "team": "TUN",
+    "number": "16",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "TUN17",
+    "group": "F",
+    "team": "TUN",
+    "number": "17",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "TUN18",
+    "group": "F",
+    "team": "TUN",
+    "number": "18",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "TUN19",
+    "group": "F",
+    "team": "TUN",
+    "number": "19",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "TUN20",
+    "group": "F",
+    "team": "TUN",
+    "number": "20",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "BEL01",
+    "group": "G",
+    "team": "BEL",
+    "number": "01",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "BEL02",
+    "group": "G",
+    "team": "BEL",
+    "number": "02",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "BEL03",
+    "group": "G",
+    "team": "BEL",
+    "number": "03",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "BEL04",
+    "group": "G",
+    "team": "BEL",
+    "number": "04",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "BEL05",
+    "group": "G",
+    "team": "BEL",
+    "number": "05",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "BEL06",
+    "group": "G",
+    "team": "BEL",
+    "number": "06",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "BEL07",
+    "group": "G",
+    "team": "BEL",
+    "number": "07",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "BEL08",
+    "group": "G",
+    "team": "BEL",
+    "number": "08",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "BEL09",
+    "group": "G",
+    "team": "BEL",
+    "number": "09",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "BEL10",
+    "group": "G",
+    "team": "BEL",
+    "number": "10",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "BEL11",
+    "group": "G",
+    "team": "BEL",
+    "number": "11",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "BEL12",
+    "group": "G",
+    "team": "BEL",
+    "number": "12",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "BEL13",
+    "group": "G",
+    "team": "BEL",
+    "number": "13",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "BEL14",
+    "group": "G",
+    "team": "BEL",
+    "number": "14",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "BEL15",
+    "group": "G",
+    "team": "BEL",
+    "number": "15",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "BEL16",
+    "group": "G",
+    "team": "BEL",
+    "number": "16",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "BEL17",
+    "group": "G",
+    "team": "BEL",
+    "number": "17",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "BEL18",
+    "group": "G",
+    "team": "BEL",
+    "number": "18",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "BEL19",
+    "group": "G",
+    "team": "BEL",
+    "number": "19",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "BEL20",
+    "group": "G",
+    "team": "BEL",
+    "number": "20",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "EGY01",
+    "group": "G",
+    "team": "EGY",
+    "number": "01",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "EGY02",
+    "group": "G",
+    "team": "EGY",
+    "number": "02",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "EGY03",
+    "group": "G",
+    "team": "EGY",
+    "number": "03",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "EGY04",
+    "group": "G",
+    "team": "EGY",
+    "number": "04",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "EGY05",
+    "group": "G",
+    "team": "EGY",
+    "number": "05",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "EGY06",
+    "group": "G",
+    "team": "EGY",
+    "number": "06",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "EGY07",
+    "group": "G",
+    "team": "EGY",
+    "number": "07",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "EGY08",
+    "group": "G",
+    "team": "EGY",
+    "number": "08",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "EGY09",
+    "group": "G",
+    "team": "EGY",
+    "number": "09",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "EGY10",
+    "group": "G",
+    "team": "EGY",
+    "number": "10",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "EGY11",
+    "group": "G",
+    "team": "EGY",
+    "number": "11",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "EGY12",
+    "group": "G",
+    "team": "EGY",
+    "number": "12",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "EGY13",
+    "group": "G",
+    "team": "EGY",
+    "number": "13",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "EGY14",
+    "group": "G",
+    "team": "EGY",
+    "number": "14",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "EGY15",
+    "group": "G",
+    "team": "EGY",
+    "number": "15",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "EGY16",
+    "group": "G",
+    "team": "EGY",
+    "number": "16",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "EGY17",
+    "group": "G",
+    "team": "EGY",
+    "number": "17",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "EGY18",
+    "group": "G",
+    "team": "EGY",
+    "number": "18",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "EGY19",
+    "group": "G",
+    "team": "EGY",
+    "number": "19",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "EGY20",
+    "group": "G",
+    "team": "EGY",
+    "number": "20",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "IRN01",
+    "group": "G",
+    "team": "IRN",
+    "number": "01",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "IRN02",
+    "group": "G",
+    "team": "IRN",
+    "number": "02",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "IRN03",
+    "group": "G",
+    "team": "IRN",
+    "number": "03",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "IRN04",
+    "group": "G",
+    "team": "IRN",
+    "number": "04",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "IRN05",
+    "group": "G",
+    "team": "IRN",
+    "number": "05",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "IRN06",
+    "group": "G",
+    "team": "IRN",
+    "number": "06",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "IRN07",
+    "group": "G",
+    "team": "IRN",
+    "number": "07",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "IRN08",
+    "group": "G",
+    "team": "IRN",
+    "number": "08",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "IRN09",
+    "group": "G",
+    "team": "IRN",
+    "number": "09",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "IRN10",
+    "group": "G",
+    "team": "IRN",
+    "number": "10",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "IRN11",
+    "group": "G",
+    "team": "IRN",
+    "number": "11",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "IRN12",
+    "group": "G",
+    "team": "IRN",
+    "number": "12",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "IRN13",
+    "group": "G",
+    "team": "IRN",
+    "number": "13",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "IRN14",
+    "group": "G",
+    "team": "IRN",
+    "number": "14",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "IRN15",
+    "group": "G",
+    "team": "IRN",
+    "number": "15",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "IRN16",
+    "group": "G",
+    "team": "IRN",
+    "number": "16",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "IRN17",
+    "group": "G",
+    "team": "IRN",
+    "number": "17",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "IRN18",
+    "group": "G",
+    "team": "IRN",
+    "number": "18",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "IRN19",
+    "group": "G",
+    "team": "IRN",
+    "number": "19",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "IRN20",
+    "group": "G",
+    "team": "IRN",
+    "number": "20",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "NZL01",
+    "group": "G",
+    "team": "NZL",
+    "number": "01",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "NZL02",
+    "group": "G",
+    "team": "NZL",
+    "number": "02",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "NZL03",
+    "group": "G",
+    "team": "NZL",
+    "number": "03",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "NZL04",
+    "group": "G",
+    "team": "NZL",
+    "number": "04",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "NZL05",
+    "group": "G",
+    "team": "NZL",
+    "number": "05",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "NZL06",
+    "group": "G",
+    "team": "NZL",
+    "number": "06",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "NZL07",
+    "group": "G",
+    "team": "NZL",
+    "number": "07",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "NZL08",
+    "group": "G",
+    "team": "NZL",
+    "number": "08",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "NZL09",
+    "group": "G",
+    "team": "NZL",
+    "number": "09",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "NZL10",
+    "group": "G",
+    "team": "NZL",
+    "number": "10",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "NZL11",
+    "group": "G",
+    "team": "NZL",
+    "number": "11",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "NZL12",
+    "group": "G",
+    "team": "NZL",
+    "number": "12",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "NZL13",
+    "group": "G",
+    "team": "NZL",
+    "number": "13",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "NZL14",
+    "group": "G",
+    "team": "NZL",
+    "number": "14",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "NZL15",
+    "group": "G",
+    "team": "NZL",
+    "number": "15",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "NZL16",
+    "group": "G",
+    "team": "NZL",
+    "number": "16",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "NZL17",
+    "group": "G",
+    "team": "NZL",
+    "number": "17",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "NZL18",
+    "group": "G",
+    "team": "NZL",
+    "number": "18",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "NZL19",
+    "group": "G",
+    "team": "NZL",
+    "number": "19",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "NZL20",
+    "group": "G",
+    "team": "NZL",
+    "number": "20",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "ESP01",
+    "group": "H",
+    "team": "ESP",
+    "number": "01",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "ESP02",
+    "group": "H",
+    "team": "ESP",
+    "number": "02",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "ESP03",
+    "group": "H",
+    "team": "ESP",
+    "number": "03",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "ESP04",
+    "group": "H",
+    "team": "ESP",
+    "number": "04",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "ESP05",
+    "group": "H",
+    "team": "ESP",
+    "number": "05",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "ESP06",
+    "group": "H",
+    "team": "ESP",
+    "number": "06",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "ESP07",
+    "group": "H",
+    "team": "ESP",
+    "number": "07",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "ESP08",
+    "group": "H",
+    "team": "ESP",
+    "number": "08",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "ESP09",
+    "group": "H",
+    "team": "ESP",
+    "number": "09",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "ESP10",
+    "group": "H",
+    "team": "ESP",
+    "number": "10",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "ESP11",
+    "group": "H",
+    "team": "ESP",
+    "number": "11",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "ESP12",
+    "group": "H",
+    "team": "ESP",
+    "number": "12",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "ESP13",
+    "group": "H",
+    "team": "ESP",
+    "number": "13",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "ESP14",
+    "group": "H",
+    "team": "ESP",
+    "number": "14",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "ESP15",
+    "group": "H",
+    "team": "ESP",
+    "number": "15",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "ESP16",
+    "group": "H",
+    "team": "ESP",
+    "number": "16",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "ESP17",
+    "group": "H",
+    "team": "ESP",
+    "number": "17",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "ESP18",
+    "group": "H",
+    "team": "ESP",
+    "number": "18",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "ESP19",
+    "group": "H",
+    "team": "ESP",
+    "number": "19",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "ESP20",
+    "group": "H",
+    "team": "ESP",
+    "number": "20",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CPV01",
+    "group": "H",
+    "team": "CPV",
+    "number": "01",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CPV02",
+    "group": "H",
+    "team": "CPV",
+    "number": "02",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CPV03",
+    "group": "H",
+    "team": "CPV",
+    "number": "03",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CPV04",
+    "group": "H",
+    "team": "CPV",
+    "number": "04",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CPV05",
+    "group": "H",
+    "team": "CPV",
+    "number": "05",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CPV06",
+    "group": "H",
+    "team": "CPV",
+    "number": "06",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CPV07",
+    "group": "H",
+    "team": "CPV",
+    "number": "07",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CPV08",
+    "group": "H",
+    "team": "CPV",
+    "number": "08",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CPV09",
+    "group": "H",
+    "team": "CPV",
+    "number": "09",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CPV10",
+    "group": "H",
+    "team": "CPV",
+    "number": "10",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CPV11",
+    "group": "H",
+    "team": "CPV",
+    "number": "11",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CPV12",
+    "group": "H",
+    "team": "CPV",
+    "number": "12",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CPV13",
+    "group": "H",
+    "team": "CPV",
+    "number": "13",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CPV14",
+    "group": "H",
+    "team": "CPV",
+    "number": "14",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CPV15",
+    "group": "H",
+    "team": "CPV",
+    "number": "15",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CPV16",
+    "group": "H",
+    "team": "CPV",
+    "number": "16",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CPV17",
+    "group": "H",
+    "team": "CPV",
+    "number": "17",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CPV18",
+    "group": "H",
+    "team": "CPV",
+    "number": "18",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CPV19",
+    "group": "H",
+    "team": "CPV",
+    "number": "19",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CPV20",
+    "group": "H",
+    "team": "CPV",
+    "number": "20",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "KSA01",
+    "group": "H",
+    "team": "KSA",
+    "number": "01",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "KSA02",
+    "group": "H",
+    "team": "KSA",
+    "number": "02",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "KSA03",
+    "group": "H",
+    "team": "KSA",
+    "number": "03",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "KSA04",
+    "group": "H",
+    "team": "KSA",
+    "number": "04",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "KSA05",
+    "group": "H",
+    "team": "KSA",
+    "number": "05",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "KSA06",
+    "group": "H",
+    "team": "KSA",
+    "number": "06",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "KSA07",
+    "group": "H",
+    "team": "KSA",
+    "number": "07",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "KSA08",
+    "group": "H",
+    "team": "KSA",
+    "number": "08",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "KSA09",
+    "group": "H",
+    "team": "KSA",
+    "number": "09",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "KSA10",
+    "group": "H",
+    "team": "KSA",
+    "number": "10",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "KSA11",
+    "group": "H",
+    "team": "KSA",
+    "number": "11",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "KSA12",
+    "group": "H",
+    "team": "KSA",
+    "number": "12",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "KSA13",
+    "group": "H",
+    "team": "KSA",
+    "number": "13",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "KSA14",
+    "group": "H",
+    "team": "KSA",
+    "number": "14",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "KSA15",
+    "group": "H",
+    "team": "KSA",
+    "number": "15",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "KSA16",
+    "group": "H",
+    "team": "KSA",
+    "number": "16",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "KSA17",
+    "group": "H",
+    "team": "KSA",
+    "number": "17",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "KSA18",
+    "group": "H",
+    "team": "KSA",
+    "number": "18",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "KSA19",
+    "group": "H",
+    "team": "KSA",
+    "number": "19",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "KSA20",
+    "group": "H",
+    "team": "KSA",
+    "number": "20",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "URU01",
+    "group": "H",
+    "team": "URU",
+    "number": "01",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "URU02",
+    "group": "H",
+    "team": "URU",
+    "number": "02",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "URU03",
+    "group": "H",
+    "team": "URU",
+    "number": "03",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "URU04",
+    "group": "H",
+    "team": "URU",
+    "number": "04",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "URU05",
+    "group": "H",
+    "team": "URU",
+    "number": "05",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "URU06",
+    "group": "H",
+    "team": "URU",
+    "number": "06",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "URU07",
+    "group": "H",
+    "team": "URU",
+    "number": "07",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "URU08",
+    "group": "H",
+    "team": "URU",
+    "number": "08",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "URU09",
+    "group": "H",
+    "team": "URU",
+    "number": "09",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "URU10",
+    "group": "H",
+    "team": "URU",
+    "number": "10",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "URU11",
+    "group": "H",
+    "team": "URU",
+    "number": "11",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "URU12",
+    "group": "H",
+    "team": "URU",
+    "number": "12",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "URU13",
+    "group": "H",
+    "team": "URU",
+    "number": "13",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "URU14",
+    "group": "H",
+    "team": "URU",
+    "number": "14",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "URU15",
+    "group": "H",
+    "team": "URU",
+    "number": "15",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "URU16",
+    "group": "H",
+    "team": "URU",
+    "number": "16",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "URU17",
+    "group": "H",
+    "team": "URU",
+    "number": "17",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "URU18",
+    "group": "H",
+    "team": "URU",
+    "number": "18",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "URU19",
+    "group": "H",
+    "team": "URU",
+    "number": "19",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "URU20",
+    "group": "H",
+    "team": "URU",
+    "number": "20",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "FRA01",
+    "group": "I",
+    "team": "FRA",
+    "number": "01",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "FRA02",
+    "group": "I",
+    "team": "FRA",
+    "number": "02",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "FRA03",
+    "group": "I",
+    "team": "FRA",
+    "number": "03",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "FRA04",
+    "group": "I",
+    "team": "FRA",
+    "number": "04",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "FRA05",
+    "group": "I",
+    "team": "FRA",
+    "number": "05",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "FRA06",
+    "group": "I",
+    "team": "FRA",
+    "number": "06",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "FRA07",
+    "group": "I",
+    "team": "FRA",
+    "number": "07",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "FRA08",
+    "group": "I",
+    "team": "FRA",
+    "number": "08",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "FRA09",
+    "group": "I",
+    "team": "FRA",
+    "number": "09",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "FRA10",
+    "group": "I",
+    "team": "FRA",
+    "number": "10",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "FRA11",
+    "group": "I",
+    "team": "FRA",
+    "number": "11",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "FRA12",
+    "group": "I",
+    "team": "FRA",
+    "number": "12",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "FRA13",
+    "group": "I",
+    "team": "FRA",
+    "number": "13",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "FRA14",
+    "group": "I",
+    "team": "FRA",
+    "number": "14",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "FRA15",
+    "group": "I",
+    "team": "FRA",
+    "number": "15",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "FRA16",
+    "group": "I",
+    "team": "FRA",
+    "number": "16",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "FRA17",
+    "group": "I",
+    "team": "FRA",
+    "number": "17",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "FRA18",
+    "group": "I",
+    "team": "FRA",
+    "number": "18",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "FRA19",
+    "group": "I",
+    "team": "FRA",
+    "number": "19",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "FRA20",
+    "group": "I",
+    "team": "FRA",
+    "number": "20",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "SEN01",
+    "group": "I",
+    "team": "SEN",
+    "number": "01",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "SEN02",
+    "group": "I",
+    "team": "SEN",
+    "number": "02",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "SEN03",
+    "group": "I",
+    "team": "SEN",
+    "number": "03",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "SEN04",
+    "group": "I",
+    "team": "SEN",
+    "number": "04",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "SEN05",
+    "group": "I",
+    "team": "SEN",
+    "number": "05",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "SEN06",
+    "group": "I",
+    "team": "SEN",
+    "number": "06",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "SEN07",
+    "group": "I",
+    "team": "SEN",
+    "number": "07",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "SEN08",
+    "group": "I",
+    "team": "SEN",
+    "number": "08",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "SEN09",
+    "group": "I",
+    "team": "SEN",
+    "number": "09",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "SEN10",
+    "group": "I",
+    "team": "SEN",
+    "number": "10",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "SEN11",
+    "group": "I",
+    "team": "SEN",
+    "number": "11",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "SEN12",
+    "group": "I",
+    "team": "SEN",
+    "number": "12",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "SEN13",
+    "group": "I",
+    "team": "SEN",
+    "number": "13",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "SEN14",
+    "group": "I",
+    "team": "SEN",
+    "number": "14",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "SEN15",
+    "group": "I",
+    "team": "SEN",
+    "number": "15",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "SEN16",
+    "group": "I",
+    "team": "SEN",
+    "number": "16",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "SEN17",
+    "group": "I",
+    "team": "SEN",
+    "number": "17",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "SEN18",
+    "group": "I",
+    "team": "SEN",
+    "number": "18",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "SEN19",
+    "group": "I",
+    "team": "SEN",
+    "number": "19",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "SEN20",
+    "group": "I",
+    "team": "SEN",
+    "number": "20",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "IRQ01",
+    "group": "I",
+    "team": "IRQ",
+    "number": "01",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "IRQ02",
+    "group": "I",
+    "team": "IRQ",
+    "number": "02",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "IRQ03",
+    "group": "I",
+    "team": "IRQ",
+    "number": "03",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "IRQ04",
+    "group": "I",
+    "team": "IRQ",
+    "number": "04",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "IRQ05",
+    "group": "I",
+    "team": "IRQ",
+    "number": "05",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "IRQ06",
+    "group": "I",
+    "team": "IRQ",
+    "number": "06",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "IRQ07",
+    "group": "I",
+    "team": "IRQ",
+    "number": "07",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "IRQ08",
+    "group": "I",
+    "team": "IRQ",
+    "number": "08",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "IRQ09",
+    "group": "I",
+    "team": "IRQ",
+    "number": "09",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "IRQ10",
+    "group": "I",
+    "team": "IRQ",
+    "number": "10",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "IRQ11",
+    "group": "I",
+    "team": "IRQ",
+    "number": "11",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "IRQ12",
+    "group": "I",
+    "team": "IRQ",
+    "number": "12",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "IRQ13",
+    "group": "I",
+    "team": "IRQ",
+    "number": "13",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "IRQ14",
+    "group": "I",
+    "team": "IRQ",
+    "number": "14",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "IRQ15",
+    "group": "I",
+    "team": "IRQ",
+    "number": "15",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "IRQ16",
+    "group": "I",
+    "team": "IRQ",
+    "number": "16",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "IRQ17",
+    "group": "I",
+    "team": "IRQ",
+    "number": "17",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "IRQ18",
+    "group": "I",
+    "team": "IRQ",
+    "number": "18",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "IRQ19",
+    "group": "I",
+    "team": "IRQ",
+    "number": "19",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "IRQ20",
+    "group": "I",
+    "team": "IRQ",
+    "number": "20",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "NOR01",
+    "group": "I",
+    "team": "NOR",
+    "number": "01",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "NOR02",
+    "group": "I",
+    "team": "NOR",
+    "number": "02",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "NOR03",
+    "group": "I",
+    "team": "NOR",
+    "number": "03",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "NOR04",
+    "group": "I",
+    "team": "NOR",
+    "number": "04",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "NOR05",
+    "group": "I",
+    "team": "NOR",
+    "number": "05",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "NOR06",
+    "group": "I",
+    "team": "NOR",
+    "number": "06",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "NOR07",
+    "group": "I",
+    "team": "NOR",
+    "number": "07",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "NOR08",
+    "group": "I",
+    "team": "NOR",
+    "number": "08",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "NOR09",
+    "group": "I",
+    "team": "NOR",
+    "number": "09",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "NOR10",
+    "group": "I",
+    "team": "NOR",
+    "number": "10",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "NOR11",
+    "group": "I",
+    "team": "NOR",
+    "number": "11",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "NOR12",
+    "group": "I",
+    "team": "NOR",
+    "number": "12",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "NOR13",
+    "group": "I",
+    "team": "NOR",
+    "number": "13",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "NOR14",
+    "group": "I",
+    "team": "NOR",
+    "number": "14",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "NOR15",
+    "group": "I",
+    "team": "NOR",
+    "number": "15",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "NOR16",
+    "group": "I",
+    "team": "NOR",
+    "number": "16",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "NOR17",
+    "group": "I",
+    "team": "NOR",
+    "number": "17",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "NOR18",
+    "group": "I",
+    "team": "NOR",
+    "number": "18",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "NOR19",
+    "group": "I",
+    "team": "NOR",
+    "number": "19",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "NOR20",
+    "group": "I",
+    "team": "NOR",
+    "number": "20",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "ARG01",
+    "group": "J",
+    "team": "ARG",
+    "number": "01",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "ARG02",
+    "group": "J",
+    "team": "ARG",
+    "number": "02",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "ARG03",
+    "group": "J",
+    "team": "ARG",
+    "number": "03",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "ARG04",
+    "group": "J",
+    "team": "ARG",
+    "number": "04",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "ARG05",
+    "group": "J",
+    "team": "ARG",
+    "number": "05",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "ARG06",
+    "group": "J",
+    "team": "ARG",
+    "number": "06",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "ARG07",
+    "group": "J",
+    "team": "ARG",
+    "number": "07",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "ARG08",
+    "group": "J",
+    "team": "ARG",
+    "number": "08",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "ARG09",
+    "group": "J",
+    "team": "ARG",
+    "number": "09",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "ARG10",
+    "group": "J",
+    "team": "ARG",
+    "number": "10",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "ARG11",
+    "group": "J",
+    "team": "ARG",
+    "number": "11",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "ARG12",
+    "group": "J",
+    "team": "ARG",
+    "number": "12",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "ARG13",
+    "group": "J",
+    "team": "ARG",
+    "number": "13",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "ARG14",
+    "group": "J",
+    "team": "ARG",
+    "number": "14",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "ARG15",
+    "group": "J",
+    "team": "ARG",
+    "number": "15",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "ARG16",
+    "group": "J",
+    "team": "ARG",
+    "number": "16",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "ARG17",
+    "group": "J",
+    "team": "ARG",
+    "number": "17",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "ARG18",
+    "group": "J",
+    "team": "ARG",
+    "number": "18",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "ARG19",
+    "group": "J",
+    "team": "ARG",
+    "number": "19",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "ARG20",
+    "group": "J",
+    "team": "ARG",
+    "number": "20",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "ALG01",
+    "group": "J",
+    "team": "ALG",
+    "number": "01",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "ALG02",
+    "group": "J",
+    "team": "ALG",
+    "number": "02",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "ALG03",
+    "group": "J",
+    "team": "ALG",
+    "number": "03",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "ALG04",
+    "group": "J",
+    "team": "ALG",
+    "number": "04",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "ALG05",
+    "group": "J",
+    "team": "ALG",
+    "number": "05",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "ALG06",
+    "group": "J",
+    "team": "ALG",
+    "number": "06",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "ALG07",
+    "group": "J",
+    "team": "ALG",
+    "number": "07",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "ALG08",
+    "group": "J",
+    "team": "ALG",
+    "number": "08",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "ALG09",
+    "group": "J",
+    "team": "ALG",
+    "number": "09",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "ALG10",
+    "group": "J",
+    "team": "ALG",
+    "number": "10",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "ALG11",
+    "group": "J",
+    "team": "ALG",
+    "number": "11",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "ALG12",
+    "group": "J",
+    "team": "ALG",
+    "number": "12",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "ALG13",
+    "group": "J",
+    "team": "ALG",
+    "number": "13",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "ALG14",
+    "group": "J",
+    "team": "ALG",
+    "number": "14",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "ALG15",
+    "group": "J",
+    "team": "ALG",
+    "number": "15",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "ALG16",
+    "group": "J",
+    "team": "ALG",
+    "number": "16",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "ALG17",
+    "group": "J",
+    "team": "ALG",
+    "number": "17",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "ALG18",
+    "group": "J",
+    "team": "ALG",
+    "number": "18",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "ALG19",
+    "group": "J",
+    "team": "ALG",
+    "number": "19",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "ALG20",
+    "group": "J",
+    "team": "ALG",
+    "number": "20",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "AUT01",
+    "group": "J",
+    "team": "AUT",
+    "number": "01",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "AUT02",
+    "group": "J",
+    "team": "AUT",
+    "number": "02",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "AUT03",
+    "group": "J",
+    "team": "AUT",
+    "number": "03",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "AUT04",
+    "group": "J",
+    "team": "AUT",
+    "number": "04",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "AUT05",
+    "group": "J",
+    "team": "AUT",
+    "number": "05",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "AUT06",
+    "group": "J",
+    "team": "AUT",
+    "number": "06",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "AUT07",
+    "group": "J",
+    "team": "AUT",
+    "number": "07",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "AUT08",
+    "group": "J",
+    "team": "AUT",
+    "number": "08",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "AUT09",
+    "group": "J",
+    "team": "AUT",
+    "number": "09",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "AUT10",
+    "group": "J",
+    "team": "AUT",
+    "number": "10",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "AUT11",
+    "group": "J",
+    "team": "AUT",
+    "number": "11",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "AUT12",
+    "group": "J",
+    "team": "AUT",
+    "number": "12",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "AUT13",
+    "group": "J",
+    "team": "AUT",
+    "number": "13",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "AUT14",
+    "group": "J",
+    "team": "AUT",
+    "number": "14",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "AUT15",
+    "group": "J",
+    "team": "AUT",
+    "number": "15",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "AUT16",
+    "group": "J",
+    "team": "AUT",
+    "number": "16",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "AUT17",
+    "group": "J",
+    "team": "AUT",
+    "number": "17",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "AUT18",
+    "group": "J",
+    "team": "AUT",
+    "number": "18",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "AUT19",
+    "group": "J",
+    "team": "AUT",
+    "number": "19",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "AUT20",
+    "group": "J",
+    "team": "AUT",
+    "number": "20",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "JOR01",
+    "group": "J",
+    "team": "JOR",
+    "number": "01",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "JOR02",
+    "group": "J",
+    "team": "JOR",
+    "number": "02",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "JOR03",
+    "group": "J",
+    "team": "JOR",
+    "number": "03",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "JOR04",
+    "group": "J",
+    "team": "JOR",
+    "number": "04",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "JOR05",
+    "group": "J",
+    "team": "JOR",
+    "number": "05",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "JOR06",
+    "group": "J",
+    "team": "JOR",
+    "number": "06",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "JOR07",
+    "group": "J",
+    "team": "JOR",
+    "number": "07",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "JOR08",
+    "group": "J",
+    "team": "JOR",
+    "number": "08",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "JOR09",
+    "group": "J",
+    "team": "JOR",
+    "number": "09",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "JOR10",
+    "group": "J",
+    "team": "JOR",
+    "number": "10",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "JOR11",
+    "group": "J",
+    "team": "JOR",
+    "number": "11",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "JOR12",
+    "group": "J",
+    "team": "JOR",
+    "number": "12",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "JOR13",
+    "group": "J",
+    "team": "JOR",
+    "number": "13",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "JOR14",
+    "group": "J",
+    "team": "JOR",
+    "number": "14",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "JOR15",
+    "group": "J",
+    "team": "JOR",
+    "number": "15",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "JOR16",
+    "group": "J",
+    "team": "JOR",
+    "number": "16",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "JOR17",
+    "group": "J",
+    "team": "JOR",
+    "number": "17",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "JOR18",
+    "group": "J",
+    "team": "JOR",
+    "number": "18",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "JOR19",
+    "group": "J",
+    "team": "JOR",
+    "number": "19",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "JOR20",
+    "group": "J",
+    "team": "JOR",
+    "number": "20",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "POR01",
+    "group": "K",
+    "team": "POR",
+    "number": "01",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "POR02",
+    "group": "K",
+    "team": "POR",
+    "number": "02",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "POR03",
+    "group": "K",
+    "team": "POR",
+    "number": "03",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "POR04",
+    "group": "K",
+    "team": "POR",
+    "number": "04",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "POR05",
+    "group": "K",
+    "team": "POR",
+    "number": "05",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "POR06",
+    "group": "K",
+    "team": "POR",
+    "number": "06",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "POR07",
+    "group": "K",
+    "team": "POR",
+    "number": "07",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "POR08",
+    "group": "K",
+    "team": "POR",
+    "number": "08",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "POR09",
+    "group": "K",
+    "team": "POR",
+    "number": "09",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "POR10",
+    "group": "K",
+    "team": "POR",
+    "number": "10",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "POR11",
+    "group": "K",
+    "team": "POR",
+    "number": "11",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "POR12",
+    "group": "K",
+    "team": "POR",
+    "number": "12",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "POR13",
+    "group": "K",
+    "team": "POR",
+    "number": "13",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "POR14",
+    "group": "K",
+    "team": "POR",
+    "number": "14",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "POR15",
+    "group": "K",
+    "team": "POR",
+    "number": "15",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "POR16",
+    "group": "K",
+    "team": "POR",
+    "number": "16",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "POR17",
+    "group": "K",
+    "team": "POR",
+    "number": "17",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "POR18",
+    "group": "K",
+    "team": "POR",
+    "number": "18",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "POR19",
+    "group": "K",
+    "team": "POR",
+    "number": "19",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "POR20",
+    "group": "K",
+    "team": "POR",
+    "number": "20",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "COD01",
+    "group": "K",
+    "team": "COD",
+    "number": "01",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "COD02",
+    "group": "K",
+    "team": "COD",
+    "number": "02",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "COD03",
+    "group": "K",
+    "team": "COD",
+    "number": "03",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "COD04",
+    "group": "K",
+    "team": "COD",
+    "number": "04",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "COD05",
+    "group": "K",
+    "team": "COD",
+    "number": "05",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "COD06",
+    "group": "K",
+    "team": "COD",
+    "number": "06",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "COD07",
+    "group": "K",
+    "team": "COD",
+    "number": "07",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "COD08",
+    "group": "K",
+    "team": "COD",
+    "number": "08",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "COD09",
+    "group": "K",
+    "team": "COD",
+    "number": "09",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "COD10",
+    "group": "K",
+    "team": "COD",
+    "number": "10",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "COD11",
+    "group": "K",
+    "team": "COD",
+    "number": "11",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "COD12",
+    "group": "K",
+    "team": "COD",
+    "number": "12",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "COD13",
+    "group": "K",
+    "team": "COD",
+    "number": "13",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "COD14",
+    "group": "K",
+    "team": "COD",
+    "number": "14",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "COD15",
+    "group": "K",
+    "team": "COD",
+    "number": "15",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "COD16",
+    "group": "K",
+    "team": "COD",
+    "number": "16",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "COD17",
+    "group": "K",
+    "team": "COD",
+    "number": "17",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "COD18",
+    "group": "K",
+    "team": "COD",
+    "number": "18",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "COD19",
+    "group": "K",
+    "team": "COD",
+    "number": "19",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "COD20",
+    "group": "K",
+    "team": "COD",
+    "number": "20",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "UZB01",
+    "group": "K",
+    "team": "UZB",
+    "number": "01",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "UZB02",
+    "group": "K",
+    "team": "UZB",
+    "number": "02",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "UZB03",
+    "group": "K",
+    "team": "UZB",
+    "number": "03",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "UZB04",
+    "group": "K",
+    "team": "UZB",
+    "number": "04",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "UZB05",
+    "group": "K",
+    "team": "UZB",
+    "number": "05",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "UZB06",
+    "group": "K",
+    "team": "UZB",
+    "number": "06",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "UZB07",
+    "group": "K",
+    "team": "UZB",
+    "number": "07",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "UZB08",
+    "group": "K",
+    "team": "UZB",
+    "number": "08",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "UZB09",
+    "group": "K",
+    "team": "UZB",
+    "number": "09",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "UZB10",
+    "group": "K",
+    "team": "UZB",
+    "number": "10",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "UZB11",
+    "group": "K",
+    "team": "UZB",
+    "number": "11",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "UZB12",
+    "group": "K",
+    "team": "UZB",
+    "number": "12",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "UZB13",
+    "group": "K",
+    "team": "UZB",
+    "number": "13",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "UZB14",
+    "group": "K",
+    "team": "UZB",
+    "number": "14",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "UZB15",
+    "group": "K",
+    "team": "UZB",
+    "number": "15",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "UZB16",
+    "group": "K",
+    "team": "UZB",
+    "number": "16",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "UZB17",
+    "group": "K",
+    "team": "UZB",
+    "number": "17",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "UZB18",
+    "group": "K",
+    "team": "UZB",
+    "number": "18",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "UZB19",
+    "group": "K",
+    "team": "UZB",
+    "number": "19",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "UZB20",
+    "group": "K",
+    "team": "UZB",
+    "number": "20",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "COL01",
+    "group": "K",
+    "team": "COL",
+    "number": "01",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "COL02",
+    "group": "K",
+    "team": "COL",
+    "number": "02",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "COL03",
+    "group": "K",
+    "team": "COL",
+    "number": "03",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "COL04",
+    "group": "K",
+    "team": "COL",
+    "number": "04",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "COL05",
+    "group": "K",
+    "team": "COL",
+    "number": "05",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "COL06",
+    "group": "K",
+    "team": "COL",
+    "number": "06",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "COL07",
+    "group": "K",
+    "team": "COL",
+    "number": "07",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "COL08",
+    "group": "K",
+    "team": "COL",
+    "number": "08",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "COL09",
+    "group": "K",
+    "team": "COL",
+    "number": "09",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "COL10",
+    "group": "K",
+    "team": "COL",
+    "number": "10",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "COL11",
+    "group": "K",
+    "team": "COL",
+    "number": "11",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "COL12",
+    "group": "K",
+    "team": "COL",
+    "number": "12",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "COL13",
+    "group": "K",
+    "team": "COL",
+    "number": "13",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "COL14",
+    "group": "K",
+    "team": "COL",
+    "number": "14",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "COL15",
+    "group": "K",
+    "team": "COL",
+    "number": "15",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "COL16",
+    "group": "K",
+    "team": "COL",
+    "number": "16",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "COL17",
+    "group": "K",
+    "team": "COL",
+    "number": "17",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "COL18",
+    "group": "K",
+    "team": "COL",
+    "number": "18",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "COL19",
+    "group": "K",
+    "team": "COL",
+    "number": "19",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "COL20",
+    "group": "K",
+    "team": "COL",
+    "number": "20",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "ENG01",
+    "group": "L",
+    "team": "ENG",
+    "number": "01",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "ENG02",
+    "group": "L",
+    "team": "ENG",
+    "number": "02",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "ENG03",
+    "group": "L",
+    "team": "ENG",
+    "number": "03",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "ENG04",
+    "group": "L",
+    "team": "ENG",
+    "number": "04",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "ENG05",
+    "group": "L",
+    "team": "ENG",
+    "number": "05",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "ENG06",
+    "group": "L",
+    "team": "ENG",
+    "number": "06",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "ENG07",
+    "group": "L",
+    "team": "ENG",
+    "number": "07",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "ENG08",
+    "group": "L",
+    "team": "ENG",
+    "number": "08",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "ENG09",
+    "group": "L",
+    "team": "ENG",
+    "number": "09",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "ENG10",
+    "group": "L",
+    "team": "ENG",
+    "number": "10",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "ENG11",
+    "group": "L",
+    "team": "ENG",
+    "number": "11",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "ENG12",
+    "group": "L",
+    "team": "ENG",
+    "number": "12",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "ENG13",
+    "group": "L",
+    "team": "ENG",
+    "number": "13",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "ENG14",
+    "group": "L",
+    "team": "ENG",
+    "number": "14",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "ENG15",
+    "group": "L",
+    "team": "ENG",
+    "number": "15",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "ENG16",
+    "group": "L",
+    "team": "ENG",
+    "number": "16",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "ENG17",
+    "group": "L",
+    "team": "ENG",
+    "number": "17",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "ENG18",
+    "group": "L",
+    "team": "ENG",
+    "number": "18",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "ENG19",
+    "group": "L",
+    "team": "ENG",
+    "number": "19",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "ENG20",
+    "group": "L",
+    "team": "ENG",
+    "number": "20",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CRO01",
+    "group": "L",
+    "team": "CRO",
+    "number": "01",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CRO02",
+    "group": "L",
+    "team": "CRO",
+    "number": "02",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CRO03",
+    "group": "L",
+    "team": "CRO",
+    "number": "03",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CRO04",
+    "group": "L",
+    "team": "CRO",
+    "number": "04",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CRO05",
+    "group": "L",
+    "team": "CRO",
+    "number": "05",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CRO06",
+    "group": "L",
+    "team": "CRO",
+    "number": "06",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CRO07",
+    "group": "L",
+    "team": "CRO",
+    "number": "07",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CRO08",
+    "group": "L",
+    "team": "CRO",
+    "number": "08",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CRO09",
+    "group": "L",
+    "team": "CRO",
+    "number": "09",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CRO10",
+    "group": "L",
+    "team": "CRO",
+    "number": "10",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CRO11",
+    "group": "L",
+    "team": "CRO",
+    "number": "11",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CRO12",
+    "group": "L",
+    "team": "CRO",
+    "number": "12",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CRO13",
+    "group": "L",
+    "team": "CRO",
+    "number": "13",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CRO14",
+    "group": "L",
+    "team": "CRO",
+    "number": "14",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CRO15",
+    "group": "L",
+    "team": "CRO",
+    "number": "15",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CRO16",
+    "group": "L",
+    "team": "CRO",
+    "number": "16",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CRO17",
+    "group": "L",
+    "team": "CRO",
+    "number": "17",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CRO18",
+    "group": "L",
+    "team": "CRO",
+    "number": "18",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CRO19",
+    "group": "L",
+    "team": "CRO",
+    "number": "19",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "CRO20",
+    "group": "L",
+    "team": "CRO",
+    "number": "20",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "GHA01",
+    "group": "L",
+    "team": "GHA",
+    "number": "01",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "GHA02",
+    "group": "L",
+    "team": "GHA",
+    "number": "02",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "GHA03",
+    "group": "L",
+    "team": "GHA",
+    "number": "03",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "GHA04",
+    "group": "L",
+    "team": "GHA",
+    "number": "04",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "GHA05",
+    "group": "L",
+    "team": "GHA",
+    "number": "05",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "GHA06",
+    "group": "L",
+    "team": "GHA",
+    "number": "06",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "GHA07",
+    "group": "L",
+    "team": "GHA",
+    "number": "07",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "GHA08",
+    "group": "L",
+    "team": "GHA",
+    "number": "08",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "GHA09",
+    "group": "L",
+    "team": "GHA",
+    "number": "09",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "GHA10",
+    "group": "L",
+    "team": "GHA",
+    "number": "10",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "GHA11",
+    "group": "L",
+    "team": "GHA",
+    "number": "11",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "GHA12",
+    "group": "L",
+    "team": "GHA",
+    "number": "12",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "GHA13",
+    "group": "L",
+    "team": "GHA",
+    "number": "13",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "GHA14",
+    "group": "L",
+    "team": "GHA",
+    "number": "14",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "GHA15",
+    "group": "L",
+    "team": "GHA",
+    "number": "15",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "GHA16",
+    "group": "L",
+    "team": "GHA",
+    "number": "16",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "GHA17",
+    "group": "L",
+    "team": "GHA",
+    "number": "17",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "GHA18",
+    "group": "L",
+    "team": "GHA",
+    "number": "18",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "GHA19",
+    "group": "L",
+    "team": "GHA",
+    "number": "19",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "GHA20",
+    "group": "L",
+    "team": "GHA",
+    "number": "20",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "PAN01",
+    "group": "L",
+    "team": "PAN",
+    "number": "01",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "PAN02",
+    "group": "L",
+    "team": "PAN",
+    "number": "02",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "PAN03",
+    "group": "L",
+    "team": "PAN",
+    "number": "03",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "PAN04",
+    "group": "L",
+    "team": "PAN",
+    "number": "04",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "PAN05",
+    "group": "L",
+    "team": "PAN",
+    "number": "05",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "PAN06",
+    "group": "L",
+    "team": "PAN",
+    "number": "06",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "PAN07",
+    "group": "L",
+    "team": "PAN",
+    "number": "07",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "PAN08",
+    "group": "L",
+    "team": "PAN",
+    "number": "08",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "PAN09",
+    "group": "L",
+    "team": "PAN",
+    "number": "09",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "PAN10",
+    "group": "L",
+    "team": "PAN",
+    "number": "10",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "PAN11",
+    "group": "L",
+    "team": "PAN",
+    "number": "11",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "PAN12",
+    "group": "L",
+    "team": "PAN",
+    "number": "12",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "PAN13",
+    "group": "L",
+    "team": "PAN",
+    "number": "13",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "PAN14",
+    "group": "L",
+    "team": "PAN",
+    "number": "14",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "PAN15",
+    "group": "L",
+    "team": "PAN",
+    "number": "15",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "PAN16",
+    "group": "L",
+    "team": "PAN",
+    "number": "16",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "PAN17",
+    "group": "L",
+    "team": "PAN",
+    "number": "17",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "PAN18",
+    "group": "L",
+    "team": "PAN",
+    "number": "18",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "PAN19",
+    "group": "L",
+    "team": "PAN",
+    "number": "19",
+    "have": false,
+    "duplicated": 0
+  },
+  {
+    "id": "PAN20",
+    "group": "L",
+    "team": "PAN",
+    "number": "20",
+    "have": false,
+    "duplicated": 0
+  }
+]
