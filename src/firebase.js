@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { initializeFirestore, persistentLocalCache, persistentMultipleTabManager } from "firebase/firestore";
+import { getFirestore } from "firebase/firestore";
 
 // Firebase configuration using environment variables from Vite .env
 const firebaseConfig = {
@@ -14,11 +14,7 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
-// Initialize Firestore with robust local caching enabled (ideal for offline usage)
-const db = initializeFirestore(app, {
-  localCache: persistentLocalCache({
-    tabManager: persistentMultipleTabManager()
-  })
-});
+// Initialize Firestore with default fast in-memory cache for ultra-low latency real-time updates
+const db = getFirestore(app);
 
 export { db };

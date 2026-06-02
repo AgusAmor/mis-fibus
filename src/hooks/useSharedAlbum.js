@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { db } from "../firebase";
-import { doc, onSnapshot, setDoc } from "firebase/firestore";
+import { doc, onSnapshot, setDoc, updateDoc } from "firebase/firestore";
 import originalStickers from "../../fibus_album.json";
 
 export function useSharedAlbum() {
@@ -14,6 +14,9 @@ export function useSharedAlbum() {
 
   // Sticker Inventory State
   const [stickersState, setStickersState] = useState({});
+
+  // Trigger state to force-restart subscription on connection/visibility changes
+  const [syncTrigger, setSyncTrigger] = useState(0);
 
   // Real-Time Cloud Sincronization with Firestore
   useEffect(() => {
@@ -50,21 +53,61 @@ export function useSharedAlbum() {
     );
 
     return () => unsubscribe();
-  }, [albumCode]);
+  }, [albumCode, syncTrigger]);
 
   // Handle local storage caching of preferences
   useEffect(() => {
     localStorage.setItem("fibus_album_code", albumCode);
   }, [albumCode]);
 
-  // Update a sticker count in Firestore
+  // Sync room code changes across tabs in real-time
+  useEffect(() => {
+    const handleStorageChange = (e) => {
+      if (e.key === "fibus_album_code" && e.newValue) {
+        setAlbumCode(e.newValue);
+      }
+    };
+    window.addEventListener("storage", handleStorageChange);
+    return () => window.removeEventListener("storage", handleStorageChange);
+  }, []);
+
+  // Sync network status and visibility/focus updates to guarantee real-time updates
+  useEffect(() => {
+    const handleOnline = () => {
+      setSyncStatus("syncing");
+      setSyncTrigger((prev) => prev + 1);
+    };
+    const handleOffline = () => {
+      setSyncStatus("offline");
+    };
+    const handleVisibilityChange = () => {
+      if (document.visibilityState === "visible") {
+        setSyncTrigger((prev) => prev + 1);
+      }
+    };
+
+    window.addEventListener("online", handleOnline);
+    window.addEventListener("offline", handleOffline);
+    window.addEventListener("visibilitychange", handleVisibilityChange);
+
+    return () => {
+      window.removeEventListener("online", handleOnline);
+      window.removeEventListener("offline", handleOffline);
+      window.removeEventListener("visibilitychange", handleVisibilityChange);
+    };
+  }, []);
+
+  // Update a sticker count in Firestore using granular nested updates for ultra-low latency
   const updateSticker = async (stickerId, updates) => {
+    // Create the full updated data object for the specific sticker to preserve all fields (have/duplicated)
+    const targetStickerData = {
+      ...(stickersState[stickerId] || { have: false, duplicated: 0 }),
+      ...updates,
+    };
+
     const newStickers = {
       ...stickersState,
-      [stickerId]: {
-        ...(stickersState[stickerId] || { have: false, duplicated: 0 }),
-        ...updates,
-      },
+      [stickerId]: targetStickerData,
     };
 
     // Optimistic local state update
@@ -72,18 +115,27 @@ export function useSharedAlbum() {
 
     try {
       const docRef = doc(db, "albums", albumCode.trim().toLowerCase());
-      await setDoc(
-        docRef,
-        {
-          stickers: newStickers,
-          lastUpdated: new Date().toISOString(),
-        },
-        { merge: true },
-      );
+      await updateDoc(docRef, {
+        [`stickers.${stickerId}`]: targetStickerData,
+        lastUpdated: new Date().toISOString(),
+      });
     } catch (e) {
-      console.error("Error writing document to Firestore:", e);
-      if (!navigator.onLine) {
-        setSyncStatus("offline");
+      // If the room document doesn't exist, create it with the initial sticker
+      if (e.code === "not-found") {
+        try {
+          const docRef = doc(db, "albums", albumCode.trim().toLowerCase());
+          await setDoc(docRef, {
+            stickers: { [stickerId]: targetStickerData },
+            lastUpdated: new Date().toISOString(),
+          });
+        } catch (setErr) {
+          console.error("Error creating room document in Firestore:", setErr);
+        }
+      } else {
+        console.error("Error updating sticker in Firestore:", e);
+        if (!navigator.onLine) {
+          setSyncStatus("offline");
+        }
       }
     }
   };
