@@ -17,6 +17,7 @@ export function StickerGroup({
   getStickerStatus,
   onShortTap,
   onLongPress,
+  searchQuery = "",
 }) {
   // Calculate dynamic group completion stats
   const allGroupStickers = isSpecial
@@ -109,19 +110,30 @@ export function StickerGroup({
           ) : (
             /* Regular group stages layout with country subdivisions */
             <div className="flex flex-col gap-6.5">
-              {countriesList.map((countryKey) => (
-                <CountrySection
-                  key={countryKey}
-                  countryKey={countryKey}
-                  groupKey={groupKey}
-                  countryStickers={countriesData[countryKey] || []}
-                  getFilteredStickers={getFilteredStickers}
-                  getStickerStatus={getStickerStatus}
-                  onShortTap={onShortTap}
-                  onLongPress={onLongPress}
-                  showGroupLabel={false}
-                />
-              ))}
+              {countriesList.map((countryKey) => {
+                const countryStickers = countriesData[countryKey] || [];
+                // Hide country accordions with zero search results when searching
+                if (
+                  searchQuery !== "" &&
+                  getFilteredStickers(countryStickers).length === 0
+                ) {
+                  return null;
+                }
+
+                return (
+                  <CountrySection
+                    key={countryKey}
+                    countryKey={countryKey}
+                    groupKey={groupKey}
+                    countryStickers={countryStickers}
+                    getFilteredStickers={getFilteredStickers}
+                    getStickerStatus={getStickerStatus}
+                    onShortTap={onShortTap}
+                    onLongPress={onLongPress}
+                    showGroupLabel={false}
+                  />
+                );
+              })}
             </div>
           )}
         </div>

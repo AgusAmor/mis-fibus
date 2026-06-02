@@ -128,7 +128,18 @@ function App() {
       <Header syncStatus={syncStatus} />
 
       {/* Hero Stats Panel */}
-      <StatsPanel stats={stats} />
+      <StatsPanel
+        stats={stats}
+        onShowDuplicates={() => {
+          setStatusFilter("duplicated");
+          setViewMode("flat");
+        }}
+        onResetFilters={() => {
+          setStatusFilter("all");
+          setViewMode("album");
+          setSearchQuery("");
+        }}
+      />
 
       {/* Main Container */}
       <main className="px-4 grow flex flex-col gap-4">
@@ -208,26 +219,35 @@ function App() {
             /* Album / Specials view modes (with accordions) */
             <>
               {/* Special Stickers & Stadiums */}
-              {(viewMode === "album" || viewMode === "specials") && (
-                <StickerGroup
-                  groupKey="FWC_SPECIAL"
-                  title="FIFA World Cup 2026 & Host Countries"
-                  isExpanded={expandedGroups.FWC_SPECIAL}
-                  onToggle={toggleGroup}
-                  isSpecial={true}
-                  stickers={sections.FWC_SPECIAL}
-                  getFilteredStickers={getFilteredStickers}
-                  getStickerStatus={getStickerStatus}
-                  onShortTap={handleShortTap}
-                  onLongPress={handleLongPress}
-                />
-              )}
+              {(viewMode === "album" || viewMode === "specials") &&
+                (searchQuery === "" || getFilteredStickers(sections.FWC_SPECIAL).length > 0) && (
+                  <StickerGroup
+                    groupKey="FWC_SPECIAL"
+                    title="FIFA World Cup 2026 & Host Countries"
+                    isExpanded={expandedGroups.FWC_SPECIAL}
+                    onToggle={toggleGroup}
+                    isSpecial={true}
+                    stickers={sections.FWC_SPECIAL}
+                    getFilteredStickers={getFilteredStickers}
+                    getStickerStatus={getStickerStatus}
+                    onShortTap={handleShortTap}
+                    onLongPress={handleLongPress}
+                    searchQuery={searchQuery}
+                  />
+                )}
 
               {/* Group Stages A - L */}
               {viewMode === "album" &&
                 ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L"].map(
                   (groupKey) => {
                     const groupCountries = groupTeams[groupKey] || [];
+                    const groupStickers = groupCountries.reduce(
+                      (acc, cKey) => [...acc, ...(countries[cKey] || [])],
+                      []
+                    );
+                    if (searchQuery !== "" && getFilteredStickers(groupStickers).length === 0)
+                      return null;
+
                     return (
                       <StickerGroup
                         key={groupKey}
@@ -242,41 +262,53 @@ function App() {
                         getStickerStatus={getStickerStatus}
                         onShortTap={handleShortTap}
                         onLongPress={handleLongPress}
+                        searchQuery={searchQuery}
                       />
                     );
                   }
                 )}
 
               {/* FIFA World Cup History */}
-              {(viewMode === "album" || viewMode === "specials") && (
-                <StickerGroup
-                  groupKey="FWC_HISTORY"
-                  title="FIFA World Cup History"
-                  isExpanded={expandedGroups.FWC_HISTORY}
-                  onToggle={toggleGroup}
-                  isSpecial={true}
-                  stickers={sections.FWC_HISTORY}
-                  getFilteredStickers={getFilteredStickers}
-                  getStickerStatus={getStickerStatus}
-                  onShortTap={handleShortTap}
-                  onLongPress={handleLongPress}
-                />
-              )}
+              {(viewMode === "album" || viewMode === "specials") &&
+                (searchQuery === "" || getFilteredStickers(sections.FWC_HISTORY).length > 0) && (
+                  <StickerGroup
+                    groupKey="FWC_HISTORY"
+                    title="FIFA World Cup History"
+                    isExpanded={expandedGroups.FWC_HISTORY}
+                    onToggle={toggleGroup}
+                    isSpecial={true}
+                    stickers={sections.FWC_HISTORY}
+                    getFilteredStickers={getFilteredStickers}
+                    getStickerStatus={getStickerStatus}
+                    onShortTap={handleShortTap}
+                    onLongPress={handleLongPress}
+                    searchQuery={searchQuery}
+                  />
+                )}
 
               {/* Coca-Cola Stickers */}
-              {(viewMode === "album" || viewMode === "specials") && (
-                <StickerGroup
-                  groupKey="CC"
-                  title="Coca-Cola"
-                  isExpanded={expandedGroups.CC}
-                  onToggle={toggleGroup}
-                  isSpecial={true}
-                  stickers={sections.CC}
-                  getFilteredStickers={getFilteredStickers}
-                  getStickerStatus={getStickerStatus}
-                  onShortTap={handleShortTap}
-                  onLongPress={handleLongPress}
-                />
+              {(viewMode === "album" || viewMode === "specials") &&
+                (searchQuery === "" || getFilteredStickers(sections.CC).length > 0) && (
+                  <StickerGroup
+                    groupKey="CC"
+                    title="Coca-Cola"
+                    isExpanded={expandedGroups.CC}
+                    onToggle={toggleGroup}
+                    isSpecial={true}
+                    stickers={sections.CC}
+                    getFilteredStickers={getFilteredStickers}
+                    getStickerStatus={getStickerStatus}
+                    onShortTap={handleShortTap}
+                    onLongPress={handleLongPress}
+                    searchQuery={searchQuery}
+                  />
+                )}
+
+              {/* If nothing matches in the entire album under Album or Specials mode */}
+              {getFilteredStickers(originalStickers).length === 0 && (
+                <p className="text-xs text-slate-400 text-center my-8 font-medium">
+                  Ninguna figurita coincide con los filtros.
+                </p>
               )}
             </>
           )}
