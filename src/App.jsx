@@ -29,19 +29,20 @@ function App() {
   // Accordion Expansions State
   const [expandedGroups, setExpandedGroups] = useState({
     FWC_SPECIAL: true,
+    FWC_HISTORY: true,
     CC: true,
-    A: false,
-    B: false,
-    C: false,
-    D: false,
-    E: false,
-    F: false,
-    G: false,
-    H: false,
-    I: false,
-    J: false,
-    K: false,
-    L: false,
+    A: true,
+    B: true,
+    C: true,
+    D: true,
+    E: true,
+    F: true,
+    G: true,
+    H: true,
+    I: true,
+    J: true,
+    K: true,
+    L: true,
   });
 
   const toggleGroup = (groupKey) => {
@@ -54,7 +55,10 @@ function App() {
   // Stickers categories definitions
   const sections = {
     FWC_SPECIAL: originalStickers.filter(
-      (s) => s.group === "SPECIAL" || s.group === "FWC",
+      (s) => s.group === "SPECIAL" || (s.group === "FWC" && parseInt(s.number, 10) <= 8),
+    ),
+    FWC_HISTORY: originalStickers.filter(
+      (s) => s.group === "FWC" && parseInt(s.number, 10) >= 9,
     ),
     CC: originalStickers.filter((s) => s.group === "CC"),
     A: originalStickers.filter((s) => s.group === "A"),
@@ -115,7 +119,9 @@ function App() {
       let matchesSection = true;
       if (sectionFilter !== "all") {
         if (sectionFilter === "SPECIAL") {
-          matchesSection = s.group === "SPECIAL" || s.group === "FWC";
+          matchesSection = s.group === "SPECIAL" || (s.group === "FWC" && parseInt(s.number, 10) <= 8);
+        } else if (sectionFilter === "FWC_HISTORY") {
+          matchesSection = s.group === "FWC" && parseInt(s.number, 10) >= 9;
         } else {
           matchesSection = s.group === sectionFilter;
         }
@@ -151,11 +157,53 @@ function App() {
           {(sectionFilter === "all" || sectionFilter === "SPECIAL") && (
             <StickerGroup
               groupKey="FWC_SPECIAL"
-              title="Especiales & Sedes"
+              title="FIFA World Cup 2026 & Host Countries"
               isExpanded={expandedGroups.FWC_SPECIAL}
               onToggle={toggleGroup}
               isSpecial={true}
               stickers={sections.FWC_SPECIAL}
+              getFilteredStickers={getFilteredStickers}
+              getStickerStatus={getStickerStatus}
+              onShortTap={handleShortTap}
+              onLongPress={handleLongPress}
+            />
+          )}
+
+          {/* Group Stages A - L */}
+          {["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L"].map(
+            (groupKey) => {
+              if (sectionFilter !== "all" && sectionFilter !== groupKey)
+                return null;
+              const groupCountries = groupTeams[groupKey] || [];
+
+              return (
+                <StickerGroup
+                  key={groupKey}
+                  groupKey={groupKey}
+                  title={`Group ${groupKey}`}
+                  isExpanded={expandedGroups[groupKey]}
+                  onToggle={toggleGroup}
+                  isSpecial={false}
+                  countriesList={groupCountries}
+                  countriesData={countries}
+                  getFilteredStickers={getFilteredStickers}
+                  getStickerStatus={getStickerStatus}
+                  onShortTap={handleShortTap}
+                  onLongPress={handleLongPress}
+                />
+              );
+            },
+          )}
+
+          {/* FIFA World Cup History */}
+          {(sectionFilter === "all" || sectionFilter === "FWC_HISTORY") && (
+            <StickerGroup
+              groupKey="FWC_HISTORY"
+              title="FIFA World Cup History"
+              isExpanded={expandedGroups.FWC_HISTORY}
+              onToggle={toggleGroup}
+              isSpecial={true}
+              stickers={sections.FWC_HISTORY}
               getFilteredStickers={getFilteredStickers}
               getStickerStatus={getStickerStatus}
               onShortTap={handleShortTap}
@@ -177,32 +225,6 @@ function App() {
               onShortTap={handleShortTap}
               onLongPress={handleLongPress}
             />
-          )}
-
-          {/* Group Stages A - L */}
-          {["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L"].map(
-            (groupKey) => {
-              if (sectionFilter !== "all" && sectionFilter !== groupKey)
-                return null;
-              const groupCountries = groupTeams[groupKey] || [];
-
-              return (
-                <StickerGroup
-                  key={groupKey}
-                  groupKey={groupKey}
-                  title={`Grupo ${groupKey}`}
-                  isExpanded={expandedGroups[groupKey]}
-                  onToggle={toggleGroup}
-                  isSpecial={false}
-                  countriesList={groupCountries}
-                  countriesData={countries}
-                  getFilteredStickers={getFilteredStickers}
-                  getStickerStatus={getStickerStatus}
-                  onShortTap={handleShortTap}
-                  onLongPress={handleLongPress}
-                />
-              );
-            },
           )}
         </div>
       </main>
