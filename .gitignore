@@ -32,6 +32,7 @@ out/
 .keys
 credentials.json
 client_secret.json
+logo_mis_fibus.ai
 
 # Certificates and private keys
 *.pem
@@ -56,7 +57,3 @@ Thumbs.db
 *.njsproj
 *.sln
 *.sw?
-
-# Temporary script files
-inspect_excel.py
-inspect_json.js
