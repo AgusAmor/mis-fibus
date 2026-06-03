@@ -28,6 +28,7 @@ function App() {
   const [searchQuery, setSearchQuery] = useState("");
   const [statusFilter, setStatusFilter] = useState("all");
   const [viewMode, setViewMode] = useState("album");
+  const [displayMode, setDisplayMode] = useState("both");
 
   // Accordion Expansions State
   const [expandedGroups, setExpandedGroups] = useState({
@@ -140,6 +141,7 @@ function App() {
         onResetFilters={() => {
           setStatusFilter("all");
           setViewMode("album");
+          setDisplayMode("both");
           setSearchQuery("");
         }}
       />
@@ -154,6 +156,8 @@ function App() {
           setStatusFilter={setStatusFilter}
           viewMode={viewMode}
           setViewMode={setViewMode}
+          displayMode={displayMode}
+          setDisplayMode={setDisplayMode}
         />
 
         {/* Board */}
@@ -170,6 +174,7 @@ function App() {
                     onShortTap={handleShortTap}
                     onLongPress={handleLongPress}
                     onToggleFavorite={toggleFavorite}
+                    displayMode={displayMode}
                   />
                 ))}
               </div>
@@ -201,6 +206,7 @@ function App() {
                         onShortTap={handleShortTap}
                         onLongPress={handleLongPress}
                         onToggleFavorite={toggleFavorite}
+                        displayMode={displayMode}
                         showGroupLabel={true}
                       />
                     );
@@ -238,6 +244,7 @@ function App() {
                     onShortTap={handleShortTap}
                     onLongPress={handleLongPress}
                     onToggleFavorite={toggleFavorite}
+                    displayMode={displayMode}
                     searchQuery={searchQuery}
                   />
                 )}
@@ -269,6 +276,7 @@ function App() {
                         onShortTap={handleShortTap}
                         onLongPress={handleLongPress}
                         onToggleFavorite={toggleFavorite}
+                        displayMode={displayMode}
                         searchQuery={searchQuery}
                       />
                     );
@@ -290,6 +298,7 @@ function App() {
                     onShortTap={handleShortTap}
                     onLongPress={handleLongPress}
                     onToggleFavorite={toggleFavorite}
+                    displayMode={displayMode}
                     searchQuery={searchQuery}
                   />
                 )}
@@ -309,6 +318,7 @@ function App() {
                     onShortTap={handleShortTap}
                     onLongPress={handleLongPress}
                     onToggleFavorite={toggleFavorite}
+                    displayMode={displayMode}
                     searchQuery={searchQuery}
                   />
                 )}

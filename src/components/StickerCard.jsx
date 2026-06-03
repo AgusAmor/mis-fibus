@@ -8,6 +8,7 @@ export function StickerCard({
   onShortTap,
   onLongPress,
   onToggleFavorite,
+  displayMode = "both",
 }) {
   const timerRef = useRef(null);
   const isLongPressRef = useRef(false);
@@ -122,9 +123,20 @@ export function StickerCard({
       </button>
 
       {/* Sticker Code in Bebas Neue */}
-      <span className="font-bebas text-lg leading-none tracking-wide">
-        {sticker.id}
-      </span>
+      {(displayMode === "both" || displayMode === "code" || (displayMode === "name" && !sticker.name)) && (
+        <span className="font-bebas text-lg leading-none tracking-wide">
+          {sticker.id}
+        </span>
+      )}
+
+      {/* Sticker Name */}
+      {(displayMode === "both" || displayMode === "name") && sticker.name && (
+        <span className={`font-medium text-center px-1.5 leading-tight max-w-full overflow-hidden text-ellipsis line-clamp-2 opacity-85 ${
+          displayMode === "name" ? "text-[10px] font-semibold leading-normal font-sans uppercase tracking-tight" : "text-[8px] mt-0.5"
+        }`}>
+          {sticker.name}
+        </span>
+      )}
 
       {/* Duplicate Badge */}
       {status.dup > 0 && (

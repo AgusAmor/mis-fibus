@@ -8,6 +8,8 @@ export function FiltersPanel({
   setStatusFilter,
   viewMode,
   setViewMode,
+  displayMode,
+  setDisplayMode,
 }) {
   return (
     <div className="flex flex-col gap-3">
@@ -32,7 +34,7 @@ export function FiltersPanel({
       </div>
 
       {/* Filter Selectors */}
-      <div className="flex gap-2">
+      <div className="grid grid-cols-3 gap-2">
         <select
           value={statusFilter}
           onChange={(e) => setStatusFilter(e.target.value)}
@@ -52,8 +54,18 @@ export function FiltersPanel({
         >
           <option value="album">Álbum</option>
           <option value="teams">Equipos</option>
-          <option value="specials">Especiales / Extras</option>
+          <option value="specials">Especiales</option>
           <option value="flat">Continua</option>
+        </select>
+
+        <select
+          value={displayMode}
+          onChange={(e) => setDisplayMode(e.target.value)}
+          className="flex-1 bg-white border border-slate-200 text-slate-700 rounded-xl p-2.5 text-xs font-semibold outline-none cursor-pointer focus:border-primary focus:shadow-[0_0_8px_rgba(0,57,166,0.15)] transition-all duration-300 shadow-xs"
+        >
+          <option value="both">Código/Nombre</option>
+          <option value="code">Solo Código</option>
+          <option value="name">Solo Nombre</option>
         </select>
       </div>
     </div>

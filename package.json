@@ -8,7 +8,8 @@
     "build": "vite build",
     "deploy": "vite build && firebase deploy",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "rename-shields": "node rename_shields.cjs"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.3.0",

@@ -136,6 +136,7 @@ export function CountrySection({
   onShortTap,
   onLongPress,
   onToggleFavorite,
+  displayMode = "both",
   showGroupLabel = false,
 }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -233,6 +234,7 @@ export function CountrySection({
                   onShortTap={onShortTap}
                   onLongPress={onLongPress}
                   onToggleFavorite={onToggleFavorite}
+                  displayMode={displayMode}
                 />
               ))}
             </div>
