@@ -17,6 +17,7 @@ export function StickerGroup({
   getStickerStatus,
   onShortTap,
   onLongPress,
+  onToggleFavorite,
   searchQuery = "",
 }) {
   // Calculate dynamic group completion stats
@@ -98,6 +99,7 @@ export function StickerGroup({
                     status={getStickerStatus(sticker.id)}
                     onShortTap={onShortTap}
                     onLongPress={onLongPress}
+                    onToggleFavorite={onToggleFavorite}
                   />
                 ))}
               </div>
@@ -130,6 +132,7 @@ export function StickerGroup({
                     getStickerStatus={getStickerStatus}
                     onShortTap={onShortTap}
                     onLongPress={onLongPress}
+                    onToggleFavorite={onToggleFavorite}
                     showGroupLabel={false}
                   />
                 );

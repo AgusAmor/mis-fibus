@@ -135,6 +135,7 @@ export function CountrySection({
   getStickerStatus,
   onShortTap,
   onLongPress,
+  onToggleFavorite,
   showGroupLabel = false,
 }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -231,6 +232,7 @@ export function CountrySection({
                   status={getStickerStatus(sticker.id)}
                   onShortTap={onShortTap}
                   onLongPress={onLongPress}
+                  onToggleFavorite={onToggleFavorite}
                 />
               ))}
             </div>

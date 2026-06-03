@@ -42,6 +42,7 @@ export function FiltersPanel({
           <option value="missing">Faltantes</option>
           <option value="owned">Obtenidas</option>
           <option value="duplicated">Repetidas</option>
+          <option value="favorite">Favoritas</option>
         </select>
 
         <select

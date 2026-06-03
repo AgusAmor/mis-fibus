@@ -101,7 +101,7 @@ export function useSharedAlbum() {
   const updateSticker = async (stickerId, updates) => {
     // Create the full updated data object for the specific sticker to preserve all fields (have/duplicated)
     const targetStickerData = {
-      ...(stickersState[stickerId] || { have: false, duplicated: 0 }),
+      ...(stickersState[stickerId] || { have: false, duplicated: 0, favorite: false }),
       ...updates,
     };
 
@@ -162,11 +162,17 @@ export function useSharedAlbum() {
     }
   };
 
+  const toggleFavorite = (id) => {
+    const current = stickersState[id] || { have: false, duplicated: 0, favorite: false };
+    updateSticker(id, { favorite: !current.favorite });
+  };
+
   const getStickerStatus = (stickerId) => {
     const state = stickersState[stickerId] || {};
     return {
       have: state.have || false,
       dup: state.duplicated || 0,
+      favorite: state.favorite || false,
     };
   };
 
@@ -197,5 +203,6 @@ export function useSharedAlbum() {
     handleShortTap,
     handleLongPress,
     getStickerStatus,
+    toggleFavorite,
   };
 }

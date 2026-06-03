@@ -18,6 +18,7 @@ function App() {
     handleShortTap,
     handleLongPress,
     getStickerStatus,
+    toggleFavorite,
   } = useSharedAlbum();
 
   // Settings Panel Visibility
@@ -116,6 +117,8 @@ function App() {
         matchesStatus = status.have;
       } else if (statusFilter === "duplicated") {
         matchesStatus = status.dup > 0;
+      } else if (statusFilter === "favorite") {
+        matchesStatus = status.favorite;
       }
 
       return matchesSearch && matchesStatus;
@@ -166,6 +169,7 @@ function App() {
                     status={getStickerStatus(sticker.id)}
                     onShortTap={handleShortTap}
                     onLongPress={handleLongPress}
+                    onToggleFavorite={toggleFavorite}
                   />
                 ))}
               </div>
@@ -196,6 +200,7 @@ function App() {
                         getStickerStatus={getStickerStatus}
                         onShortTap={handleShortTap}
                         onLongPress={handleLongPress}
+                        onToggleFavorite={toggleFavorite}
                         showGroupLabel={true}
                       />
                     );
@@ -232,6 +237,7 @@ function App() {
                     getStickerStatus={getStickerStatus}
                     onShortTap={handleShortTap}
                     onLongPress={handleLongPress}
+                    onToggleFavorite={toggleFavorite}
                     searchQuery={searchQuery}
                   />
                 )}
@@ -262,6 +268,7 @@ function App() {
                         getStickerStatus={getStickerStatus}
                         onShortTap={handleShortTap}
                         onLongPress={handleLongPress}
+                        onToggleFavorite={toggleFavorite}
                         searchQuery={searchQuery}
                       />
                     );
@@ -282,6 +289,7 @@ function App() {
                     getStickerStatus={getStickerStatus}
                     onShortTap={handleShortTap}
                     onLongPress={handleLongPress}
+                    onToggleFavorite={toggleFavorite}
                     searchQuery={searchQuery}
                   />
                 )}
@@ -300,6 +308,7 @@ function App() {
                     getStickerStatus={getStickerStatus}
                     onShortTap={handleShortTap}
                     onLongPress={handleLongPress}
+                    onToggleFavorite={toggleFavorite}
                     searchQuery={searchQuery}
                   />
                 )}
