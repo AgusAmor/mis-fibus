@@ -96,3 +96,13 @@ The sticker cards support three touch/click states with haptic feedback:
     *   `visibilitychange`: Forces a fresh subscription fetch from Firestore when the browser tab/mobile app becomes visible (`document.visibilityState === 'visible'`).
     *   `online` / `offline`: Dynamically updates network status and re-establishes snapshot listeners as soon as connectivity recovers.
     *   `storage`: Syncs the active room code (`albumCode`) across multiple tabs in real-time.
+
+---
+
+## 8. PWA & iOS Home Screen Integration
+
+To support running as a standalone app on iOS Safari ("Add to Home Screen"):
+*   **Icon:** Configured via `<link rel="apple-touch-icon" href="/logo-fibus.png" />` in `index.html`.
+*   **Standalone Mode:** Enabled via `<meta name="apple-mobile-web-app-capable" content="yes" />` to hide browser navigation frames when launched from the home screen.
+*   **Title & Styling:** Custom title `"Mis Fibus"` set via `apple-mobile-web-app-title` and status bar styled to `default`.
+
