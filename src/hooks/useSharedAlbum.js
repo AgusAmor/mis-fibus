@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { db } from "../firebase";
-import { doc, onSnapshot, setDoc, updateDoc } from "firebase/firestore";
+import { doc, onSnapshot, setDoc, updateDoc, getDoc } from "firebase/firestore";
 import originalStickers from "../../fibus_album.json";
 
 export function useSharedAlbum() {
@@ -8,7 +8,7 @@ export function useSharedAlbum() {
   const [albumCode, setAlbumCode] = useState(() => {
     const urlParams = new URLSearchParams(window.location.search);
     const roomParam = urlParams.get("room") || urlParams.get("sala");
-    return roomParam ? roomParam.trim() : (localStorage.getItem("fibus_album_code") || "fibus_mundial_2026");
+    return roomParam ? roomParam.trim() : (localStorage.getItem("fibus_album_code") || "sala_predeterminada");
   });
 
   // Cloud Sincronization Status State
@@ -68,6 +68,31 @@ export function useSharedAlbum() {
         window.history.replaceState(null, "", newUrl.toString());
       }
     }
+  }, [albumCode]);
+
+  // Automatically initialize the room document in Firestore if it doesn't exist yet
+  useEffect(() => {
+    const initRoomInFirestore = async () => {
+      const cleanCode = albumCode.trim().toLowerCase();
+      if (!cleanCode || cleanCode === "sala_predeterminada") return;
+
+      try {
+        const docRef = doc(db, "albums", cleanCode);
+        const docSnap = await getDoc(docRef);
+        if (!docSnap.exists()) {
+          await setDoc(docRef, {
+            stickers: {},
+            createdAt: new Date().toISOString(),
+            lastUpdated: new Date().toISOString(),
+          });
+          console.log(`Document for room '${cleanCode}' successfully created in Firestore.`);
+        }
+      } catch (err) {
+        console.error("Error checking or creating room in Firestore:", err);
+      }
+    };
+
+    initRoomInFirestore();
   }, [albumCode]);
 
   // Sync room code changes across tabs in real-time

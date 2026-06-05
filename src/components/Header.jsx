@@ -4,10 +4,11 @@ import {
   FaCircle,
   FaExclamationTriangle,
   FaTimesCircle,
+  FaQuestionCircle,
 } from "react-icons/fa";
 
-// Header component displaying the app title and the real-time sync status indicator.
-export function Header({ syncStatus }) {
+// Header component displaying the app title, help button, and real-time sync status indicator.
+export function Header({ syncStatus, onOpenHelp }) {
   const getSyncIcon = () => {
     switch (syncStatus) {
       case "syncing":
@@ -53,7 +54,17 @@ export function Header({ syncStatus }) {
           </h1>
         </div>
       </div>
-      <div>{getSyncIcon()}</div>
+      <div className="flex items-center gap-2.5">
+        <button
+          onClick={onOpenHelp}
+          className="text-white/85 hover:text-white transition-colors cursor-pointer p-1 rounded-full hover:bg-white/10 flex items-center justify-center"
+          title="Ayuda e Instrucciones"
+          aria-label="Ayuda"
+        >
+          <FaQuestionCircle className="text-lg" />
+        </button>
+        {getSyncIcon()}
+      </div>
     </header>
   );
 }

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import originalStickers from "../fibus_album.json";
 import { useSharedAlbum } from "./hooks/useSharedAlbum";
 import { Header } from "./components/Header";
@@ -8,6 +8,7 @@ import { FiltersPanel } from "./components/FiltersPanel";
 import { StickerGroup } from "./components/StickerGroup";
 import { StickerCard } from "./components/StickerCard";
 import { CountrySection } from "./components/CountrySection";
+import { HelpModal } from "./components/HelpModal";
 
 function App() {
   const {
@@ -23,6 +24,25 @@ function App() {
 
   // Settings Panel Visibility
   const [showSettings, setShowSettings] = useState(false);
+
+  // Help Modal Visibility
+  const [showHelp, setShowHelp] = useState(false);
+
+  // Trigger help modal on first visit (using localStorage check)
+  useEffect(() => {
+    const hasSeenHelp = localStorage.getItem("fibus_help_dismissed");
+    if (!hasSeenHelp || albumCode === "sala_predeterminada") {
+      setShowHelp(true);
+    }
+  }, [albumCode]);
+
+  const closeHelp = (newRoomCode) => {
+    if (newRoomCode && newRoomCode !== "sala_predeterminada") {
+      setAlbumCode(newRoomCode);
+    }
+    localStorage.setItem("fibus_help_dismissed", "true");
+    setShowHelp(false);
+  };
 
   // Filter & Search States
   const [searchQuery, setSearchQuery] = useState("");
@@ -129,7 +149,7 @@ function App() {
   return (
     <div className="w-full max-w-200 mx-auto min-h-screen flex flex-col box-border pb-8">
       {/* Header */}
-      <Header syncStatus={syncStatus} />
+      <Header syncStatus={syncStatus} onOpenHelp={() => setShowHelp(true)} />
 
       {/* Hero Stats Panel */}
       <StatsPanel
@@ -341,6 +361,9 @@ function App() {
         showSettings={showSettings}
         setShowSettings={setShowSettings}
       />
+
+      {/* Help Modal */}
+      <HelpModal isOpen={showHelp} onClose={closeHelp} albumCode={albumCode} />
     </div>
   );
 }
