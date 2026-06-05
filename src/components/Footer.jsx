@@ -43,7 +43,7 @@ export function Footer({
 
       <div className="text-center mt-2 mb-6">
         <p className="text-[10px] text-slate-400 font-medium m-0">
-          MIS-FIBUS 2026 &copy;&nbsp; | Álbum Único Compartido en Tiempo Real
+          MIS-FIBUS 2026 &copy;&nbsp; | Único Álbum Compartido en Tiempo Real
         </p>
       </div>
     </footer>

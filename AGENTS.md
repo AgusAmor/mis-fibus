@@ -88,14 +88,19 @@ The sticker cards support three touch/click states with haptic feedback:
 
 ---
 
-## 7. Real-Time Cloud Synchronization Logic (`useSharedAlbum.js`)
+## 7. Real-Time Cloud Synchronization & URL Routing Logic (`useSharedAlbum.js`)
 
 *   **Firestore Room:** Albums are stored in Firestore under `albums/{albumCode}`.
-*   **Ultra-Low Latency Updates:** Updates do not upload the entire checklist. They use granular dot notation updates (e.g. `updateDoc` with `stickers.ARG10`) so that only a few bytes are transferred per click.
-*   **Mobile App Resumption listeners:**
+*   **Room Initialization & Persistence:** 
+    *   Upon load, the room code is read from the URL parameter `room` or `sala` (e.g., `?room=mi_sala`).
+    *   If no URL parameter is provided, it falls back to the room saved in `localStorage` (`fibus_album_code`) or defaults to `"fibus_mundial_2026"`.
+    *   Any active room code is immediately cached in `localStorage` to ensure persistence across sessions (e.g., when launched from the iPhone Home Screen shortcut).
+*   **Dynamic URL Reflection:** Whenever the active `albumCode` changes, the URL query parameters are updated in real-time to `?room={albumCode}` using `window.history.replaceState` without reloading the page.
+*   **Ultra-Low Latency Updates:** Updates do not upload the entire checklist. They use granular dot notation updates (e.g., `updateDoc` with `stickers.ARG10`) so that only a few bytes are transferred per click.
+*   **Mobile App Resumption & Tab Isolation listeners:**
     *   `visibilitychange`: Forces a fresh subscription fetch from Firestore when the browser tab/mobile app becomes visible (`document.visibilityState === 'visible'`).
     *   `online` / `offline`: Dynamically updates network status and re-establishes snapshot listeners as soon as connectivity recovers.
-    *   `storage`: Syncs the active room code (`albumCode`) across multiple tabs in real-time.
+    *   `storage`: Syncs the active room code (`albumCode`) across tabs in real-time, but **ignores updates** if the target tab has an explicit room query parameter in its URL that differs from the new value, preventing cross-tab pollution for independent albums.
 
 ---
 

@@ -6,7 +6,9 @@ import originalStickers from "../../fibus_album.json";
 export function useSharedAlbum() {
   // Shared Album Room Code State
   const [albumCode, setAlbumCode] = useState(() => {
-    return localStorage.getItem("fibus_album_code") || "fibus_mundial_2026";
+    const urlParams = new URLSearchParams(window.location.search);
+    const roomParam = urlParams.get("room") || urlParams.get("sala");
+    return roomParam ? roomParam.trim() : (localStorage.getItem("fibus_album_code") || "fibus_mundial_2026");
   });
 
   // Cloud Sincronization Status State
@@ -55,15 +57,30 @@ export function useSharedAlbum() {
     return () => unsubscribe();
   }, [albumCode, syncTrigger]);
 
-  // Handle local storage caching of preferences
+  // Handle local storage caching of preferences and update URL parameter
   useEffect(() => {
-    localStorage.setItem("fibus_album_code", albumCode);
+    if (albumCode) {
+      localStorage.setItem("fibus_album_code", albumCode);
+      const newUrl = new URL(window.location.href);
+      if (newUrl.searchParams.get("room") !== albumCode) {
+        newUrl.searchParams.set("room", albumCode);
+        newUrl.searchParams.delete("sala"); // Normalize 'sala' to 'room'
+        window.history.replaceState(null, "", newUrl.toString());
+      }
+    }
   }, [albumCode]);
 
   // Sync room code changes across tabs in real-time
   useEffect(() => {
     const handleStorageChange = (e) => {
       if (e.key === "fibus_album_code" && e.newValue) {
+        // If the current tab has a query parameter that differs from the new value, ignore it.
+        // This prevents tabs with different explicit rooms from overriding each other.
+        const urlParams = new URLSearchParams(window.location.search);
+        const currentRoomParam = urlParams.get("room") || urlParams.get("sala");
+        if (currentRoomParam && currentRoomParam !== e.newValue) {
+          return;
+        }
         setAlbumCode(e.newValue);
       }
     };
