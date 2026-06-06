@@ -8,6 +8,8 @@ import { FiltersPanel } from "./components/FiltersPanel/FiltersPanel";
 import { StickerBoard } from "./components/StickerBoard/StickerBoard";
 import { HelpModal } from "./components/HelpModal/HelpModal";
 import { ShareDuplicatesButton } from "./components/ShareDuplicatesButton/ShareDuplicatesButton";
+import { usePWAInfo } from "./hooks/usePWAInfo";
+import { InstallModal } from "./components/InstallModal/InstallModal";
 
 /**
  * App — root component responsible for wiring state and layout.
@@ -37,6 +39,19 @@ function App() {
   const [statusFilter, setStatusFilter] = useState("all");
   const [viewMode, setViewMode] = useState("album");
   const [displayMode, setDisplayMode] = useState("both");
+
+  // PWA & Installation State
+  const { isStandalone, os } = usePWAInfo();
+  const [showInstallModal, setShowInstallModal] = useState(false);
+  const [hasAutoShownInstall, setHasAutoShownInstall] = useState(false);
+
+  // Show install modal automatically on browser load (if not standalone)
+  useEffect(() => {
+    if (isStandalone === false && !hasAutoShownInstall) {
+      setShowInstallModal(true);
+      setHasAutoShownInstall(true);
+    }
+  }, [isStandalone, hasAutoShownInstall]);
 
   // Accordion expanded/collapsed state — all sections open by default
   const [expandedGroups, setExpandedGroups] = useState({
@@ -73,7 +88,12 @@ function App() {
   return (
     <div className="w-full max-w-xl mx-auto min-h-screen flex flex-col box-border pb-8">
       {/* App header with logo, sync status, and help button */}
-      <Header syncStatus={syncStatus} onOpenHelp={() => setShowHelp(true)} />
+      <Header 
+        syncStatus={syncStatus} 
+        onOpenHelp={() => setShowHelp(true)} 
+        onOpenInstall={() => setShowInstallModal(true)}
+        isStandalone={isStandalone}
+      />
 
       {/* Album progress overview with shortcut click handlers */}
       <StatsPanel
@@ -137,6 +157,9 @@ function App() {
 
       {/* Help and onboarding modal */}
       <HelpModal isOpen={showHelp} onClose={closeHelp} albumCode={albumCode} />
+      
+      {/* PWA Installation modal */}
+      <InstallModal isOpen={showInstallModal} onClose={() => setShowInstallModal(false)} os={os} />
     </div>
   );
 }

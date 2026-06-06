@@ -46,8 +46,8 @@ export function CountrySection({
   // Inherit the group's color based on its letter (A=0, B=1, C=2...)
   const groupIndex = (groupKey && groupKey.length === 1) ? groupKey.charCodeAt(0) - 65 : -1;
   const countryBgColor = groupIndex >= 0 
-    ? ["bg-primary", "bg-secondary", "bg-success"][groupIndex % 3] 
-    : "bg-primary";
+    ? ["bg-group-blue", "bg-secondary", "bg-success"][groupIndex % 3] 
+    : "bg-group-blue";
 
   const headerTitle = showGroupLabel
     ? `${countryInfo.name} (Group ${groupKey})`

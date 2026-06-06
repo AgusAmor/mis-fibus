@@ -125,6 +125,7 @@ To support running as a standalone app on iOS Safari ("Add to Home Screen") and 
 - **Caching Strategy (Firebase Hosting Caching Control):** To ensure iOS standalone atajos (Web Clips) load the latest code updates on every launch instead of keeping old files in aggressive local cache, `firebase.json` specifies:
   - `index.html` (and dynamic routes matched by `/**`) is served with `Cache-Control: no-cache, no-store, must-revalidate` to force server revalidation.
   - Hashed static assets in `/assets/**` are cached long-term using `Cache-Control: public, max-age=31536000, immutable` for maximum performance.
+- **Install Prompt (Non-Invasive UX):** When the app is opened in a standard browser (not standalone), an `InstallModal` automatically pops up once per session offering specific OS-based instructions (iOS Safari Share -> Add to Home Screen, Android Chrome -> Install App). A download icon also appears in the `Header` to manually open the modal again at any time.
 
 ---
 
@@ -161,6 +162,7 @@ The codebase follows the Single Responsibility Principle. Every file has one cle
 | `Footer.jsx` | Room code display and settings panel toggle |
 | `SettingsPanel.jsx` | Room code editing form with debounced save |
 | `HelpModal.jsx` | Modal shell + section structure; composes StickerLegend, GestureGuide, useRoomCheck |
+| `InstallModal.jsx` | Modal offering OS-specific instructions for PWA installation |
 | `StickerLegend.jsx` | Four example cards showing sticker states (Faltante/Obtenida/Repetida/Favorita) |
 | `GestureGuide.jsx` | Three gesture cards explaining single tap, long press, and double tap |
 | `CountryFlag.jsx` | Dynamic SVG flag thumbnail for each country key |

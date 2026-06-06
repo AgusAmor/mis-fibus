@@ -49,11 +49,11 @@ export function StickerGroup({
   // Calculate cycled colors for group stages (A=0, B=1, C=2, etc.)
   const groupIndex = (!isSpecial && groupKey.length === 1) ? groupKey.charCodeAt(0) - 65 : -1;
   const groupIconColor = groupIndex >= 0 
-    ? ["text-primary", "text-secondary", "text-success"][groupIndex % 3] 
-    : "text-primary";
+    ? ["text-group-blue", "text-secondary", "text-success"][groupIndex % 3] 
+    : "text-group-blue";
   const groupBgColor = groupIndex >= 0 
-    ? ["bg-primary", "bg-secondary", "bg-success"][groupIndex % 3] 
-    : "bg-primary";
+    ? ["bg-group-blue", "bg-secondary", "bg-success"][groupIndex % 3] 
+    : "bg-group-blue";
 
   return (
     <div className="bg-white border border-slate-200/80 rounded-2xl overflow-hidden shadow-md shadow-slate-100/50 flex flex-col">
