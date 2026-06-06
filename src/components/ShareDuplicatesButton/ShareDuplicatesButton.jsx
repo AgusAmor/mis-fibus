@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { FaShareAlt, FaCheck } from "react-icons/fa";
-import { albumOrderedStickers } from "../constants/albumSections";
+import { albumOrderedStickers } from "../../constants/albumSections";
 
 // ShareDuplicatesButton Component
 // Handles the compiling, formatting, and copying/sharing of duplicate stickers

@@ -1,13 +1,13 @@
 import { useState, useEffect } from "react";
 import { useSharedAlbum } from "./hooks/useSharedAlbum";
 import { useFilteredStickers } from "./hooks/useFilteredStickers";
-import { Header } from "./components/Header";
-import { Footer } from "./components/Footer";
-import { StatsPanel } from "./components/StatsPanel";
-import { FiltersPanel } from "./components/FiltersPanel";
-import { StickerBoard } from "./components/StickerBoard";
-import { HelpModal } from "./components/HelpModal";
-import { ShareDuplicatesButton } from "./components/ShareDuplicatesButton";
+import { Header } from "./components/Header/Header";
+import { Footer } from "./components/Footer/Footer";
+import { StatsPanel } from "./components/StatsPanel/StatsPanel";
+import { FiltersPanel } from "./components/FiltersPanel/FiltersPanel";
+import { StickerBoard } from "./components/StickerBoard/StickerBoard";
+import { HelpModal } from "./components/HelpModal/HelpModal";
+import { ShareDuplicatesButton } from "./components/ShareDuplicatesButton/ShareDuplicatesButton";
 
 /**
  * App — root component responsible for wiring state and layout.

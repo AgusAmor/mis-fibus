@@ -5,8 +5,8 @@ import {
   FaCheckCircle,
   FaExclamationTriangle,
 } from "react-icons/fa";
-import { StickerLegend } from "./StickerLegend";
-import { GestureGuide } from "./GestureGuide";
+import { StickerLegend } from "./components/StickerLegend";
+import { GestureGuide } from "./components/GestureGuide";
 import { useRoomCheck } from "../../hooks/useRoomCheck";
 
 /**
