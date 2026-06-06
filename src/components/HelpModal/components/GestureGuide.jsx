@@ -25,7 +25,7 @@ export function GestureGuide() {
             </h4>
             <p className="text-[11px] text-slate-500 m-0 mt-0.5 leading-relaxed font-medium">
               Marca la figurita como <strong>Obtenida</strong>. Si ya la
-              tienes, le añade una <strong>Repetida</strong> (x1, x2, etc.).
+              tenés, le suma una <strong>Repetida</strong> (x1, x2, etc.).
             </p>
           </div>
         </div>

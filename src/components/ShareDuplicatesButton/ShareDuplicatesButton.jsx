@@ -41,7 +41,7 @@ export function ShareDuplicatesButton({
     });
 
     if (repeatedStickers.length === 0) {
-      alert("No tienes figuritas repetidas para compartir.");
+      alert("No tenés figuritas repetidas para compartir.");
       return;
     }
 

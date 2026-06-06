@@ -61,7 +61,7 @@ export function HelpModal({ isOpen, onClose, albumCode }) {
             Guía de Uso - Mis Fibus
           </h2>
           <p className="text-xs text-slate-500 font-medium mt-1 leading-relaxed">
-            Aprende a registrar tus figuritas y compartirlas en tiempo real.
+            Aprendé a registrar tus figuritas y compartirlas en tiempo real.
           </p>
         </div>
 
@@ -82,7 +82,7 @@ export function HelpModal({ isOpen, onClose, albumCode }) {
               Álbum Compartido en Tiempo Real
             </h4>
             <p className="text-[11px] text-slate-600 m-0 mt-1 leading-relaxed font-medium">
-              Puedes invitar a otra persona compartiendo el código de tu sala.
+              Podés invitar a otra persona compartiendo el código de tu sala.
               Cualquier cambio que realicen se verá reflejado en el dispositivo
               del otro.
             </p>
@@ -95,7 +95,7 @@ export function HelpModal({ isOpen, onClose, albumCode }) {
                 Configura tu Sala
               </h4>
               <p className="text-[11px] text-slate-500 m-0 leading-relaxed font-medium">
-                Para evitar compartir el mismo álbum con otros usuarios, ingresa
+                Para evitar compartir el mismo álbum con otros usuarios, ingresá
                 un nombre o código único para tu sala (ej.{" "}
                 <em>nuestro_album_2026</em>).
               </p>

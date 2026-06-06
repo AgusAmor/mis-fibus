@@ -16,7 +16,7 @@ export function ShortcutsGuide() {
       <div className="flex flex-col gap-2.5">
         {/* Reset Filters Shortcut */}
         <div className="flex gap-3 bg-white p-3 rounded-2xl border border-slate-100 items-start">
-          <div className="flex flex-col gap-1 shrink-0 mt-1 w-[80px]">
+          <div className="flex flex-col gap-1 shrink-0 mt-1 w-20">
             <span className="text-[8px] font-bold text-primary font-montserrat uppercase tracking-wider leading-none">
               Progreso
             </span>
@@ -25,7 +25,7 @@ export function ShortcutsGuide() {
                 45%
               </span>
             </div>
-            <div className="w-full bg-slate-100 border border-slate-200/60 h-2.5 rounded-full overflow-hidden mt-0.5 p-[1px]">
+            <div className="w-full bg-slate-100 border border-slate-200/60 h-2.5 rounded-full overflow-hidden mt-0.5 p-px">
               <div className="h-full bg-primary rounded-full w-[45%]"></div>
             </div>
           </div>
@@ -34,14 +34,14 @@ export function ShortcutsGuide() {
               Restablecer Filtros
             </h4>
             <p className="text-[11px] text-slate-500 m-0 mt-0.5 leading-relaxed font-medium">
-              Toca la sección de <strong>Progreso</strong> o el porcentaje completado para limpiar los filtros y volver a la vista general.
+              Tocá la sección de <strong>Progreso</strong> o el porcentaje completado para limpiar los filtros y volver a la vista general.
             </p>
           </div>
         </div>
 
         {/* View Duplicates Shortcut */}
         <div className="flex gap-3 bg-white p-3 rounded-2xl border border-slate-100 items-center">
-          <div className="shrink-0 w-[80px] flex justify-center">
+          <div className="shrink-0 w-20 flex justify-center">
             <span className="text-secondary flex items-center gap-1 bg-secondary/5 px-2.5 py-1 rounded-full border border-secondary/10 font-bold uppercase tracking-wider text-[9px] select-none shadow-sm">
               <FaSync className="text-[8px]" />{" "}
               <strong className="font-bebas text-base leading-none text-secondary">
@@ -55,7 +55,7 @@ export function ShortcutsGuide() {
               Filtrar Repetidas
             </h4>
             <p className="text-[11px] text-slate-500 m-0 mt-0.5 leading-relaxed font-medium">
-              Toca la cantidad de <strong>repetidas</strong> para ver al instante sólo las figuritas que tienes duplicadas.
+              Tocá la cantidad de <strong>repetidas</strong> para ver al instante sólo las figuritas que tenés más de una vez.
             </p>
           </div>
         </div>

@@ -23,7 +23,7 @@ export function InstallModal({ isOpen, onClose, os }) {
             Instalar la App
           </h2>
           <p className="text-xs text-slate-500 font-medium mt-1 leading-relaxed">
-            Agrega Mis Fibus a tu pantalla de inicio para una mejor experiencia.
+            Agregá Mis Fibus a tu pantalla de inicio para una mejor experiencia.
           </p>
         </div>
 
@@ -38,10 +38,10 @@ export function InstallModal({ isOpen, onClose, os }) {
               </div>
               <ol className="flex flex-col gap-3 text-xs text-slate-600 pl-2 border-l-2 border-slate-200 ml-4">
                 <li className="leading-relaxed">
-                    <span className="font-bold mr-1">1.</span> Toca el ícono de <strong className="text-apple whitespace-nowrap"><MdIosShare className="inline text-[13px] align-middle mr-0.5 relative -top-0.5" />Compartir</strong> en la barra inferior.
+                    <span className="font-bold mr-1">1.</span> Tocá el ícono de <strong className="text-apple whitespace-nowrap"><MdIosShare className="inline text-[13px] align-middle mr-0.5 relative -top-0.5" />Compartir</strong> en la barra inferior.
                   </li>
                   <li className="leading-relaxed">
-                    <span className="font-bold mr-1">2.</span> Selecciona <strong className="text-apple whitespace-nowrap"><FaRegPlusSquare className="inline text-[13px] align-middle mr-1 relative -top-px" />Agregar a Inicio</strong>.
+                    <span className="font-bold mr-1">2.</span> Seleccioná <strong className="text-apple whitespace-nowrap"><FaRegPlusSquare className="inline text-[13px] align-middle mr-1 relative -top-px" />Agregar a Inicio</strong>.
                   </li>
               </ol>
             </div>
@@ -55,7 +55,7 @@ export function InstallModal({ isOpen, onClose, os }) {
               </div>
               <ol className="flex flex-col gap-3 text-xs text-slate-600 pl-2 border-l-2 border-slate-200 ml-4">
                 <li className="leading-relaxed">
-                    <span className="font-bold mr-1">1.</span> En la barra superior, a la derecha de la barra de búsqueda toca el ícono<strong className="text-success whitespace-nowrap"><FaEllipsisV className="inline text-[13px] align-middle relative -top-px" />Tres puntos</strong>.
+                    <span className="font-bold mr-1">1.</span> En la barra superior, a la derecha de la barra de búsqueda tocá el ícono<strong className="text-success whitespace-nowrap"><FaEllipsisV className="inline text-[13px] align-middle relative -top-px" />Tres puntos</strong>.
                   </li>
                   <li className="leading-relaxed">
                     <span className="font-bold mr-1">2.</span> Seleccioná la opción <strong className="text-success">Instalar aplicación</strong>.
@@ -77,10 +77,10 @@ export function InstallModal({ isOpen, onClose, os }) {
                 </div>
                 <ol className="flex flex-col gap-2 text-[11px] text-slate-600 pl-2 border-l-2 border-slate-200 ml-3.5">
                   <li className="leading-relaxed">
-                    <span className="font-bold mr-1">1.</span> Toca el ícono de <strong className="text-apple whitespace-nowrap"><MdIosShare className="inline text-[13px] align-middle mr-0.5 relative -top-0.5" />Compartir</strong> en la barra inferior.
+                    <span className="font-bold mr-1">1.</span> Tocá el ícono de <strong className="text-apple whitespace-nowrap"><MdIosShare className="inline text-[13px] align-middle mr-0.5 relative -top-0.5" />Compartir</strong> en la barra inferior.
                   </li>
                   <li className="leading-relaxed">
-                    <span className="font-bold mr-1">2.</span> Selecciona <strong className="text-apple whitespace-nowrap"><FaRegPlusSquare className="inline text-[13px] align-middle mr-1 relative -top-px" />Agregar a Inicio</strong>.
+                    <span className="font-bold mr-1">2.</span> Seleccioná <strong className="text-apple whitespace-nowrap"><FaRegPlusSquare className="inline text-[13px] align-middle mr-1 relative -top-px" />Agregar a Inicio</strong>.
                   </li>
                 </ol>
               </div>
@@ -94,7 +94,7 @@ export function InstallModal({ isOpen, onClose, os }) {
                 </div>
                 <ol className="flex flex-col gap-2 text-[11px] text-slate-600 pl-2 border-l-2 border-slate-200 ml-3.5">
                   <li className="leading-relaxed">
-                    <span className="font-bold mr-1">1.</span> En la barra superior, a la derecha de la barra de búsqueda toca el ícono<strong className="text-success whitespace-nowrap"><FaEllipsisV className="inline text-[13px] align-middle relative -top-px" />Tres puntos</strong>.
+                    <span className="font-bold mr-1">1.</span> En la barra superior, a la derecha de la barra de búsqueda tocá el ícono<strong className="text-success whitespace-nowrap"><FaEllipsisV className="inline text-[13px] align-middle relative -top-px" />Tres puntos</strong>.
                   </li>
                   <li className="leading-relaxed">
                     <span className="font-bold mr-1">2.</span> Seleccioná la opción <strong className="text-success">Instalar aplicación</strong>.
