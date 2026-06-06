@@ -1,4 +1,4 @@
-import { FaTimes, FaApple, FaAndroid, FaShareSquare, FaEllipsisV, FaPlusSquare } from "react-icons/fa";
+import { FaTimes, FaApple, FaAndroid, FaRegPlusSquare, FaEllipsisV, FaPlusSquare } from "react-icons/fa";
 import { MdIosShare } from "react-icons/md";
 
 export function InstallModal({ isOpen, onClose, os }) {
@@ -31,17 +31,17 @@ export function InstallModal({ isOpen, onClose, os }) {
           {os === "ios" ? (
             <div className="flex flex-col gap-4">
               <div className="flex items-center gap-3 text-slate-700 font-medium text-sm">
-                <span className="bg-primary/10 text-primary w-8 h-8 rounded-full flex items-center justify-center shrink-0">
+                <span className="bg-apple/10 text-apple w-8 h-8 rounded-full flex items-center justify-center shrink-0">
                   <FaApple className="text-lg" />
                 </span>
                 <span>Instrucciones para Safari en iOS</span>
               </div>
               <ol className="flex flex-col gap-3 text-xs text-slate-600 pl-2 border-l-2 border-slate-200 ml-4">
                 <li className="leading-relaxed">
-                    <span className="font-bold mr-1">1.</span> Toca el ícono de <strong className="text-primary whitespace-nowrap"><MdIosShare className="inline text-[13px] align-middle mr-0.5 relative -top-0.5" />Compartir</strong> en la barra inferior.
+                    <span className="font-bold mr-1">1.</span> Toca el ícono de <strong className="text-apple whitespace-nowrap"><MdIosShare className="inline text-[13px] align-middle mr-0.5 relative -top-0.5" />Compartir</strong> en la barra inferior.
                   </li>
                   <li className="leading-relaxed">
-                    <span className="font-bold mr-1">2.</span> Selecciona <strong className="text-primary whitespace-nowrap"><FaPlusSquare className="inline text-[13px] align-middle mr-1 relative -top-px" />Agregar a Inicio</strong>.
+                    <span className="font-bold mr-1">2.</span> Selecciona <strong className="text-apple whitespace-nowrap"><FaRegPlusSquare className="inline text-[13px] align-middle mr-1 relative -top-px" />Agregar a Inicio</strong>.
                   </li>
               </ol>
             </div>
@@ -70,17 +70,17 @@ export function InstallModal({ isOpen, onClose, os }) {
               
               <div className="flex flex-col gap-3">
                 <div className="flex items-center gap-3 text-slate-700 font-medium text-sm">
-                  <span className="bg-primary/10 text-primary w-7 h-7 rounded-full flex items-center justify-center shrink-0">
+                  <span className="bg-apple/10 text-apple w-7 h-7 rounded-full flex items-center justify-center shrink-0">
                     <FaApple className="text-sm" />
                   </span>
                   <span>iOS desde Safari</span>
                 </div>
                 <ol className="flex flex-col gap-2 text-[11px] text-slate-600 pl-2 border-l-2 border-slate-200 ml-3.5">
                   <li className="leading-relaxed">
-                    <span className="font-bold mr-1">1.</span> Toca el ícono de <strong className="text-primary whitespace-nowrap"><MdIosShare className="inline text-[13px] align-middle mr-0.5 relative -top-0.5" />Compartir</strong> en la barra inferior.
+                    <span className="font-bold mr-1">1.</span> Toca el ícono de <strong className="text-apple whitespace-nowrap"><MdIosShare className="inline text-[13px] align-middle mr-0.5 relative -top-0.5" />Compartir</strong> en la barra inferior.
                   </li>
                   <li className="leading-relaxed">
-                    <span className="font-bold mr-1">2.</span> Selecciona <strong className="text-primary whitespace-nowrap"><FaPlusSquare className="inline text-[13px] align-middle mr-1 relative -top-px" />Agregar a Inicio</strong>.
+                    <span className="font-bold mr-1">2.</span> Selecciona <strong className="text-apple whitespace-nowrap"><FaRegPlusSquare className="inline text-[13px] align-middle mr-1 relative -top-px" />Agregar a Inicio</strong>.
                   </li>
                 </ol>
               </div>
