@@ -1,53 +1,53 @@
 // Raw flag colors for all 48 countries
 export const FLAG_GRADIENTS = {
-  MEX: ["#006847", "#FFFFFF", "#CE1126"],
+  MEX: ["#006847", "#f8fafc", "#CE1126"],
   RSA: ["#E21836", "#007A3D", "#002395"],
-  KOR: ["#CD2E3A", "#FFFFFF", "#0A1D37"],
-  CZE: ["#11457E", "#FFFFFF", "#D7141A"],
-  CAN: ["#FF0000", "#FFFFFF", "#FF0000"],
+  KOR: ["#CD2E3A", "#f8fafc", "#0A1D37"],
+  CZE: ["#11457E", "#f8fafc", "#D7141A"],
+  CAN: ["#FF0000", "#f8fafc", "#FF0000"],
   BIH: ["#002395", "#FECB00", "#002395"],
-  QAT: ["#FFFFFF", "#8D1B3D", "#8D1B3D"],
-  SUI: ["#DA291C", "#FFFFFF", "#DA291C"],
+  QAT: ["#f8fafc", "#8D1B3D", "#8D1B3D"],
+  SUI: ["#DA291C", "#f8fafc", "#DA291C"],
   BRA: ["#009739", "#FEDF00", "#012169"],
   MAR: ["#C1272D", "#006233", "#C1272D"],
   HAI: ["#00209F", "#D21034", "#00209F"],
-  SCO: ["#0065BF", "#FFFFFF", "#0065BF"],
-  USA: ["#0A3161", "#FFFFFF", "#B31942"],
-  PAR: ["#D52B1E", "#FFFFFF", "#0038A8"],
-  AUS: ["#00008B", "#FFFFFF", "#FF0000"],
-  TUR: ["#E30A17", "#FFFFFF", "#E30A17"],
-  GER: ["#000000", "#DD0000", "#FFCC00"],
+  SCO: ["#0065BF", "#f8fafc", "#0065BF"],
+  USA: ["#0A3161", "#f8fafc", "#B31942"],
+  PAR: ["#D52B1E", "#f8fafc", "#0038A8"],
+  AUS: ["#00008B", "#f8fafc", "#FF0000"],
+  TUR: ["#E30A17", "#f8fafc", "#E30A17"],
+  GER: ["#0f172a", "#DD0000", "#FFCC00"],
   CUW: ["#002B7F", "#F9E814", "#002B7F"],
-  CIV: ["#F77F00", "#FFFFFF", "#009E60"],
+  CIV: ["#F77F00", "#f8fafc", "#009E60"],
   ECU: ["#FFDD00", "#001489", "#ED1C24"],
-  NED: ["#AE1C28", "#FFFFFF", "#21468B"],
-  JPN: ["#FFFFFF", "#BC002D", "#FFFFFF"],
+  NED: ["#AE1C28", "#f8fafc", "#21468B"],
+  JPN: ["#f8fafc", "#BC002D", "#f8fafc"],
   SWE: ["#006AA7", "#FECC00", "#006AA7"],
-  TUN: ["#E20909", "#FFFFFF", "#E20909"],
-  BEL: ["#000000", "#FDDA24", "#EF3340"],
-  EGY: ["#C1272D", "#FFFFFF", "#000000"],
-  IRN: ["#239B56", "#FFFFFF", "#DA291C"],
-  NZL: ["#00247D", "#FFFFFF", "#CC0A2C"],
+  TUN: ["#E20909", "#f8fafc", "#E20909"],
+  BEL: ["#0f172a", "#FDDA24", "#EF3340"],
+  EGY: ["#C1272D", "#f8fafc", "#0f172a"],
+  IRN: ["#239B56", "#f8fafc", "#DA291C"],
+  NZL: ["#00247D", "#f8fafc", "#CC0A2C"],
   ESP: ["#AD1519", "#FABD00", "#00568F"],
-  CPV: ["#002A8F", "#FFFFFF", "#CE1126"],
-  KSA: ["#006C35", "#FFFFFF", "#006C35"],
-  URU: ["#0038A8", "#FFFFFF", "#FEDF00"],
-  FRA: ["#002654", "#FFFFFF", "#ED2939"],
+  CPV: ["#002A8F", "#f8fafc", "#CE1126"],
+  KSA: ["#006C35", "#f8fafc", "#006C35"],
+  URU: ["#0038A8", "#f8fafc", "#FEDF00"],
+  FRA: ["#002654", "#f8fafc", "#ED2939"],
   SEN: ["#00853F", "#FDEF42", "#E31B23"],
-  IRQ: ["#FF0000", "#FFFFFF", "#000000"],
+  IRQ: ["#FF0000", "#f8fafc", "#0f172a"],
   NOR: ["#EF2B2D", "#00205B", "#EF2B2D"],
-  ARG: ["#74ACDF", "#FFFFFF", "#74ACDF"],
-  ALG: ["#006633", "#FFFFFF", "#D21034"],
-  AUT: ["#ED2939", "#FFFFFF", "#ED2939"],
-  JOR: ["#000000", "#FFFFFF", "#D21034"],
+  ARG: ["#74ACDF", "#f8fafc", "#74ACDF"],
+  ALG: ["#006633", "#f8fafc", "#D21034"],
+  AUT: ["#ED2939", "#f8fafc", "#ED2939"],
+  JOR: ["#0f172a", "#f8fafc", "#D21034"],
   POR: ["#046A38", "#DA291C", "#DA291C"],
   COD: ["#007FFF", "#F4B400", "#CE1126"],
-  UZB: ["#00A3E0", "#FFFFFF", "#1FAE51"],
+  UZB: ["#00A3E0", "#f8fafc", "#1FAE51"],
   COL: ["#FCD116", "#0038A8", "#C8102E"],
-  ENG: ["#FFFFFF", "#CE1126", "#FFFFFF"],
-  CRO: ["#FF0000", "#FFFFFF", "#171796"],
+  ENG: ["#f8fafc", "#CE1126", "#f8fafc"],
+  CRO: ["#FF0000", "#f8fafc", "#171796"],
   GHA: ["#FCD116", "#006B3F", "#DA291C"],
-  PAN: ["#005293", "#FFFFFF", "#D21034"],
+  PAN: ["#005293", "#f8fafc", "#D21034"],
 };
 
 // Relative color proportions representing the visual prominence in each flag
@@ -216,7 +216,7 @@ export const getCountryPattern = (countryKey) => {
 
   // Draw the page margin split curve (solid white)
   const marginW = (hash("g") % 15) + 15; // 15-30 range
-  paths += `<path d='M 0 0 C ${marginW} ${r1}, ${marginW / 2} ${r3}, 0 100 Z' fill='#ffffff' />`;
+  paths += `<path d='M 0 0 C ${marginW} ${r1}, ${marginW / 2} ${r3}, 0 100 Z' fill='#f8fafc' />`;
 
   const svg = `<svg xmlns='http://www.w3.org/2000/svg' width='100%' height='100%' viewBox='0 0 100 100' preserveAspectRatio='none'>
     ${paths}
@@ -224,3 +224,4 @@ export const getCountryPattern = (countryKey) => {
 
   return `url("data:image/svg+xml,${encodeURIComponent(svg)}")`;
 };
+

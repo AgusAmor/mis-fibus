@@ -71,7 +71,7 @@ function App() {
   const getFilteredStickers = useFilteredStickers(statusFilter, searchQuery, getStickerStatus);
 
   return (
-    <div className="w-full max-w-200 mx-auto min-h-screen flex flex-col box-border pb-8">
+    <div className="w-full max-w-xl mx-auto min-h-screen flex flex-col box-border pb-8">
       {/* App header with logo, sync status, and help button */}
       <Header syncStatus={syncStatus} onOpenHelp={() => setShowHelp(true)} />
 

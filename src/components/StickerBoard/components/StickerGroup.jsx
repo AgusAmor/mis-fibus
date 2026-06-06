@@ -46,6 +46,15 @@ export function StickerGroup({
       : 0;
   const isGroupCompleted = groupPercent >= 100;
 
+  // Calculate cycled colors for group stages (A=0, B=1, C=2, etc.)
+  const groupIndex = (!isSpecial && groupKey.length === 1) ? groupKey.charCodeAt(0) - 65 : -1;
+  const groupIconColor = groupIndex >= 0 
+    ? ["text-primary", "text-secondary", "text-success"][groupIndex % 3] 
+    : "text-primary";
+  const groupBgColor = groupIndex >= 0 
+    ? ["bg-primary", "bg-secondary", "bg-success"][groupIndex % 3] 
+    : "bg-primary";
+
   return (
     <div className="bg-white border border-slate-200/80 rounded-2xl overflow-hidden shadow-md shadow-slate-100/50 flex flex-col">
       {/* Group Accordion Header */}
@@ -60,7 +69,7 @@ export function StickerGroup({
             ) : isSpecial ? (
               <FaStar className="text-accent text-base" />
             ) : (
-              <FaFutbol className="text-primary text-base" />
+              <FaFutbol className={`${groupIconColor} text-base`} />
             )}
             <h2 className="text-sm font-montserrat font-extrabold text-slate-800 uppercase tracking-wide">
               {title}
@@ -89,7 +98,7 @@ export function StickerGroup({
                   ? "bg-coke-red"
                   : groupKey.startsWith("FWC")
                     ? "bg-accent"
-                    : "bg-primary"
+                    : groupBgColor
             }`}
             style={{ width: `${groupPercent}%` }}
           />
@@ -124,7 +133,7 @@ export function StickerGroup({
           ) : (
             /* Regular group stages layout with country subdivisions */
             <div className="flex flex-col gap-6.5">
-              {countriesList.map((countryKey) => {
+              {countriesList.map((countryKey, index) => {
                 const countryStickers = countriesData[countryKey] || [];
                 // Hide country accordions with zero search results when searching
                 if (
@@ -147,6 +156,7 @@ export function StickerGroup({
                     onToggleFavorite={onToggleFavorite}
                     displayMode={displayMode}
                     showGroupLabel={false}
+                    countryIndex={index}
                   />
                 );
               })}

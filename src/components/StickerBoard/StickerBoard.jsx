@@ -48,7 +48,7 @@ export function StickerBoard({
   // --- TEAMS (Flat country list, no special sections) ---
   if (viewMode === "teams") {
     const renderedCountries = GROUP_KEYS.flatMap((groupKey) =>
-      (groupTeams[groupKey] || []).map((countryKey) => {
+      (groupTeams[groupKey] || []).map((countryKey, index) => {
         const countryStickers = countries[countryKey] || [];
         if (getFilteredStickers(countryStickers).length === 0) return null;
         return (
@@ -58,6 +58,7 @@ export function StickerBoard({
             groupKey={groupKey}
             countryStickers={countryStickers}
             showGroupLabel={true}
+            countryIndex={index}
             {...groupHandlers}
           />
         );

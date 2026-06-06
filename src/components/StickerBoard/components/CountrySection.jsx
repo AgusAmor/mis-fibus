@@ -23,6 +23,7 @@ export function CountrySection({
   onToggleFavorite,
   displayMode = "both",
   showGroupLabel = false,
+  countryIndex = 0,
 }) {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -41,6 +42,12 @@ export function CountrySection({
 
   const countryInfo = COUNTRY_METADATA[countryKey] || { name: countryKey };
   const countryBg = getCountryPattern(countryKey);
+  
+  // Inherit the group's color based on its letter (A=0, B=1, C=2...)
+  const groupIndex = (groupKey && groupKey.length === 1) ? groupKey.charCodeAt(0) - 65 : -1;
+  const countryBgColor = groupIndex >= 0 
+    ? ["bg-primary", "bg-secondary", "bg-success"][groupIndex % 3] 
+    : "bg-primary";
 
   const headerTitle = showGroupLabel
     ? `${countryInfo.name} (Group ${groupKey})`
@@ -79,7 +86,7 @@ export function CountrySection({
         <div className="w-full bg-slate-100 h-1 rounded-full overflow-hidden mt-0.5">
           <div
             className={`h-full transition-all duration-500 rounded-full ${
-              isCountryCompleted ? "bg-success" : "bg-primary"
+              isCountryCompleted ? "bg-success" : countryBgColor
             }`}
             style={{ width: `${countryPercent}%` }}
           />

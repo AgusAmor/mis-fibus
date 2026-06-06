@@ -9,7 +9,7 @@
   --color-success: #00a651;
   --color-coke-red: #d71920;
   --color-bg-base: #f9f7f3;
-  --color-surface: #ffffff;
+  --color-surface: #f8fafc;
   --color-text-primary: #111111;
   --color-border-light: #e5e7eb;
 
@@ -109,3 +109,4 @@ body {
   user-select: none;
   -webkit-touch-callout: none;
 }
+
