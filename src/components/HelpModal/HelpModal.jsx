@@ -7,6 +7,7 @@ import {
 } from "react-icons/fa";
 import { StickerLegend } from "./components/StickerLegend";
 import { GestureGuide } from "./components/GestureGuide";
+import { ShortcutsGuide } from "./components/ShortcutsGuide";
 import { useRoomCheck } from "../../hooks/useRoomCheck";
 
 /**
@@ -71,6 +72,9 @@ export function HelpModal({ isOpen, onClose, albumCode }) {
 
           {/* Gesture interaction guide */}
           <GestureGuide />
+
+          {/* Shortcuts guide */}
+          <ShortcutsGuide />
 
           {/* Shared rooms explanation */}
           <div className="bg-primary/5 border border-primary/10 p-3.5 rounded-2xl">
