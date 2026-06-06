@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-import { FaCog, FaSave } from "react-icons/fa";
+import { FaCog } from "react-icons/fa";
+import { IoLogIn } from "react-icons/io5";
 
 // Settings panel component where users can view/change the shared album room code.
 export function SettingsPanel({ showSettings, albumCode, setAlbumCode }) {
@@ -43,14 +44,18 @@ export function SettingsPanel({ showSettings, albumCode, setAlbumCode }) {
           />
           <button
             onClick={handleSave}
-            disabled={!localRoom.trim() || localRoom.trim().toLowerCase() === albumCode.toLowerCase()}
+            disabled={
+              !localRoom.trim() ||
+              localRoom.trim().toLowerCase() === albumCode.toLowerCase()
+            }
             className={`px-4 rounded-xl flex items-center justify-center gap-1.5 text-xs font-montserrat font-extrabold uppercase tracking-wide transition-all duration-300 ${
-              !localRoom.trim() || localRoom.trim().toLowerCase() === albumCode.toLowerCase()
+              !localRoom.trim() ||
+              localRoom.trim().toLowerCase() === albumCode.toLowerCase()
                 ? "bg-slate-100 text-slate-400 cursor-not-allowed"
                 : "bg-primary hover:bg-primary/95 text-white hover:shadow-md cursor-pointer"
             }`}
           >
-            <FaSave className="text-xs" /> Guardar
+            <IoLogIn className="text-xs" /> Entrar
           </button>
         </div>
       </div>

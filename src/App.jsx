@@ -9,6 +9,7 @@ import { StickerGroup } from "./components/StickerGroup";
 import { StickerCard } from "./components/StickerCard";
 import { CountrySection } from "./components/CountrySection";
 import { HelpModal } from "./components/HelpModal";
+import { FaShareAlt, FaCheck } from "react-icons/fa";
 
 function App() {
   const {
@@ -49,6 +50,9 @@ function App() {
   const [statusFilter, setStatusFilter] = useState("all");
   const [viewMode, setViewMode] = useState("album");
   const [displayMode, setDisplayMode] = useState("both");
+
+  // State to track if the duplicates list was successfully copied to the clipboard
+  const [copied, setCopied] = useState(false);
 
   // Accordion Expansions State
   const [expandedGroups, setExpandedGroups] = useState({
@@ -146,6 +150,72 @@ function App() {
     });
   };
 
+  // Check if the album has any duplicates to decide button enablement
+  const hasDuplicates = originalStickers.some(
+    (s) => getStickerStatus(s.id).dup > 0
+  );
+
+  // Copy formatted text to clipboard and show temporary visual success state
+  const copyToClipboard = (text) => {
+    navigator.clipboard
+      .writeText(text)
+      .then(() => {
+        setCopied(true);
+        setTimeout(() => setCopied(false), 2000);
+      })
+      .catch((err) => {
+        console.error("Failed to copy text: ", err);
+      });
+  };
+
+  // Compile repeated stickers list, format it as readable text, and share it via Web Share API or fallback to clipboard
+  const handleShareRepeated = async () => {
+    const repeatedStickers = originalStickers.filter((s) => {
+      const status = getStickerStatus(s.id);
+      return status.dup > 0;
+    });
+
+    if (repeatedStickers.length === 0) {
+      alert("No tienes figuritas repetidas para compartir.");
+      return;
+    }
+
+    const formattedList = repeatedStickers
+      .map((s) => {
+        const status = getStickerStatus(s.id);
+        const namePart = s.name ? ` (${s.name})` : "";
+        return `- ${s.id}${namePart} x${status.dup}`;
+      })
+      .join("\n");
+
+    const totalDups = repeatedStickers.reduce(
+      (acc, s) => acc + getStickerStatus(s.id).dup,
+      0
+    );
+
+    const shareText = `¿Querés cambiar? 🔄\nMis Fibus Repetidas (${totalDups})\n\n${formattedList}`;
+
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+      navigator.userAgent
+    );
+
+    if (navigator.share && isMobile) {
+      try {
+        await navigator.share({
+          title: "Mis Fibus Repetidas",
+          text: shareText,
+        });
+      } catch (err) {
+        // Fallback to clipboard if sharing fails (e.g. user cancellation, except AbortError)
+        if (err.name !== "AbortError") {
+          copyToClipboard(shareText);
+        }
+      }
+    } else {
+      copyToClipboard(shareText);
+    }
+  };
+
   return (
     <div className="w-full max-w-200 mx-auto min-h-screen flex flex-col box-border pb-8">
       {/* Header */}
@@ -179,6 +249,34 @@ function App() {
           displayMode={displayMode}
           setDisplayMode={setDisplayMode}
         />
+
+        {/* Share duplicates button - shown only when the "Repetidas" filter is active */}
+        {statusFilter === "duplicated" && (
+          <button
+            onClick={handleShareRepeated}
+            disabled={!hasDuplicates}
+            className={`w-full rounded-xl py-3 px-4 font-montserrat font-extrabold text-xs uppercase tracking-wider transition-all duration-300 flex items-center justify-center gap-2 ${
+              !hasDuplicates
+                ? "bg-slate-100 text-slate-400 border border-slate-200 cursor-not-allowed"
+                : copied
+                ? "bg-emerald-600 text-white border-2 border-emerald-400 hover:shadow-lg hover:shadow-emerald-600/15 active:scale-[0.98] cursor-pointer"
+                : "bg-[#5E0B19] hover:bg-[#4a0813] text-[#F9F7F3] border-2 border-[#D4AF37]/45 hover:border-[#D4AF37] hover:shadow-lg hover:shadow-[#5E0B19]/15 active:scale-[0.98] cursor-pointer"
+            }`}
+          >
+            {copied ? (
+              <>
+                <FaCheck className="text-sm text-emerald-200 animate-bounce" /> ¡Copiado al portapapeles!
+              </>
+            ) : (
+              <>
+                <FaShareAlt
+                  className={`text-sm ${hasDuplicates ? "text-[#D4AF37]" : "text-slate-400"}`}
+                />{" "}
+                Compartir repetidas
+              </>
+            )}
+          </button>
+        )}
 
         {/* Board */}
         <div className="flex flex-col gap-3">
