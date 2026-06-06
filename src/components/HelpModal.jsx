@@ -1,5 +1,12 @@
 import { useState, useEffect } from "react";
-import { FaCheck, FaTimes, FaLock, FaInfoCircle, FaCheckCircle, FaExclamationTriangle } from "react-icons/fa";
+import {
+  FaCheck,
+  FaTimes,
+  FaLock,
+  FaInfoCircle,
+  FaCheckCircle,
+  FaExclamationTriangle,
+} from "react-icons/fa";
 import { TbHandMove, TbHandClick, TbHandFinger } from "react-icons/tb";
 import { db } from "../firebase";
 import { doc, getDoc } from "firebase/firestore";
@@ -239,12 +246,14 @@ export function HelpModal({ isOpen, onClose, albumCode }) {
                   )}
                   {!isCheckingRoom && roomExists === true && (
                     <span className="text-[10px] text-blue-600 font-semibold flex items-center gap-1.5">
-                      <FaInfoCircle className="text-[10px] shrink-0" /> Esta sala ya existe. Te unirás al álbum compartido existente.
+                      <FaInfoCircle className="text-[10px] shrink-0" /> Esta
+                      sala ya existe. Te unirás al álbum compartido existente.
                     </span>
                   )}
                   {!isCheckingRoom && roomExists === false && (
                     <span className="text-[10px] text-emerald-600 font-semibold flex items-center gap-1.5">
-                      <FaCheckCircle className="text-[10px] shrink-0" /> Nombre disponible. Se creará un nuevo álbum privado.
+                      <FaCheckCircle className="text-[10px] shrink-0" /> Nombre
+                      disponible. Se creará un nuevo álbum privado.
                     </span>
                   )}
                 </div>
@@ -252,7 +261,9 @@ export function HelpModal({ isOpen, onClose, albumCode }) {
 
               {/* Security Warning */}
               <p className="text-[10px] text-red-500 font-semibold leading-relaxed m-0 mt-0.5 flex items-start gap-1.5">
-                <FaExclamationTriangle className="text-[10px] shrink-0 mt-0.5" /> No compartas este código con extraños. Cualquiera que tenga el código de tu sala podrá ver y modificar tu álbum.
+                <FaExclamationTriangle className="text-[10px] shrink-0 mt-0.5" />{" "}
+                No compartas este código con extraños. Cualquiera que tenga el
+                código de tu sala podrá ver y modificar tu álbum.
               </p>
             </div>
           )}

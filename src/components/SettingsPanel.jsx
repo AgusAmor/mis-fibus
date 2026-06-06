@@ -10,8 +10,8 @@ export function SettingsPanel({ showSettings, albumCode, setAlbumCode }) {
         <FaCog className="text-xs" /> Configuración del Álbum
       </h3>
       <p className="text-xs text-slate-500 m-0 leading-relaxed font-medium">
-        Ingresen el mismo código de sala compartido en sus respectivos celulares
-        para ver y registrar sus figuritas en tiempo real.
+        Compartí este código de sala para ver y registrar sus figuritas en
+        tiempo real con alguien más.
       </p>
       <div className="flex flex-col gap-1.5 mt-1">
         <label className="text-[11px] font-bold text-slate-400 uppercase tracking-wide">
