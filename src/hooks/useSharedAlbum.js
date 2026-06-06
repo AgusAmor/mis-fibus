@@ -1,33 +1,52 @@
-import { useState, useEffect } from "react";
+import { useState, useCallback, useEffect } from "react";
 import { db } from "../firebase";
 import { doc, onSnapshot, setDoc, updateDoc, getDoc } from "firebase/firestore";
-import originalStickers from "../../fibus_album.json";
+import { useRoomSync } from "./useRoomSync";
+import { useNetworkListeners } from "./useNetworkListeners";
+import { useAlbumStats } from "./useAlbumStats";
 
+/**
+ * useSharedAlbum — composes the album's real-time Firestore synchronization.
+ *
+ * Responsibilities:
+ *  - Subscribe to the Firestore album document and keep local sticker state in sync.
+ *  - Initialize the room document in Firestore if it doesn't exist yet.
+ *  - Expose granular sticker update actions (short tap, long press, favorite toggle).
+ *  - Delegate room code management to useRoomSync.
+ *  - Delegate network/visibility listener setup to useNetworkListeners.
+ *  - Delegate stats derivation to useAlbumStats.
+ */
 export function useSharedAlbum() {
-  // Shared Album Room Code State
-  const [albumCode, setAlbumCode] = useState(() => {
-    const urlParams = new URLSearchParams(window.location.search);
-    const roomParam = urlParams.get("room") || urlParams.get("sala");
-    
-    // Ignore default fallback strings in URL parameters to avoid overwriting stored preferences
-    if (roomParam && roomParam.trim() && roomParam.trim() !== "sala_predeterminada") {
-      return roomParam.trim().toLowerCase();
-    }
-    
-    // Retrieve stored room or default fallback
-    return localStorage.getItem("fibus_album_code") || "sala_predeterminada";
-  });
+  // Room code lifecycle (URL init, localStorage cache, cross-tab sync, URL reflection)
+  const { albumCode, setAlbumCode } = useRoomSync();
 
-  // Cloud Sincronization Status State
-  const [syncStatus, setSyncStatus] = useState("disconnected"); // 'disconnected', 'syncing', 'synced', 'offline', 'error'
+  // Cloud synchronization status indicator
+  const [syncStatus, setSyncStatus] = useState("disconnected");
 
-  // Sticker Inventory State
+  // Local mirror of the Firestore stickers map
   const [stickersState, setStickersState] = useState({});
 
-  // Trigger state to force-restart subscription on connection/visibility changes
+  // Incrementing trigger used to force-restart the Firestore snapshot on reconnect/visibility
   const [syncTrigger, setSyncTrigger] = useState(0);
 
-  // Real-Time Cloud Sincronization with Firestore
+  // Network and visibility event listener callbacks
+  const handleOnline = useCallback(() => {
+    setSyncStatus("syncing");
+    setSyncTrigger((prev) => prev + 1);
+  }, []);
+
+  const handleOffline = useCallback(() => {
+    setSyncStatus("offline");
+  }, []);
+
+  const handleVisible = useCallback(() => {
+    setSyncTrigger((prev) => prev + 1);
+  }, []);
+
+  // Attach browser-level connectivity and visibility listeners
+  useNetworkListeners({ onOnline: handleOnline, onOffline: handleOffline, onVisible: handleVisible });
+
+  // Real-time Firestore subscription — restarts whenever the album code or syncTrigger changes
   useEffect(() => {
     if (!albumCode.trim()) {
       setSyncStatus("disconnected");
@@ -53,31 +72,14 @@ export function useSharedAlbum() {
       },
       (error) => {
         console.error("Firestore sync error:", error);
-        if (!navigator.onLine) {
-          setSyncStatus("offline");
-        } else {
-          setSyncStatus("error");
-        }
+        setSyncStatus(navigator.onLine ? "error" : "offline");
       },
     );
 
     return () => unsubscribe();
   }, [albumCode, syncTrigger]);
 
-  // Handle local storage caching of preferences and update URL parameter
-  useEffect(() => {
-    if (albumCode) {
-      localStorage.setItem("fibus_album_code", albumCode);
-      const newUrl = new URL(window.location.href);
-      if (newUrl.searchParams.get("room") !== albumCode) {
-        newUrl.searchParams.set("room", albumCode);
-        newUrl.searchParams.delete("sala"); // Normalize 'sala' to 'room'
-        window.history.replaceState(null, "", newUrl.toString());
-      }
-    }
-  }, [albumCode]);
-
-  // Automatically initialize the room document in Firestore if it doesn't exist yet
+  // Automatically create the room document in Firestore if it doesn't exist yet
   useEffect(() => {
     const initRoomInFirestore = async () => {
       const cleanCode = albumCode.trim().toLowerCase();
@@ -102,65 +104,18 @@ export function useSharedAlbum() {
     initRoomInFirestore();
   }, [albumCode]);
 
-  // Sync room code changes across tabs in real-time
-  useEffect(() => {
-    const handleStorageChange = (e) => {
-      if (e.key === "fibus_album_code" && e.newValue) {
-        // If the current tab has a query parameter that differs from the new value, ignore it.
-        // This prevents tabs with different explicit rooms from overriding each other.
-        const urlParams = new URLSearchParams(window.location.search);
-        const currentRoomParam = urlParams.get("room") || urlParams.get("sala");
-        if (currentRoomParam && currentRoomParam !== e.newValue) {
-          return;
-        }
-        setAlbumCode(e.newValue);
-      }
-    };
-    window.addEventListener("storage", handleStorageChange);
-    return () => window.removeEventListener("storage", handleStorageChange);
-  }, []);
-
-  // Sync network status and visibility/focus updates to guarantee real-time updates
-  useEffect(() => {
-    const handleOnline = () => {
-      setSyncStatus("syncing");
-      setSyncTrigger((prev) => prev + 1);
-    };
-    const handleOffline = () => {
-      setSyncStatus("offline");
-    };
-    const handleVisibilityChange = () => {
-      if (document.visibilityState === "visible") {
-        setSyncTrigger((prev) => prev + 1);
-      }
-    };
-
-    window.addEventListener("online", handleOnline);
-    window.addEventListener("offline", handleOffline);
-    window.addEventListener("visibilitychange", handleVisibilityChange);
-
-    return () => {
-      window.removeEventListener("online", handleOnline);
-      window.removeEventListener("offline", handleOffline);
-      window.removeEventListener("visibilitychange", handleVisibilityChange);
-    };
-  }, []);
-
-  // Update a sticker count in Firestore using granular nested updates for ultra-low latency
+  /**
+   * Update a single sticker's state in Firestore using granular dot-notation updates.
+   * Performs an optimistic local state update first for sub-100ms perceived latency.
+   */
   const updateSticker = async (stickerId, updates) => {
-    // Create the full updated data object for the specific sticker to preserve all fields (have/duplicated)
     const targetStickerData = {
       ...(stickersState[stickerId] || { have: false, duplicated: 0, favorite: false }),
       ...updates,
     };
 
-    const newStickers = {
-      ...stickersState,
-      [stickerId]: targetStickerData,
-    };
-
-    // Optimistic local state update
-    setStickersState(newStickers);
+    // Optimistic update: reflect the change locally before the server round-trip
+    setStickersState((prev) => ({ ...prev, [stickerId]: targetStickerData }));
 
     try {
       const docRef = doc(db, "albums", albumCode.trim().toLowerCase());
@@ -169,7 +124,7 @@ export function useSharedAlbum() {
         lastUpdated: new Date().toISOString(),
       });
     } catch (e) {
-      // If the room document doesn't exist, create it with the initial sticker
+      // If the room document doesn't exist yet, create it with this sticker as the seed
       if (e.code === "not-found") {
         try {
           const docRef = doc(db, "albums", albumCode.trim().toLowerCase());
@@ -182,14 +137,12 @@ export function useSharedAlbum() {
         }
       } else {
         console.error("Error updating sticker in Firestore:", e);
-        if (!navigator.onLine) {
-          setSyncStatus("offline");
-        }
+        if (!navigator.onLine) setSyncStatus("offline");
       }
     }
   };
 
-  // Toque corto: poseer o sumar repetidas
+  // Short tap: mark as owned, or add a duplicate if already owned
   const handleShortTap = (id) => {
     const current = stickersState[id] || { have: false, duplicated: 0 };
     if (!current.have) {
@@ -199,7 +152,7 @@ export function useSharedAlbum() {
     }
   };
 
-  // Presión larga: restar repetidas o desmarcar posesión
+  // Long press: subtract a duplicate, or un-mark as owned if no duplicates remain
   const handleLongPress = (id) => {
     const current = stickersState[id] || { have: false, duplicated: 0 };
     if (!current.have) return;
@@ -211,11 +164,13 @@ export function useSharedAlbum() {
     }
   };
 
+  // Double tap: toggle the sticker's favorite status
   const toggleFavorite = (id) => {
     const current = stickersState[id] || { have: false, duplicated: 0, favorite: false };
     updateSticker(id, { favorite: !current.favorite });
   };
 
+  // Return a normalized status object for a given sticker ID
   const getStickerStatus = (stickerId) => {
     const state = stickersState[stickerId] || {};
     return {
@@ -225,30 +180,15 @@ export function useSharedAlbum() {
     };
   };
 
-  const getStats = () => {
-    let owned = 0;
-    let dups = 0;
-
-    originalStickers.forEach((s) => {
-      const state = stickersState[s.id] || {};
-      if (state.have) owned++;
-      dups += state.duplicated || 0;
-    });
-
-    return {
-      total: originalStickers.length,
-      owned,
-      percent: ((owned / originalStickers.length) * 100).toFixed(1),
-      dups,
-    };
-  };
+  // Derive album-wide completion stats from the current sticker state
+  const stats = useAlbumStats(stickersState);
 
   return {
     albumCode,
     setAlbumCode,
     syncStatus,
     stickersState,
-    stats: getStats(),
+    stats,
     handleShortTap,
     handleLongPress,
     getStickerStatus,

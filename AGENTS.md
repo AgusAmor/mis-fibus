@@ -125,3 +125,49 @@ To support running as a standalone app on iOS Safari ("Add to Home Screen") and 
 - **Caching Strategy (Firebase Hosting Caching Control):** To ensure iOS standalone atajos (Web Clips) load the latest code updates on every launch instead of keeping old files in aggressive local cache, `firebase.json` specifies:
   - `index.html` (and dynamic routes matched by `/**`) is served with `Cache-Control: no-cache, no-store, must-revalidate` to force server revalidation.
   - Hashed static assets in `/assets/**` are cached long-term using `Cache-Control: public, max-age=31536000, immutable` for maximum performance.
+
+---
+
+## 9. Module Architecture & Single Responsibility Principle
+
+The codebase follows the Single Responsibility Principle. Every file has one clear reason to change.
+
+### Hooks (`src/hooks/`)
+
+| Hook | Responsibility |
+|---|---|
+| `useSharedAlbum.js` | Composes all album hooks; owns Firestore subscription and sticker mutation actions |
+| `useRoomSync.js` | Room code init from URL/localStorage, persistence, URL reflection, cross-tab sync |
+| `useNetworkListeners.js` | Attaches and cleans up `online`, `offline`, and `visibilitychange` event listeners |
+| `useAlbumStats.js` | Derives `{ total, owned, percent, dups }` from the sticker state map (pure computation) |
+| `useStickerGestures.js` | Encapsulates tap/double-tap/long-press gesture detection with timer refs; returns spreadable event handler props |
+| `useFilteredStickers.js` | Returns a `getFilteredStickers(list)` function scoped to the current status and search filters |
+| `useRoomCheck.js` | Debounced Firestore room-existence check; returns `{ roomExists, isCheckingRoom }` |
+
+### Components (`src/components/`)
+
+| Component | Responsibility |
+|---|---|
+| `App.jsx` | Root wiring: state declarations, prop distribution, page layout |
+| `StickerBoard.jsx` | Switches between flat/teams/album/specials grid layouts; delegates card/group rendering |
+| `StickerCard.jsx` | Presentational single-card view; consumes `useStickerGestures` for all interactions |
+| `StickerGroup.jsx` | Collapsible accordion for a named group (Special or Group Stage) with progress bar |
+| `CountrySection.jsx` | Collapsible accordion for a single country with flag background pattern and 4-col card grid |
+| `Header.jsx` | App title, help button, sync badge layout |
+| `SyncStatusBadge.jsx` | Maps `syncStatus` string to its styled badge element |
+| `StatsPanel.jsx` | Album progress overview with clickable shortcut handlers |
+| `FiltersPanel.jsx` | Search input + three filter selectors (status / view / display) |
+| `ShareDuplicatesButton.jsx` | Compiles and shares/copies duplicate sticker list; shown only in Repetidas filter mode |
+| `Footer.jsx` | Room code display and settings panel toggle |
+| `SettingsPanel.jsx` | Room code editing form with debounced save |
+| `HelpModal.jsx` | Modal shell + section structure; composes StickerLegend, GestureGuide, useRoomCheck |
+| `StickerLegend.jsx` | Four example cards showing sticker states (Faltante/Obtenida/Repetida/Favorita) |
+| `GestureGuide.jsx` | Three gesture cards explaining single tap, long press, and double tap |
+| `CountryFlag.jsx` | Dynamic SVG flag thumbnail for each country key |
+
+### Constants (`src/constants/`)
+
+| File | Responsibility |
+|---|---|
+| `albumSections.js` | `groupTeams`, `sections`, `countries` map, and `albumOrderedStickers` ordered list |
+| `countryData.js` | `FLAG_GRADIENTS`, `FLAG_PROPORTIONS`, `COUNTRY_METADATA`, and `getCountryPattern` SVG generator |

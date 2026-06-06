@@ -2,9 +2,16 @@ import { useState } from "react";
 import { StickerCard } from "./StickerCard";
 import { FaChevronUp, FaChevronDown } from "react-icons/fa";
 import { CountryFlag } from "./CountryFlag";
+import { getCountryPattern, COUNTRY_METADATA } from "../../../constants/countryData";
 
-import { getCountryPattern, COUNTRY_METADATA } from "../constants/countryData";
-
+/**
+ * CountrySection — collapsible accordion for a single country with flag background pattern.
+ *
+ * Responsibilities:
+ *  - Render the country header (flag thumbnail, name, progress bar).
+ *  - Expand/collapse the sticker grid on click.
+ *  - Display the flag-colors SVG background when expanded.
+ */
 export function CountrySection({
   countryKey,
   groupKey,

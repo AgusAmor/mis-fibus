@@ -1,5 +1,5 @@
 import { FaCheck } from "react-icons/fa";
-import { useStickerGestures } from "../hooks/useStickerGestures";
+import { useStickerGestures } from "../../../hooks/useStickerGestures";
 
 /**
  * StickerCard — presentational component for a single collectible sticker card.

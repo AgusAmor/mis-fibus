@@ -1,4 +1,4 @@
-import { SettingsPanel } from "./SettingsPanel";
+import { SettingsPanel } from "./components/SettingsPanel";
 import { FaCog, FaTimes } from "react-icons/fa";
 
 // Footer component showing the current room/album code and toggleable SettingsPanel.
