@@ -213,7 +213,8 @@ export function HelpModal({ isOpen, onClose, albumCode }) {
             </h4>
             <p className="text-[11px] text-slate-600 m-0 mt-1 leading-relaxed font-medium">
               Puedes invitar a otra persona compartiendo el código de tu sala.
-              Cualquier cambio que realicen se reflejará en ambos teléfonos.
+              Cualquier cambio que realicen se verá reflejado en el dispositivo
+              del otro.
             </p>
           </div>
 

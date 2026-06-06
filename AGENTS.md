@@ -20,8 +20,10 @@ Welcome, fellow AI agent! This document serves as the single source of truth for
 The design mimics the feel of the physical Panini sticker album:
 
 - **Primary Background:** A soft cream/ivory color (`#F9F7F3`) simulating matte paper.
-- **Primary Accent Color:** A deep Burgundy/Guinda (`#5E0B19`) representing the official World Cup look.
-- **Secondary/Highlight Color:** Gold/Oro (`#D4AF37`) for highlights, special cards, and duplicates.
+- **Primary Accent Color:** Blue/Teal (`#a9ced6`) representing the official look.
+- **Secondary Color:** Vibrant Orange (`#e25822`) from the package background curves.
+- **Highlight/Accent Color:** Gold/Oro (`#D4AF37`) for highlights, special cards, and duplicates.
+- **Success Color:** Green (`#00a651`) from the package background curves.
 - **Typography Hierarchy:**
   - `Montserrat` (extrabold, uppercase) for section headers and country names.
   - `Bebas Neue` for numbers, percentages, duplicate counts, and sticker codes (e.g., `ARG10`).
@@ -90,8 +92,8 @@ _Gestural Isolation:_ Ensure all touch phases and mouse clicks cancel default pr
   - Clicking the progress bar or stats counts resets filters to "Album View", "All Stickers", and empty search.
 - **Sharing Duplicates:**
   - When the "Repetidas" (Duplicated) status filter is active, a premium "Compartir repetidas" button is rendered below the filters and above the sticker list.
-  - It compiles all duplicates sorted by album order, formats them (e.g., `- ARG17 (Lionel Messi) x2`), sums the total, and appends a dynamic room invitation link (`?room=room_code`).
-  - On mobile devices, it invokes `navigator.share` for native sharing; on desktop browsers, it copies the text to the clipboard and shows a temporary success state (`"¡Copiado al portapapeles!"` in emerald green) for 2 seconds.
+  - It compiles all duplicates sorted by album order, formats them (e.g., `- ARG17 (Lionel Messi) x2`) and sums the total.
+  - On mobile devices, it invokes `navigator.share` for native sharing; on desktop browsers, it copies the text to the clipboard and shows a temporary success state (`"¡Copiado al portapapeles!"` in success green) for 2 seconds.
   - The button automatically disables (greyed out) if the active room has zero duplicates.
 
 ---

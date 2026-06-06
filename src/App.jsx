@@ -83,7 +83,9 @@ function App() {
   // Stickers categories definitions
   const sections = {
     FWC_SPECIAL: originalStickers.filter(
-      (s) => s.group === "SPECIAL" || (s.group === "FWC" && parseInt(s.number, 10) <= 8),
+      (s) =>
+        s.group === "SPECIAL" ||
+        (s.group === "FWC" && parseInt(s.number, 10) <= 8),
     ),
     FWC_HISTORY: originalStickers.filter(
       (s) => s.group === "FWC" && parseInt(s.number, 10) >= 9,
@@ -152,7 +154,7 @@ function App() {
 
   // Check if the album has any duplicates to decide button enablement
   const hasDuplicates = originalStickers.some(
-    (s) => getStickerStatus(s.id).dup > 0
+    (s) => getStickerStatus(s.id).dup > 0,
   );
 
   // Copy formatted text to clipboard and show temporary visual success state
@@ -170,7 +172,29 @@ function App() {
 
   // Compile repeated stickers list, format it as readable text, and share it via Web Share API or fallback to clipboard
   const handleShareRepeated = async () => {
-    const repeatedStickers = originalStickers.filter((s) => {
+    // Construct the stickers array in the exact visual order of the album
+    const albumOrderedStickers = [];
+
+    // 1. FWC_SPECIAL
+    albumOrderedStickers.push(...sections.FWC_SPECIAL);
+
+    // 2. Group Stages (A to L)
+    ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L"].forEach(
+      (groupKey) => {
+        const groupCountries = groupTeams[groupKey] || [];
+        groupCountries.forEach((cKey) => {
+          albumOrderedStickers.push(...(countries[cKey] || []));
+        });
+      },
+    );
+
+    // 3. FWC_HISTORY
+    albumOrderedStickers.push(...sections.FWC_HISTORY);
+
+    // 4. CC (Coca-Cola)
+    albumOrderedStickers.push(...sections.CC);
+
+    const repeatedStickers = albumOrderedStickers.filter((s) => {
       const status = getStickerStatus(s.id);
       return status.dup > 0;
     });
@@ -190,14 +214,15 @@ function App() {
 
     const totalDups = repeatedStickers.reduce(
       (acc, s) => acc + getStickerStatus(s.id).dup,
-      0
+      0,
     );
 
-    const shareText = `¿Querés cambiar? 🔄\nMis Fibus Repetidas (${totalDups})\n\n${formattedList}`;
+    const shareText = `¿Querés cambiar?\nMis Fibus Repetidas (${totalDups})\n\n${formattedList}`;
 
-    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-      navigator.userAgent
-    );
+    const isMobile =
+      /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+        navigator.userAgent,
+      );
 
     if (navigator.share && isMobile) {
       try {
@@ -259,18 +284,19 @@ function App() {
               !hasDuplicates
                 ? "bg-slate-100 text-slate-400 border border-slate-200 cursor-not-allowed"
                 : copied
-                ? "bg-emerald-600 text-white border-2 border-emerald-400 hover:shadow-lg hover:shadow-emerald-600/15 active:scale-[0.98] cursor-pointer"
-                : "bg-[#5E0B19] hover:bg-[#4a0813] text-[#F9F7F3] border-2 border-[#D4AF37]/45 hover:border-[#D4AF37] hover:shadow-lg hover:shadow-[#5E0B19]/15 active:scale-[0.98] cursor-pointer"
+                  ? "bg-success text-white border-2 border-success/45 hover:shadow-lg hover:shadow-success/15 active:scale-[0.98] cursor-pointer"
+                  : "bg-secondary hover:bg-secondary/90 text-white border-2 border-accent/45 hover:border-accent hover:shadow-lg hover:shadow-secondary/15 active:scale-[0.98] cursor-pointer"
             }`}
           >
             {copied ? (
               <>
-                <FaCheck className="text-sm text-emerald-200 animate-bounce" /> ¡Copiado al portapapeles!
+                <FaCheck className="text-sm text-white/80 animate-bounce" />{" "}
+                ¡Copiado al portapapeles!
               </>
             ) : (
               <>
                 <FaShareAlt
-                  className={`text-sm ${hasDuplicates ? "text-[#D4AF37]" : "text-slate-400"}`}
+                  className={`text-sm ${hasDuplicates ? "text-accent" : "text-slate-400"}`}
                 />{" "}
                 Compartir repetidas
               </>
@@ -305,39 +331,64 @@ function App() {
           ) : viewMode === "teams" ? (
             /* Teams Only - flat list of CountrySections with group names */
             <div className="flex flex-col gap-3.5">
-              {["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L"].flatMap(
-                (groupKey) => {
-                  const groupCountries = groupTeams[groupKey] || [];
-                  return groupCountries.map((countryKey) => {
-                    const countryStickers = countries[countryKey] || [];
-                    // Only render if there's at least one sticker matching filters in this country
-                    if (getFilteredStickers(countryStickers).length === 0) return null;
+              {[
+                "A",
+                "B",
+                "C",
+                "D",
+                "E",
+                "F",
+                "G",
+                "H",
+                "I",
+                "J",
+                "K",
+                "L",
+              ].flatMap((groupKey) => {
+                const groupCountries = groupTeams[groupKey] || [];
+                return groupCountries.map((countryKey) => {
+                  const countryStickers = countries[countryKey] || [];
+                  // Only render if there's at least one sticker matching filters in this country
+                  if (getFilteredStickers(countryStickers).length === 0)
+                    return null;
 
-                    return (
-                      <CountrySection
-                        key={countryKey}
-                        countryKey={countryKey}
-                        groupKey={groupKey}
-                        countryStickers={countryStickers}
-                        getFilteredStickers={getFilteredStickers}
-                        getStickerStatus={getStickerStatus}
-                        onShortTap={handleShortTap}
-                        onLongPress={handleLongPress}
-                        onToggleFavorite={toggleFavorite}
-                        displayMode={displayMode}
-                        showGroupLabel={true}
-                      />
-                    );
-                  });
-                }
-              )}
+                  return (
+                    <CountrySection
+                      key={countryKey}
+                      countryKey={countryKey}
+                      groupKey={groupKey}
+                      countryStickers={countryStickers}
+                      getFilteredStickers={getFilteredStickers}
+                      getStickerStatus={getStickerStatus}
+                      onShortTap={handleShortTap}
+                      onLongPress={handleLongPress}
+                      onToggleFavorite={toggleFavorite}
+                      displayMode={displayMode}
+                      showGroupLabel={true}
+                    />
+                  );
+                });
+              })}
               {/* If no country has matching stickers */}
-              {["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L"].every(
-                (groupKey) =>
-                  (groupTeams[groupKey] || []).every(
-                    (countryKey) =>
-                      getFilteredStickers(countries[countryKey] || []).length === 0
-                  )
+              {[
+                "A",
+                "B",
+                "C",
+                "D",
+                "E",
+                "F",
+                "G",
+                "H",
+                "I",
+                "J",
+                "K",
+                "L",
+              ].every((groupKey) =>
+                (groupTeams[groupKey] || []).every(
+                  (countryKey) =>
+                    getFilteredStickers(countries[countryKey] || []).length ===
+                    0,
+                ),
               ) && (
                 <p className="text-xs text-slate-400 text-center my-8 font-medium">
                   Ninguna figurita coincide con los filtros.
@@ -349,7 +400,8 @@ function App() {
             <>
               {/* Special Stickers & Stadiums */}
               {(viewMode === "album" || viewMode === "specials") &&
-                (searchQuery === "" || getFilteredStickers(sections.FWC_SPECIAL).length > 0) && (
+                (searchQuery === "" ||
+                  getFilteredStickers(sections.FWC_SPECIAL).length > 0) && (
                   <StickerGroup
                     groupKey="FWC_SPECIAL"
                     title="FIFA World Cup 2026 & Host Countries"
@@ -369,41 +421,56 @@ function App() {
 
               {/* Group Stages A - L */}
               {viewMode === "album" &&
-                ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L"].map(
-                  (groupKey) => {
-                    const groupCountries = groupTeams[groupKey] || [];
-                    const groupStickers = groupCountries.reduce(
-                      (acc, cKey) => [...acc, ...(countries[cKey] || [])],
-                      []
-                    );
-                    if (searchQuery !== "" && getFilteredStickers(groupStickers).length === 0)
-                      return null;
+                [
+                  "A",
+                  "B",
+                  "C",
+                  "D",
+                  "E",
+                  "F",
+                  "G",
+                  "H",
+                  "I",
+                  "J",
+                  "K",
+                  "L",
+                ].map((groupKey) => {
+                  const groupCountries = groupTeams[groupKey] || [];
+                  const groupStickers = groupCountries.reduce(
+                    (acc, cKey) => [...acc, ...(countries[cKey] || [])],
+                    [],
+                  );
+                  if (
+                    searchQuery !== "" &&
+                    getFilteredStickers(groupStickers).length === 0
+                  )
+                    return null;
 
-                    return (
-                      <StickerGroup
-                        key={groupKey}
-                        groupKey={groupKey}
-                        title={`Group ${groupKey}`}
-                        isExpanded={expandedGroups[groupKey]}
-                        onToggle={toggleGroup}
-                        isSpecial={false}
-                        countriesList={groupCountries}
-                        countriesData={countries}
-                        getFilteredStickers={getFilteredStickers}
-                        getStickerStatus={getStickerStatus}
-                        onShortTap={handleShortTap}
-                        onLongPress={handleLongPress}
-                        onToggleFavorite={toggleFavorite}
-                        displayMode={displayMode}
-                        searchQuery={searchQuery}
-                      />
-                    );
-                  }
-                )}
+                  return (
+                    <StickerGroup
+                      key={groupKey}
+                      groupKey={groupKey}
+                      title={`Group ${groupKey}`}
+                      isExpanded={expandedGroups[groupKey]}
+                      onToggle={toggleGroup}
+                      isSpecial={false}
+                      countriesList={groupCountries}
+                      countriesData={countries}
+                      getFilteredStickers={getFilteredStickers}
+                      getStickerStatus={getStickerStatus}
+                      onShortTap={handleShortTap}
+                      onLongPress={handleLongPress}
+                      onToggleFavorite={toggleFavorite}
+                      displayMode={displayMode}
+                      searchQuery={searchQuery}
+                    />
+                  );
+                })}
 
               {/* FIFA World Cup History */}
               {(viewMode === "album" || viewMode === "specials") &&
-                (searchQuery === "" || getFilteredStickers(sections.FWC_HISTORY).length > 0) && (
+                (searchQuery === "" ||
+                  getFilteredStickers(sections.FWC_HISTORY).length > 0) && (
                   <StickerGroup
                     groupKey="FWC_HISTORY"
                     title="FIFA World Cup History"
@@ -423,7 +490,8 @@ function App() {
 
               {/* Coca-Cola Stickers */}
               {(viewMode === "album" || viewMode === "specials") &&
-                (searchQuery === "" || getFilteredStickers(sections.CC).length > 0) && (
+                (searchQuery === "" ||
+                  getFilteredStickers(sections.CC).length > 0) && (
                   <StickerGroup
                     groupKey="CC"
                     title="Coca-Cola"
