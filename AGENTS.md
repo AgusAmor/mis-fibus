@@ -98,6 +98,7 @@ _Gestural Isolation:_ Ensure all touch phases and mouse clicks cancel default pr
   - Upon load, the room code is read from the URL parameter `room` or `sala` (e.g., `?room=mi_sala`).
   - If no URL parameter is provided, it falls back to the room saved in `localStorage` (`fibus_album_code`) or defaults to `"fibus_mundial_2026"`.
   - Any active room code is immediately cached in `localStorage` to ensure persistence across sessions (e.g., when launched from the iPhone Home Screen shortcut).
+  - **Room Code Modification:** Changing the room code in the settings panel uses a local input state and an explicit 'Save' (Guardar) button. This prevents updating the global room state on every keypress, which would otherwise trigger premature initialization of intermediate/incomplete room documents on Firestore.
 - **Dynamic URL Reflection:** Whenever the active `albumCode` changes, the URL query parameters are updated in real-time to `?room={albumCode}` using `window.history.replaceState` without reloading the page.
 - **Ultra-Low Latency Updates:** Updates do not upload the entire checklist. They use granular dot notation updates (e.g., `updateDoc` with `stickers.ARG10`) so that only a few bytes are transferred per click.
 - **Mobile App Resumption & Tab Isolation listeners:**
@@ -114,3 +115,6 @@ To support running as a standalone app on iOS Safari ("Add to Home Screen"):
 - **Icon:** Configured via `<link rel="apple-touch-icon" href="/logo-fibus.png" />` in `index.html`.
 - **Standalone Mode:** Enabled via `<meta name="apple-mobile-web-app-capable" content="yes" />` to hide browser navigation frames when launched from the home screen.
 - **Title & Styling:** Custom title `"Mis Fibus"` set via `apple-mobile-web-app-title` and status bar styled to `default`.
+- **Caching Strategy (Firebase Hosting Caching Control):** To ensure iOS standalone atajos (Web Clips) load the latest code updates on every launch instead of keeping old files in aggressive local cache, `firebase.json` specifies:
+  - `index.html` (and dynamic routes matched by `/**`) is served with `Cache-Control: no-cache, no-store, must-revalidate` to force server revalidation.
+  - Hashed static assets in `/assets/**` are cached long-term using `Cache-Control: public, max-age=31536000, immutable` for maximum performance.
