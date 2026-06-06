@@ -48,7 +48,7 @@ export function StickerGroup({
         <div className="flex justify-between items-center w-full">
           <div className="flex items-center gap-3">
             {groupKey === "CC" ? (
-              <SiCocacola className="text-secondary text-base" />
+              <SiCocacola className="text-coke-red text-base" />
             ) : isSpecial ? (
               <FaStar className="text-accent text-base" />
             ) : (
@@ -78,8 +78,10 @@ export function StickerGroup({
               isGroupCompleted
                 ? "bg-success"
                 : groupKey === "CC"
-                  ? "bg-secondary"
-                  : "bg-primary"
+                  ? "bg-coke-red"
+                  : groupKey.startsWith("FWC")
+                    ? "bg-accent"
+                    : "bg-primary"
             }`}
             style={{ width: `${groupPercent}%` }}
           />
