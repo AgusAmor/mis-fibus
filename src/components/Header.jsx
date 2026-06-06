@@ -50,7 +50,7 @@ export function Header({ syncStatus, onOpenHelp }) {
         <img src="/logo-fibus.png" alt="Logo Fibus" className="h-15 w-auto" />
         <div>
           <h1 className="text-xl font-montserrat font-extrabold tracking-wider text-white">
-            MIS FIBUS 2026
+            MIS FIBUS
           </h1>
         </div>
       </div>

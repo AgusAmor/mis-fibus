@@ -17,6 +17,34 @@
   --font-bebas: 'Bebas Neue', sans-serif;
 }
 
+html {
+  font-size: 14px; /* Base for small mobile screens (<380px) */
+}
+
+@media (min-width: 380px) {
+  html {
+    font-size: 15px; /* Standard mobile screens (380px - 640px) */
+  }
+}
+
+@media (min-width: 640px) {
+  html {
+    font-size: 16px; /* Tablet screens (640px - 1024px) */
+  }
+}
+
+@media (min-width: 1024px) {
+  html {
+    font-size: 16.5px; /* Desktop screens (1024px - 1280px) */
+  }
+}
+
+@media (min-width: 1280px) {
+  html {
+    font-size: 17px; /* Large screens (>1280px) */
+  }
+}
+
 :root {
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
   color-scheme: light;
