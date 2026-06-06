@@ -8,7 +8,14 @@ export function useSharedAlbum() {
   const [albumCode, setAlbumCode] = useState(() => {
     const urlParams = new URLSearchParams(window.location.search);
     const roomParam = urlParams.get("room") || urlParams.get("sala");
-    return roomParam ? roomParam.trim() : (localStorage.getItem("fibus_album_code") || "sala_predeterminada");
+    
+    // Ignore default fallback strings in URL parameters to avoid overwriting stored preferences
+    if (roomParam && roomParam.trim() && roomParam.trim() !== "sala_predeterminada") {
+      return roomParam.trim().toLowerCase();
+    }
+    
+    // Retrieve stored room or default fallback
+    return localStorage.getItem("fibus_album_code") || "sala_predeterminada";
   });
 
   // Cloud Sincronization Status State

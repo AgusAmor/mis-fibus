@@ -1,0 +1,17 @@
+{
+  "short_name": "Mis Fibus",
+  "name": "Mis Fibus - Colección Mundial 2026",
+  "icons": [
+    {
+      "src": "/logo-fibus.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#F9F7F3",
+  "theme_color": "#a9ced6",
+  "display": "standalone",
+  "orientation": "portrait"
+}

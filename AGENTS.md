@@ -106,12 +106,12 @@ _Gestural Isolation:_ Ensure all touch phases and mouse clicks cancel default pr
   - `online` / `offline`: Dynamically updates network status and re-establishes snapshot listeners as soon as connectivity recovers.
   - `storage`: Syncs the active room code (`albumCode`) across tabs in real-time, but **ignores updates** if the target tab has an explicit room query parameter in its URL that differs from the new value, preventing cross-tab pollution for independent albums.
 
----
-
 ## 8. PWA & iOS Home Screen Integration
 
-To support running as a standalone app on iOS Safari ("Add to Home Screen"):
+To support running as a standalone app on iOS Safari ("Add to Home Screen") and Android Google Chrome ("Install App"):
 
+- **PWA Manifest:** Added `manifest.json` in `/public/manifest.json` defining standard metadata (`name`, `short_name`, `theme_color`, `background_color`) with linked icons having the purpose set to `"any"` (to prevent Android Chrome from stretching/distorting the logo in masked launchers) and linked it in `index.html`.
+- **Clean Startup URL:** Manifest defines `"start_url": "/"` and `"display": "standalone"`. This forces both Android WebAPKs and iOS Web Clips to launch at the clean root URL without query parameter pollution, ensuring it automatically falls back to retrieve the saved room from `localStorage`.
 - **Icon:** Configured via `<link rel="apple-touch-icon" href="/logo-fibus.png" />` in `index.html`.
 - **Standalone Mode:** Enabled via `<meta name="apple-mobile-web-app-capable" content="yes" />` to hide browser navigation frames when launched from the home screen.
 - **Title & Styling:** Custom title `"Mis Fibus"` set via `apple-mobile-web-app-title` and status bar styled to `default`.
