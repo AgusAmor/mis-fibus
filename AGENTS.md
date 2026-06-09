@@ -3,10 +3,11 @@
 Welcome, fellow AI agent! This document serves as the single source of truth for the context, design systems, interaction patterns, and constraints of the **mis-fibus** application.
 
 > [!IMPORTANT]
-> **To future AI Developers:** If you introduce new core UX features, modify design tokens, or adjust fundamental logic, **you MUST update this file** at the end of your execution to keep future agents aligned.
+> **To future AI Developers:** If you introduce new core UX features, modify design tokens, adjust fundamental logic, or make changes that alter the user-facing functionality, **you MUST update both this file (`AGENTS.md`) and the project `README.md`** at the end of your execution to keep future agents and users aligned.
 
 > [!IMPORTANT]
 > **Execution Constraint:** Do NOT run production builds (e.g. `pnpm run build`) or perform git commits on behalf of the user. All builds, verification checks, and repository commits are handled exclusively by the user. Focus solely on code modification, layout styling, and structural refactoring.
+
 
 ---
 
