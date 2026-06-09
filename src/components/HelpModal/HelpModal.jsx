@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   FaTimes,
   FaInfoCircle,
@@ -20,7 +20,22 @@ import { useRoomCheck } from "../../hooks/useRoomCheck";
  *  - Delegate confirmation to the onClose callback with the chosen room code.
  */
 export function HelpModal({ isOpen, onClose, albumCode }) {
-  if (!isOpen) return null;
+  const [render, setRender] = useState(isOpen);
+  const [isClosing, setIsClosing] = useState(false);
+
+  useEffect(() => {
+    if (isOpen) {
+      setRender(true);
+      setIsClosing(false);
+    } else if (render) {
+      setIsClosing(true);
+      const timer = setTimeout(() => {
+        setRender(false);
+        setIsClosing(false);
+      }, 200); // Wait for the 200ms scale-out/fade-out exit animation
+      return () => clearTimeout(timer);
+    }
+  }, [isOpen, render]);
 
   const isRoomNotSet = albumCode === "sala_predeterminada";
   const [roomInput, setRoomInput] = useState("");
@@ -38,10 +53,12 @@ export function HelpModal({ isOpen, onClose, albumCode }) {
     }
   };
 
+  if (!render) return null;
+
   return (
-    <div className="fixed inset-0 bg-slate-900/60 backdrop-blur-xs flex items-center justify-center z-100 p-4 animate-fade-in">
+    <div className={`fixed inset-0 bg-slate-900/60 backdrop-blur-xs flex items-center justify-center z-100 p-4 ${isClosing ? "animate-fade-out" : "animate-fade-in"}`}>
       <div
-        className="bg-bg-base border-2 border-primary/20 rounded-3xl shadow-2xl w-full max-w-lg overflow-y-auto max-h-[90vh] flex flex-col relative animate-scale-in"
+        className={`bg-bg-base border-2 border-primary/20 rounded-3xl shadow-2xl w-full max-w-lg overflow-y-auto max-h-[90vh] flex flex-col relative ${isClosing ? "animate-scale-out" : "animate-scale-in"}`}
         onClick={(e) => e.stopPropagation()}
       >
         {/* Close button — hidden when the room has not yet been configured */}

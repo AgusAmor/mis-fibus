@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import {
   FaTimes,
   FaApple,
@@ -8,12 +9,29 @@ import {
 import { MdIosShare, MdOutlineInstallDesktop } from "react-icons/md";
 
 export function InstallModal({ isOpen, onClose, os }) {
-  if (!isOpen) return null;
+  const [render, setRender] = useState(isOpen);
+  const [isClosing, setIsClosing] = useState(false);
+
+  useEffect(() => {
+    if (isOpen) {
+      setRender(true);
+      setIsClosing(false);
+    } else if (render) {
+      setIsClosing(true);
+      const timer = setTimeout(() => {
+        setRender(false);
+        setIsClosing(false);
+      }, 200); // Wait for the 200ms scale-out/fade-out exit animation
+      return () => clearTimeout(timer);
+    }
+  }, [isOpen, render]);
+
+  if (!render) return null;
 
   return (
-    <div className="fixed inset-0 bg-slate-900/60 backdrop-blur-xs flex items-center justify-center z-100 p-4 animate-fade-in">
+    <div className={`fixed inset-0 bg-slate-900/60 backdrop-blur-xs flex items-center justify-center z-100 p-4 ${isClosing ? "animate-fade-out" : "animate-fade-in"}`}>
       <div
-        className="bg-bg-base border-2 border-primary/20 rounded-3xl shadow-2xl w-full max-w-sm overflow-hidden flex flex-col relative animate-scale-in"
+        className={`bg-bg-base border-2 border-primary/20 rounded-3xl shadow-2xl w-full max-w-sm overflow-hidden flex flex-col relative ${isClosing ? "animate-scale-out" : "animate-scale-in"}`}
         onClick={(e) => e.stopPropagation()}
       >
         <button
