@@ -105,65 +105,67 @@ export function StickerGroup({
         </div>
       </header>
 
-      {/* Expanded Accordion Body */}
-      {isExpanded && (
-        <div className="p-4 border-t border-slate-100 bg-slate-50/30 flex flex-col gap-5">
-          {isSpecial ? (
-            /* Special section layout */
-            <>
-              <div className="grid grid-cols-[repeat(auto-fill,minmax(65px,1fr))] gap-2.5 sm:grid-cols-[repeat(auto-fill,minmax(70px,1fr))]">
-                {getFilteredStickers(stickers).map((sticker) => (
-                  <StickerCard
-                    key={sticker.id}
-                    sticker={sticker}
-                    status={getStickerStatus(sticker.id)}
-                    onShortTap={onShortTap}
-                    onLongPress={onLongPress}
-                    onToggleFavorite={onToggleFavorite}
-                    displayMode={displayMode}
-                  />
-                ))}
-              </div>
-              {getFilteredStickers(stickers).length === 0 && (
-                <p className="text-xs text-slate-400 text-center my-2 font-medium">
-                  Ninguna figurita coincide con los filtros.
-                </p>
-              )}
-            </>
-          ) : (
-            /* Regular group stages layout with country subdivisions */
-            <div className="flex flex-col gap-6.5">
-              {countriesList.map((countryKey, index) => {
-                const countryStickers = countriesData[countryKey] || [];
-                // Hide country accordions with zero search results when searching
-                if (
-                  searchQuery !== "" &&
-                  getFilteredStickers(countryStickers).length === 0
-                ) {
-                  return null;
-                }
+      {/* Expanded Accordion Body with smooth CSS height transition */}
+      <div className={`accordion-wrapper ${isExpanded ? "open" : ""}`}>
+        <div className="accordion-inner">
+          <div className="p-4 border-t border-slate-100 bg-slate-50/30 flex flex-col gap-5">
+            {isSpecial ? (
+              /* Special section layout */
+              <>
+                <div className="grid grid-cols-[repeat(auto-fill,minmax(65px,1fr))] gap-2.5 sm:grid-cols-[repeat(auto-fill,minmax(70px,1fr))]">
+                  {getFilteredStickers(stickers).map((sticker) => (
+                    <StickerCard
+                      key={sticker.id}
+                      sticker={sticker}
+                      status={getStickerStatus(sticker.id)}
+                      onShortTap={onShortTap}
+                      onLongPress={onLongPress}
+                      onToggleFavorite={onToggleFavorite}
+                      displayMode={displayMode}
+                    />
+                  ))}
+                </div>
+                {getFilteredStickers(stickers).length === 0 && (
+                  <p className="text-xs text-slate-400 text-center my-2 font-medium">
+                    Ninguna figurita coincide con los filtros.
+                  </p>
+                )}
+              </>
+            ) : (
+              /* Regular group stages layout with country subdivisions */
+              <div className="flex flex-col gap-6.5">
+                {countriesList.map((countryKey, index) => {
+                  const countryStickers = countriesData[countryKey] || [];
+                  // Hide country accordions with zero search results when searching
+                  if (
+                    searchQuery !== "" &&
+                    getFilteredStickers(countryStickers).length === 0
+                  ) {
+                    return null;
+                  }
 
-                return (
-                  <CountrySection
-                    key={countryKey}
-                    countryKey={countryKey}
-                    groupKey={groupKey}
-                    countryStickers={countryStickers}
-                    getFilteredStickers={getFilteredStickers}
-                    getStickerStatus={getStickerStatus}
-                    onShortTap={onShortTap}
-                    onLongPress={onLongPress}
-                    onToggleFavorite={onToggleFavorite}
-                    displayMode={displayMode}
-                    showGroupLabel={false}
-                    countryIndex={index}
-                  />
-                );
-              })}
-            </div>
-          )}
+                  return (
+                    <CountrySection
+                      key={countryKey}
+                      countryKey={countryKey}
+                      groupKey={groupKey}
+                      countryStickers={countryStickers}
+                      getFilteredStickers={getFilteredStickers}
+                      getStickerStatus={getStickerStatus}
+                      onShortTap={onShortTap}
+                      onLongPress={onLongPress}
+                      onToggleFavorite={onToggleFavorite}
+                      displayMode={displayMode}
+                      showGroupLabel={false}
+                      countryIndex={index}
+                    />
+                  );
+                })}
+              </div>
+            )}
+          </div>
         </div>
-      )}
+      </div>
     </div>
   );
 }

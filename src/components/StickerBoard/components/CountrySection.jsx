@@ -93,46 +93,48 @@ export function CountrySection({
         </div>
       </div>
 
-      {/* Stickers Grid & Content */}
-      {isOpen && (
-        <div
-          className="relative z-10 p-4 flex flex-col gap-3 rounded-b-xl overflow-hidden"
-          style={
-            countryBg !== "none"
-              ? {
-                  backgroundImage: countryBg,
-                  backgroundSize: "cover",
-                }
-              : {}
-          }
-        >
-          {/* Semi-translucent overlay to soften the flag background for high contrast */}
-          <div className="absolute inset-0 bg-white/30 pointer-events-none z-0"></div>
+      {/* Stickers Grid & Content with smooth CSS height transition */}
+      <div className={`accordion-wrapper ${isOpen ? "open" : ""}`}>
+        <div className="accordion-inner">
+          <div
+            className="relative z-10 p-4 flex flex-col gap-3 rounded-b-xl overflow-hidden"
+            style={
+              countryBg !== "none"
+                ? {
+                    backgroundImage: countryBg,
+                    backgroundSize: "cover",
+                  }
+                : {}
+            }
+          >
+            {/* Semi-translucent overlay to soften the flag background for high contrast */}
+            <div className="absolute inset-0 bg-white/30 pointer-events-none z-0"></div>
 
-          {/* Stickers Grid in 4 columns */}
-          {filteredCountryStickers.length > 0 && (
-            <div className="relative z-10 grid grid-cols-4 gap-2 sm:gap-2.5 mt-1">
-              {filteredCountryStickers.map((sticker) => (
-                <StickerCard
-                  key={sticker.id}
-                  sticker={sticker}
-                  status={getStickerStatus(sticker.id)}
-                  onShortTap={onShortTap}
-                  onLongPress={onLongPress}
-                  onToggleFavorite={onToggleFavorite}
-                  displayMode={displayMode}
-                />
-              ))}
-            </div>
-          )}
+            {/* Stickers Grid in 4 columns */}
+            {filteredCountryStickers.length > 0 && (
+              <div className="relative z-10 grid grid-cols-4 gap-2 sm:gap-2.5 mt-1">
+                {filteredCountryStickers.map((sticker) => (
+                  <StickerCard
+                    key={sticker.id}
+                    sticker={sticker}
+                    status={getStickerStatus(sticker.id)}
+                    onShortTap={onShortTap}
+                    onLongPress={onLongPress}
+                    onToggleFavorite={onToggleFavorite}
+                    displayMode={displayMode}
+                  />
+                ))}
+              </div>
+            )}
 
-          {filteredCountryStickers.length === 0 && (
-            <p className="relative z-10 text-[11px] font-semibold text-slate-700 bg-white/80 px-3 py-1.5 rounded-lg border border-slate-200/50 shadow-xs self-center my-1">
-              Ninguna figurita coincide con los filtros.
-            </p>
-          )}
+            {filteredCountryStickers.length === 0 && (
+              <p className="relative z-10 text-[11px] font-semibold text-slate-700 bg-white/80 px-3 py-1.5 rounded-lg border border-slate-200/50 shadow-xs self-center my-1">
+                Ninguna figurita coincide con los filtros.
+              </p>
+            )}
+          </div>
         </div>
-      )}
+      </div>
     </div>
   );
 }
