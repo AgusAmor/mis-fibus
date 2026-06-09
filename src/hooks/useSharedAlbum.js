@@ -1,4 +1,5 @@
 import { useState, useCallback, useEffect } from "react";
+import { appendHistoryEvent, ACTION_TYPES } from "../utils/historyLogic";
 import { db } from "../firebase";
 import { doc, onSnapshot, setDoc, updateDoc, getDoc } from "firebase/firestore";
 import { useRoomSync } from "./useRoomSync";
@@ -142,32 +143,53 @@ export function useSharedAlbum() {
     }
   };
 
+
   // Short tap: mark as owned, or add a duplicate if already owned
   const handleShortTap = (id) => {
-    const current = stickersState[id] || { have: false, duplicated: 0 };
+    const current = stickersState[id] || { have: false, duplicated: 0, history: [] };
     if (!current.have) {
-      updateSticker(id, { have: true, duplicated: 0 });
+      updateSticker(id, { 
+        have: true, 
+        duplicated: 0,
+        history: appendHistoryEvent(current.history, ACTION_TYPES.OBTENIDA)
+      });
     } else {
-      updateSticker(id, { duplicated: (current.duplicated || 0) + 1 });
+      updateSticker(id, { 
+        duplicated: (current.duplicated || 0) + 1,
+        history: appendHistoryEvent(current.history, ACTION_TYPES.REPETIDA_AGREGADA)
+      });
     }
   };
 
   // Long press: subtract a duplicate, or un-mark as owned if no duplicates remain
   const handleLongPress = (id) => {
-    const current = stickersState[id] || { have: false, duplicated: 0 };
+    const current = stickersState[id] || { have: false, duplicated: 0, history: [] };
     if (!current.have) return;
 
     if ((current.duplicated || 0) > 0) {
-      updateSticker(id, { duplicated: (current.duplicated || 0) - 1 });
+      updateSticker(id, { 
+        duplicated: (current.duplicated || 0) - 1,
+        history: appendHistoryEvent(current.history, ACTION_TYPES.REPETIDA_ELIMINADA)
+      });
     } else {
-      updateSticker(id, { have: false, duplicated: 0 });
+      updateSticker(id, { 
+        have: false, 
+        duplicated: 0,
+        history: appendHistoryEvent(current.history, ACTION_TYPES.ELIMINADA)
+      });
     }
   };
 
   // Double tap: toggle the sticker's favorite status
   const toggleFavorite = (id) => {
-    const current = stickersState[id] || { have: false, duplicated: 0, favorite: false };
-    updateSticker(id, { favorite: !current.favorite });
+    const current = stickersState[id] || { have: false, duplicated: 0, favorite: false, history: [] };
+    updateSticker(id, { 
+      favorite: !current.favorite,
+      history: appendHistoryEvent(
+        current.history, 
+        !current.favorite ? ACTION_TYPES.FAVORITA_AGREGADA : ACTION_TYPES.FAVORITA_ELIMINADA
+      )
+    });
   };
 
   // Return a normalized status object for a given sticker ID

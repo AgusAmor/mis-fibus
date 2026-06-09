@@ -8,7 +8,6 @@ Welcome, fellow AI agent! This document serves as the single source of truth for
 > [!IMPORTANT]
 > **Execution Constraint:** Do NOT run production builds (e.g. `pnpm run build`) or perform git commits on behalf of the user. All builds, verification checks, and repository commits are handled exclusively by the user. Focus solely on code modification, layout styling, and structural refactoring.
 
-
 ---
 
 ## 1. Project Overview & Context
@@ -140,51 +139,57 @@ The codebase follows the Single Responsibility Principle. Every file has one cle
 
 ### Hooks (`src/hooks/`)
 
-| Hook | Responsibility |
-|---|---|
-| `useSharedAlbum.js` | Composes all album hooks; owns Firestore subscription and sticker mutation actions |
-| `useRoomSync.js` | Room code init from URL/localStorage, persistence, URL reflection, cross-tab sync |
-| `useNetworkListeners.js` | Attaches and cleans up `online`, `offline`, and `visibilitychange` event listeners |
-| `useAlbumStats.js` | Derives `{ total, owned, percent, dups }` from the sticker state map (pure computation) |
-| `useStickerGestures.js` | Encapsulates tap/double-tap/long-press gesture detection with timer refs; returns spreadable event handler props |
-| `useFilteredStickers.js` | Returns a `getFilteredStickers(list)` function scoped to the current status and search filters |
-| `useRoomCheck.js` | Debounced Firestore room-existence check; returns `{ roomExists, isCheckingRoom }` |
-| `useShareDuplicates.js` | Compiles, groups, formats, and handles Web Share/clipboard triggers for duplicate stickers |
-| `useShareMissing.js` | Compiles, groups, formats, and handles Web Share/clipboard triggers for missing stickers |
+| Hook                     | Responsibility                                                                                                   |
+| ------------------------ | ---------------------------------------------------------------------------------------------------------------- |
+| `useSharedAlbum.js`      | Composes all album hooks; owns Firestore subscription and sticker mutation actions                               |
+| `useRoomSync.js`         | Room code init from URL/localStorage, persistence, URL reflection, cross-tab sync                                |
+| `useNetworkListeners.js` | Attaches and cleans up `online`, `offline`, and `visibilitychange` event listeners                               |
+| `useAlbumStats.js`       | Derives `{ total, owned, percent, dups }` from the sticker state map (pure computation)                          |
+| `useStickerGestures.js`  | Encapsulates tap/double-tap/long-press gesture detection with timer refs; returns spreadable event handler props |
+| `useFilteredStickers.js` | Returns a `getFilteredStickers(list)` function scoped to the current status and search filters                   |
+| `useRoomCheck.js`        | Debounced Firestore room-existence check; returns `{ roomExists, isCheckingRoom }`                               |
+| `useShareDuplicates.js`  | Compiles, groups, formats, and handles Web Share/clipboard triggers for duplicate stickers                       |
+| `useShareMissing.js`     | Compiles, groups, formats, and handles Web Share/clipboard triggers for missing stickers                         |
 
 ### Components (`src/components/`)
 
-| Component | Responsibility |
-|---|---|
-| `App.jsx` | Root wiring: state declarations, prop distribution, page layout |
-| `StickerBoard.jsx` | Switches between flat/teams/album/specials grid layouts; delegates card/group rendering |
-| `StickerCard.jsx` | Presentational single-card view; consumes `useStickerGestures` for all interactions |
-| `StickerGroup.jsx` | Collapsible accordion for a named group (Special or Group Stage) with progress bar |
-| `CountrySection.jsx` | Collapsible accordion for a single country with flag background pattern and 4-col card grid |
-| `Header.jsx` | App title, help button, sync badge layout |
-| `SyncStatusBadge.jsx` | Maps `syncStatus` string to its styled badge element |
-| `StatsPanel.jsx` | Album progress overview with clickable shortcut handlers |
-| `FiltersPanel.jsx` | Search input + three filter selectors (status / view / display) |
-| `ShareDuplicatesButton.jsx` | Presentational button for sharing duplicates; consumes `useShareDuplicates` hook |
-| `ShareMissingButton.jsx` | Presentational button for sharing missing stickers; consumes `useShareMissing` hook |
-| `Footer.jsx` | Room code display and settings panel toggle |
-| `SettingsPanel.jsx` | Room code editing form with debounced save |
-| `HelpModal.jsx` | Modal shell + section structure; composes StickerLegend, GestureGuide, useRoomCheck |
-| `InstallModal.jsx` | Modal offering OS-specific instructions for PWA installation |
-| `StickerLegend.jsx` | Four example cards showing sticker states (Faltante/Obtenida/Repetida/Favorita) |
-| `GestureGuide.jsx` | Three gesture cards explaining single tap, long press, and double tap |
-| `CountryFlag.jsx` | Dynamic SVG flag thumbnail for each country key |
+| Component                   | Responsibility                                                                              |
+| --------------------------- | ------------------------------------------------------------------------------------------- |
+| `App.jsx`                   | Root wiring: state declarations, prop distribution, page layout                             |
+| `StickerBoard.jsx`          | Switches between flat/teams/album/specials grid layouts; delegates card/group rendering     |
+| `StickerCard.jsx`           | Presentational single-card view; consumes `useStickerGestures` for all interactions         |
+| `StickerGroup.jsx`          | Collapsible accordion for a named group (Special or Group Stage) with progress bar          |
+| `CountrySection.jsx`        | Collapsible accordion for a single country with flag background pattern and 4-col card grid |
+| `Header.jsx`                | App title, help button, sync badge layout                                                   |
+| `SyncStatusBadge.jsx`       | Maps `syncStatus` string to its styled badge element                                        |
+| `StatsPanel.jsx`            | Album progress overview with clickable shortcut handlers                                    |
+| `FiltersPanel.jsx`          | Search input + three filter selectors (status / view / display)                             |
+| `ShareDuplicatesButton.jsx` | Presentational button for sharing duplicates; consumes `useShareDuplicates` hook            |
+| `ShareMissingButton.jsx`    | Presentational button for sharing missing stickers; consumes `useShareMissing` hook         |
+| `Footer.jsx`                | Room code display and settings panel toggle                                                 |
+| `SettingsPanel.jsx`         | Room code editing form with debounced save                                                  |
+| `HelpModal.jsx`             | Modal shell + section structure; composes StickerLegend, GestureGuide, useRoomCheck         |
+| `InstallModal.jsx`          | Modal offering OS-specific instructions for PWA installation                                |
+| `HistoryModal.jsx`          | Modal that renders a grouped chronological log of all sticker mutations                     |
+| `StickerLegend.jsx`         | Four example cards showing sticker states (Faltante/Obtenida/Repetida/Favorita)             |
+| `GestureGuide.jsx`          | Three gesture cards explaining single tap, long press, and double tap                       |
+| `CountryFlag.jsx`           | Dynamic SVG flag thumbnail for each country key                                             |
+
+### Utilities (`src/utils/`)
+
+| File               | Responsibility                                                                                  |
+| ------------------ | ----------------------------------------------------------------------------------------------- |
+| `historyLogic.js`  | Pure functions to append/cancel time-delayed event logs (`OBTENIDA`, `ELIMINADA`, etc.)           |
 
 ### Constants (`src/constants/`)
 
-| File | Responsibility |
-|---|---|
-| `albumSections.js` | `groupTeams`, `sections`, `countries` map, and `albumOrderedStickers` ordered list |
-| `countryData.js` | `FLAG_GRADIENTS`, `FLAG_PROPORTIONS`, `COUNTRY_METADATA`, and `getCountryPattern` SVG generator |
+| File               | Responsibility                                                                                  |
+| ------------------ | ----------------------------------------------------------------------------------------------- |
+| `albumSections.js` | `groupTeams`, `sections`, `countries` map, and `albumOrderedStickers` ordered list              |
+| `countryData.js`   | `FLAG_GRADIENTS`, `FLAG_PROPORTIONS`, `COUNTRY_METADATA`, and `getCountryPattern` SVG generator |
 
 ### Project Root (`/`)
 
-| File | Responsibility |
-|---|---|
+| File      | Responsibility                                                                      |
+| --------- | ----------------------------------------------------------------------------------- |
 | `LICENSE` | Proprietary License file designating sole ownership and creation rights to AgusAmor |
-

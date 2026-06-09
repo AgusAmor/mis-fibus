@@ -61,6 +61,15 @@ Optimizado especialmente para pantallas táctiles con feedback de vibración (`n
   - Tocá la cantidad global de repetidas para filtrarlas al instante.
   - Tocá el logo superior de "MIS FIBUS" para volver arriba de todo automáticamente.
 
+### 📜 Historial de Cambios (Log)
+
+- **Registro Cronológico:** La aplicación registra automáticamente el día y la hora exacta de cada cambio que hacés en el álbum (cuándo obtenés una figurita, sumás una repetida o la marcás como favorita).
+- **Cancelación Inteligente (Trial Delay):** Si marcás una figurita por error y la desmarcás rápidamente, el sistema anula la acción cruzada para mantener el historial limpio y evitar spam visual.
+- **Acceso Directo:** Podés revisar todo tu historial tocando el botón del reloj (`FaHistory`) en el menú superior.
+
+> [!IMPORTANT]
+> **Para futuros desarrolladores AI:** Cada vez que realices una modificación arquitectónica o agregues una nueva funcionalidad orientada al usuario, debés actualizar **este archivo (`README.md`) y el archivo `AGENTS.md`** para reflejar los cambios.
+
 ---
 
 ## 🏗️ Flujo de Sincronización
@@ -69,11 +78,11 @@ Optimizado especialmente para pantallas táctiles con feedback de vibración (`n
 graph TD
     %% Nube en el nivel superior
     FS[("🔥 Cloud Firestore (Nube)")]
-    
+
     %% Celulares en el nivel medio
     A["📱 Celular A (App Instalada)"]
     B["📱 Celular B (App Instalada)"]
-    
+
     %% Caché offline en el nivel inferior
     CA[("💾 Caché Offline")]
     CB[("💾 Caché Offline")]
@@ -81,7 +90,7 @@ graph TD
     %% Conexiones de sincronización (Nube <--> Celulares)
     FS <-->|Sincronización en Tiempo Real| A
     FS <-->|Sincronización en Tiempo Real| B
-    
+
     %% Conexiones de persistencia local (Celulares --> Caché)
     A -->|Persistencia Local| CA
     B -->|Persistencia Local| CB
@@ -118,4 +127,3 @@ Este proyecto y todo su código asociado son propiedad exclusiva de **AgusAmor (
 <p align="center">
   <i>Mis Fibus • Creado para hacer del coleccionismo una aventura de a dos.</i>
 </p>
-

@@ -1,4 +1,4 @@
-import { FaQuestionCircle, FaDownload } from "react-icons/fa";
+import { FaQuestionCircle, FaDownload, FaHistory } from "react-icons/fa";
 import { SyncStatusBadge } from "./components/SyncStatusBadge";
 
 /**
@@ -9,7 +9,7 @@ import { SyncStatusBadge } from "./components/SyncStatusBadge";
  *  - Provide a help button to open the help modal.
  *  - Show the current sync status via SyncStatusBadge.
  */
-export function Header({ syncStatus, onOpenHelp, onOpenInstall, isStandalone }) {
+export function Header({ syncStatus, onOpenHelp, onOpenInstall, onOpenHistory, isStandalone }) {
   return (
     <header className="flex justify-between items-center px-4 py-4.5 bg-primary text-white sticky top-0 z-50 shadow-md">
       <div 
@@ -25,6 +25,14 @@ export function Header({ syncStatus, onOpenHelp, onOpenInstall, isStandalone }) 
         </div>
       </div>
       <div className="flex items-center gap-2.5">
+        <button
+          onClick={onOpenHistory}
+          className="text-white/85 hover:text-white transition-colors cursor-pointer p-1 rounded-full hover:bg-white/10 flex items-center justify-center"
+          title="Ver Historial"
+          aria-label="Historial"
+        >
+          <FaHistory className="text-lg" />
+        </button>
         {!isStandalone && (
           <button
             onClick={onOpenInstall}

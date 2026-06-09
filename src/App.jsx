@@ -11,6 +11,7 @@ import { ShareDuplicatesButton } from "./components/ShareDuplicatesButton/ShareD
 import { ShareMissingButton } from "./components/ShareMissingButton/ShareMissingButton";
 import { usePWAInfo } from "./hooks/usePWAInfo";
 import { InstallModal } from "./components/InstallModal/InstallModal";
+import { HistoryModal } from "./components/HistoryModal/HistoryModal";
 
 /**
  * App — root component responsible for wiring state and layout.
@@ -26,6 +27,7 @@ function App() {
     albumCode,
     setAlbumCode,
     syncStatus,
+    stickersState,
     stats,
     handleShortTap,
     handleLongPress,
@@ -36,6 +38,7 @@ function App() {
   // --- UI State ---
   const [showSettings, setShowSettings] = useState(false);
   const [showHelp, setShowHelp] = useState(false);
+  const [showHistory, setShowHistory] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [statusFilter, setStatusFilter] = useState("all");
   const [viewMode, setViewMode] = useState("album");
@@ -93,6 +96,7 @@ function App() {
         syncStatus={syncStatus} 
         onOpenHelp={() => setShowHelp(true)} 
         onOpenInstall={() => setShowInstallModal(true)}
+        onOpenHistory={() => setShowHistory(true)}
         isStandalone={isStandalone}
       />
 
@@ -172,6 +176,9 @@ function App() {
       
       {/* PWA Installation modal */}
       <InstallModal isOpen={showInstallModal} onClose={() => setShowInstallModal(false)} os={os} />
+      
+      {/* History modal */}
+      <HistoryModal isOpen={showHistory} onClose={() => setShowHistory(false)} stickersState={stickersState} />
     </div>
   );
 }
