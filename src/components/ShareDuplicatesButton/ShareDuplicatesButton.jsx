@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { FaShareAlt, FaCheck } from "react-icons/fa";
 import { albumOrderedStickers } from "../../constants/albumSections";
+import { COUNTRY_EMOJIS } from "../../constants/countryData";
 
 // ShareDuplicatesButton Component
 // Handles the compiling, formatting, and copying/sharing of duplicate stickers
@@ -45,12 +46,48 @@ export function ShareDuplicatesButton({
       return;
     }
 
-    // Format individual items
-    const formattedList = repeatedStickers
-      .map((s) => {
-        const status = getStickerStatus(s.id);
-        const namePart = s.name ? ` (${s.name})` : "";
-        return `- ${s.id}${namePart} x${status.dup}`;
+    // Group duplicates by team key to format according to user layout
+    const groups = [];
+    const groupMap = {};
+
+    repeatedStickers.forEach((s) => {
+      const status = getStickerStatus(s.id);
+      const teamKey = s.team === "SPECIAL" ? "FWC" : s.team;
+
+      if (!groupMap[teamKey]) {
+        groupMap[teamKey] = {
+          team: teamKey,
+          stickers: []
+        };
+        groups.push(groupMap[teamKey]);
+      }
+
+      groupMap[teamKey].stickers.push({
+        s,
+        dup: status.dup
+      });
+    });
+
+    // Format each team/category group into a display line
+    const formattedList = groups
+      .map((g) => {
+        let emoji = "⚽";
+        if (g.team === "FWC") {
+          emoji = "🏆";
+        } else if (g.team === "CC") {
+          emoji = "🥤";
+        } else if (COUNTRY_EMOJIS[g.team]) {
+          emoji = COUNTRY_EMOJIS[g.team];
+        }
+
+        const numbersList = g.stickers
+          .map(({ s, dup }) => {
+            const displayNum = s.number === "00" ? "00" : parseInt(s.number, 10).toString();
+            return dup > 1 ? `${displayNum} (x${dup})` : displayNum;
+          })
+          .join(", ");
+
+        return `${g.team} ${emoji} : ${numbersList}`;
       })
       .join("\n");
 

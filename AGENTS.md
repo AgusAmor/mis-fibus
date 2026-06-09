@@ -5,6 +5,9 @@ Welcome, fellow AI agent! This document serves as the single source of truth for
 > [!IMPORTANT]
 > **To future AI Developers:** If you introduce new core UX features, modify design tokens, or adjust fundamental logic, **you MUST update this file** at the end of your execution to keep future agents aligned.
 
+> [!IMPORTANT]
+> **Execution Constraint:** Do NOT run production builds (e.g. `pnpm run build`) or perform git commits on behalf of the user. All builds, verification checks, and repository commits are handled exclusively by the user. Focus solely on code modification, layout styling, and structural refactoring.
+
 ---
 
 ## 1. Project Overview & Context
@@ -92,7 +95,7 @@ _Gestural Isolation:_ Ensure all touch phases and mouse clicks cancel default pr
   - Clicking the progress bar or stats counts resets filters to "Album View", "All Stickers", and empty search.
 - **Sharing Duplicates:**
   - When the "Repetidas" (Duplicated) status filter is active, a premium "Compartir repetidas" button is rendered below the filters and above the sticker list.
-  - It compiles all duplicates sorted by album order, formats them (e.g., `- ARG17 (Lionel Messi) x2`) and sums the total.
+  - It compiles all duplicates sorted by album order, groups them by country/category, maps each to its corresponding flag or custom emoji, and formats them as a comma-separated list of clean sticker numbers with multipliers where applicable (e.g., `MEX 🇲🇽 : 1, 6 (x2), 13, 15`). It also sums the total.
   - On mobile devices, it invokes `navigator.share` for native sharing; on desktop browsers, it copies the text to the clipboard and shows a temporary success state (`"¡Copiado al portapapeles!"` in success green) for 2 seconds.
   - The button automatically disables (greyed out) if the active room has zero duplicates.
 
