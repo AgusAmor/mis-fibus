@@ -93,11 +93,12 @@ _Gestural Isolation:_ Ensure all touch phases and mouse clicks cancel default pr
 - **Interactive Atajos (Shortcuts):**
   - Clicking the duplicate count badge in `StatsPanel` switches filters to "Duplicated" and "Continuous Grid".
   - Clicking the progress bar or stats counts resets filters to "Album View", "All Stickers", and empty search.
-- **Sharing Duplicates:**
-  - When the "Repetidas" (Duplicated) status filter is active, a premium "Compartir repetidas" button is rendered below the filters and above the sticker list.
-  - It compiles all duplicates sorted by album order, groups them by country/category, maps each to its corresponding flag or custom emoji, and formats them as a comma-separated list of clean sticker numbers with multipliers where applicable (e.g., `MEX 🇲🇽 : 1, 6 (x2), 13, 15`). It also sums the total.
-  - On mobile devices, it invokes `navigator.share` for native sharing; on desktop browsers, it copies the text to the clipboard and shows a temporary success state (`"¡Copiado al portapapeles!"` in success green) for 2 seconds.
-  - The button automatically disables (greyed out) if the active room has zero duplicates.
+- **Sharing Duplicates & Missing Lists:**
+  - When either "Repetidas" (Duplicated) or "Faltantes" (Missing) status filter is active, two premium sharing buttons ("Compartir repetidas" and "Compartir faltantes") are rendered side-by-side below the filters.
+  - "Compartir repetidas" compiles all duplicates sorted by album order, groups them by country/category, maps each to its corresponding flag or custom emoji, and formats them as a comma-separated list of clean sticker numbers with multipliers where applicable (e.g., `MEX 🇲🇽 : 1, 6 (x2), 13, 15`). It also sums the total.
+  - "Compartir faltantes" compiles all missing stickers in the same grouped comma-separated format but without multipliers (e.g., `MEX 🇲🇽 : 2, 7, 14`).
+  - On mobile devices, they invoke `navigator.share` for native sharing; on desktop browsers, they copy the text to the clipboard and show a temporary success state (`"¡Copiado al portapapeles!"` in success green) for 2 seconds.
+  - Each button automatically disables (greyed out) if the active room has zero duplicates or zero missing stickers, respectively.
 
 ---
 
@@ -147,6 +148,8 @@ The codebase follows the Single Responsibility Principle. Every file has one cle
 | `useStickerGestures.js` | Encapsulates tap/double-tap/long-press gesture detection with timer refs; returns spreadable event handler props |
 | `useFilteredStickers.js` | Returns a `getFilteredStickers(list)` function scoped to the current status and search filters |
 | `useRoomCheck.js` | Debounced Firestore room-existence check; returns `{ roomExists, isCheckingRoom }` |
+| `useShareDuplicates.js` | Compiles, groups, formats, and handles Web Share/clipboard triggers for duplicate stickers |
+| `useShareMissing.js` | Compiles, groups, formats, and handles Web Share/clipboard triggers for missing stickers |
 
 ### Components (`src/components/`)
 
@@ -161,7 +164,8 @@ The codebase follows the Single Responsibility Principle. Every file has one cle
 | `SyncStatusBadge.jsx` | Maps `syncStatus` string to its styled badge element |
 | `StatsPanel.jsx` | Album progress overview with clickable shortcut handlers |
 | `FiltersPanel.jsx` | Search input + three filter selectors (status / view / display) |
-| `ShareDuplicatesButton.jsx` | Compiles and shares/copies duplicate sticker list; shown only in Repetidas filter mode |
+| `ShareDuplicatesButton.jsx` | Presentational button for sharing duplicates; consumes `useShareDuplicates` hook |
+| `ShareMissingButton.jsx` | Presentational button for sharing missing stickers; consumes `useShareMissing` hook |
 | `Footer.jsx` | Room code display and settings panel toggle |
 | `SettingsPanel.jsx` | Room code editing form with debounced save |
 | `HelpModal.jsx` | Modal shell + section structure; composes StickerLegend, GestureGuide, useRoomCheck |

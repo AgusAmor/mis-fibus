@@ -8,6 +8,7 @@ import { FiltersPanel } from "./components/FiltersPanel/FiltersPanel";
 import { StickerBoard } from "./components/StickerBoard/StickerBoard";
 import { HelpModal } from "./components/HelpModal/HelpModal";
 import { ShareDuplicatesButton } from "./components/ShareDuplicatesButton/ShareDuplicatesButton";
+import { ShareMissingButton } from "./components/ShareMissingButton/ShareMissingButton";
 import { usePWAInfo } from "./hooks/usePWAInfo";
 import { InstallModal } from "./components/InstallModal/InstallModal";
 
@@ -123,12 +124,23 @@ function App() {
           setDisplayMode={setDisplayMode}
         />
 
-        {/* Share duplicates button — visible only when the Repetidas filter is active */}
-        <ShareDuplicatesButton
-          statusFilter={statusFilter}
-          albumCode={albumCode}
-          getStickerStatus={getStickerStatus}
-        />
+        {/* Share buttons — visible when either Repetidas or Faltantes filter is active */}
+        {(statusFilter === "duplicated" || statusFilter === "missing") && (
+          <div className="grid grid-cols-2 gap-3 mt-1">
+            <ShareDuplicatesButton
+              statusFilter={statusFilter}
+              albumCode={albumCode}
+              getStickerStatus={getStickerStatus}
+              forceShow={true}
+            />
+            <ShareMissingButton
+              statusFilter={statusFilter}
+              albumCode={albumCode}
+              getStickerStatus={getStickerStatus}
+              forceShow={true}
+            />
+          </div>
+        )}
 
         {/* Main sticker grid — layout switches based on viewMode */}
         <div className="flex flex-col gap-3">
