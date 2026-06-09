@@ -109,6 +109,13 @@ El proyecto está cimentado sobre tecnologías de vanguardia enfocadas en rendim
 
 ---
 
+## 📄 Licencia
+
+Este proyecto y todo su código asociado son propiedad exclusiva de **AgusAmor (Agustín Amor)**. Todos los derechos reservados. Queda estrictamente prohibida la reproducción, copia, distribución, modificación o uso no autorizado de este software. Para más detalles, consulte el archivo [LICENSE](file:///c:/Users/Elmo/Desktop/mis-fibus/LICENSE).
+
+---
+
 <p align="center">
   <i>Mis Fibus • Creado para hacer del coleccionismo una aventura de a dos.</i>
 </p>
+

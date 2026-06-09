@@ -181,3 +181,10 @@ The codebase follows the Single Responsibility Principle. Every file has one cle
 |---|---|
 | `albumSections.js` | `groupTeams`, `sections`, `countries` map, and `albumOrderedStickers` ordered list |
 | `countryData.js` | `FLAG_GRADIENTS`, `FLAG_PROPORTIONS`, `COUNTRY_METADATA`, and `getCountryPattern` SVG generator |
+
+### Project Root (`/`)
+
+| File | Responsibility |
+|---|---|
+| `LICENSE` | Proprietary License file designating sole ownership and creation rights to AgusAmor |
+
