@@ -63,9 +63,13 @@ Optimizado especialmente para pantallas táctiles con feedback de vibración (`n
 
 ### 📜 Historial de Cambios (Log)
 
-- **Registro Cronológico:** La aplicación registra automáticamente el día y la hora exacta de cada cambio que hacés en el álbum (cuándo obtenés una figurita, sumás una repetida o la marcás como favorita).
+- **Registro Cronológico:** La aplicación registra automáticamente el día y la hora exacta de cada cambio que hacés en el álbum (cuándo obtenés una figurita, sumás una repetida o la marcás como favorita), incluyendo además el **nombre del jugador** junto al código.
+- **Búsqueda y Filtros de Historial:** Permite filtrar los registros en tiempo real por buscador (búsqueda por código de figurita o nombre del jugador), por tipo de acción (Obtenidas, Eliminadas, Repetidas agregadas/eliminadas, Favoritas) y ordenar de forma cronológica ascendente o descendente ("Más nuevos primero" / "Más viejos primero").
 - **Cancelación Inteligente (Trial Delay):** Si marcás una figurita por error y la desmarcás rápidamente, el sistema anula la acción cruzada para mantener el historial limpio y evitar spam visual.
 - **Acceso Directo:** Podés revisar todo tu historial tocando el botón del reloj (`FaHistory`) en el menú superior.
+- **Prevención de Auto-Zoom en iOS:** Ajusta automáticamente a `16px` la tipografía de los inputs y selects en pantallas móviles, previniendo que iOS Safari amplíe o haga zoom de forma molesta en el campo de texto cuando está activo.
+
+
 
 > [!IMPORTANT]
 > **Para futuros desarrolladores AI:** Cada vez que realices una modificación arquitectónica o agregues una nueva funcionalidad orientada al usuario, debés actualizar **este archivo (`README.md`) y el archivo `AGENTS.md`** para reflejar los cambios.

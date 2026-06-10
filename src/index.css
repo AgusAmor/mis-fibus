@@ -116,7 +116,10 @@ body {
   margin: 0;
   padding: 0;
   min-height: 100vh;
+  overflow-x: hidden;
+  max-width: 100%;
 }
+
 
 /* Custom scrollbars styling for the Panini physical album theme */
 ::-webkit-scrollbar {
@@ -162,4 +165,18 @@ body {
   overflow: hidden;
   min-height: 0;
 }
+
+/* Prevent iOS Safari auto-zoom on input focus (only apply to text typing inputs) */
+@media (max-width: 767px) {
+  input, textarea {
+    font-size: 16px !important;
+  }
+}
+
+/* Enforce max-width on selects so they do not cause horizontal layout overflow */
+select {
+  max-width: 100%;
+}
+
+
 

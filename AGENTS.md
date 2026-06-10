@@ -130,6 +130,7 @@ To support running as a standalone app on iOS Safari ("Add to Home Screen") and 
   - `index.html` (and dynamic routes matched by `/**`) is served with `Cache-Control: no-cache, no-store, must-revalidate` to force server revalidation.
   - Hashed static assets in `/assets/**` are cached long-term using `Cache-Control: public, max-age=31536000, immutable` for maximum performance.
 - **Install Prompt (Non-Invasive UX):** When the app is opened in a standard browser (not standalone), an `InstallModal` automatically pops up once per session offering specific OS-based instructions (iOS Safari Share -> Add to Home Screen, Android Chrome -> Install App). A download icon also appears in the `Header` to manually open the modal again at any time.
+- **iOS Safari Auto-Zoom Fix:** To prevent automatic screen zooming when focusing on input and select elements on iOS, a global CSS rule in `index.css` forces a minimum font-size of `16px` for all `input`, `select`, and `textarea` elements on screen viewport widths ≤ 767px.
 
 ---
 
@@ -170,7 +171,7 @@ The codebase follows the Single Responsibility Principle. Every file has one cle
 | `SettingsPanel.jsx`         | Room code editing form with debounced save                                                  |
 | `HelpModal.jsx`             | Modal shell + section structure; composes StickerLegend, GestureGuide, useRoomCheck         |
 | `InstallModal.jsx`          | Modal offering OS-specific instructions for PWA installation                                |
-| `HistoryModal.jsx`          | Modal that renders a grouped chronological log of all sticker mutations                     |
+| `HistoryModal.jsx`          | Modal that renders a grouped chronological log of all sticker mutations with filters (search, action type, sort order) and player names |
 | `StickerLegend.jsx`         | Four example cards showing sticker states (Faltante/Obtenida/Repetida/Favorita)             |
 | `GestureGuide.jsx`          | Three gesture cards explaining single tap, long press, and double tap                       |
 | `CountryFlag.jsx`           | Dynamic SVG flag thumbnail for each country key                                             |
